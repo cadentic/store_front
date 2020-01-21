@@ -132,7 +132,7 @@ export default function AdminNavbarLinks() {
                       onClick={handleCloseNotification}
                       className={classes.dropdownItem}
                     >
-                        {notification}
+                        {notification.text}
                     </MenuItem>
                     ))}
                   </MenuList>
