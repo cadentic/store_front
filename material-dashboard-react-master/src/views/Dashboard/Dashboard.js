@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
 // @material-ui/core
@@ -39,87 +39,73 @@ import {
 
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
 
+import axios from "axios";
+
 const useStyles = makeStyles(styles);
+
+const getIcon = icon => {
+  switch(icon) {
+    case "store": return <Store />;
+    case "warning": return <Warning />;
+    case "date-range": return <DateRange />;
+    case "local-offer": return <LocalOffer />;
+    case "update": return <Update />;
+    case "arrow-upward": return <ArrowUpward />;
+    case "access-time": return <AccessTime />;
+    case "accessibility": return <Accessibility />;
+    case "bug-report": return <BugReport />;
+    case "code": return <Code />;
+    case "cloud": return <Cloud />;
+  }
+
+  return <Icon>{icon}</Icon>;
+};
+
+const colorizedIcon = (color, icon) => {
+  let result;
+  switch(color) {
+    case "danger": return <Danger>{getIcon(icon)}</Danger>;
+  }
+  return getIcon(icon);
+};
 
 export default function Dashboard() {
   const classes = useStyles();
+  const [informationalCards, setInformationalCards] = useState([]);
+
+  useEffect(() => {
+    axios.get("/json/dashboard-informational-cards.json")
+         .then(({data}) => setInformationalCards(data));
+  }, []);
+
   return (
     <div>
       <GridContainer>
+        {informationalCards.map(item => (
         <GridItem xs={12} sm={6} md={3}>
           <Card>
-            <CardHeader color="warning" stats icon>
-              <CardIcon color="warning">
-                <Icon>content_copy</Icon>
+            <CardHeader color={item.color} stats icon>
+              <CardIcon color={item.color}>
+                {getIcon(item.icon)}
               </CardIcon>
-              <p className={classes.cardCategory}>Used Space</p>
+              <p className={classes.cardCategory}>{item.textLabel}</p>
               <h3 className={classes.cardTitle}>
-                49/50 <small>GB</small>
+                {item.text}
               </h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
-                <Danger>
-                  <Warning />
-                </Danger>
-                <a href="#pablo" onClick={e => e.preventDefault()}>
-                  Get more space
-                </a>
+                {colorizedIcon(item.footerIconColor, item.footerIcon)}
+                {item.footerLink && (
+                  <a href={item.footerLink} onClick={e => e.preventDefault()}>
+                    {item.footerText}
+                  </a>
+                 ) || item.footerText}
               </div>
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="success" stats icon>
-              <CardIcon color="success">
-                <Store />
-              </CardIcon>
-              <p className={classes.cardCategory}>Revenue</p>
-              <h3 className={classes.cardTitle}>$34,245</h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <DateRange />
-                Last 24 Hours
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="danger" stats icon>
-              <CardIcon color="danger">
-                <Icon>info_outline</Icon>
-              </CardIcon>
-              <p className={classes.cardCategory}>Fixed Issues</p>
-              <h3 className={classes.cardTitle}>75</h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <LocalOffer />
-                Tracked from Github
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="info" stats icon>
-              <CardIcon color="info">
-                <Accessibility />
-              </CardIcon>
-              <p className={classes.cardCategory}>Followers</p>
-              <h3 className={classes.cardTitle}>+245</h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <Update />
-                Just Updated
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
+        ))}
       </GridContainer>
       <GridContainer>
         <GridItem xs={12} sm={12} md={4}>
