@@ -1,0 +1,45 @@
+{
+    "header": [
+        "Course title",
+        "Course Duration",
+        "Course Fee",
+        "Taken slot"
+    ],
+    "body": [
+        {
+            "id": 1,
+            "title": "HTML5 ",
+            "duration": "2 weeks",
+            "fee": "$4000",
+            "slot": 10
+        },
+        {
+            "id": 2,
+            "title": "CSS3 ",
+            "duration": "3 days",
+            "fee": "$1000",
+            "slot": 20
+        },
+        {
+            "id": 3,
+            "title": "Javascript ",
+            "duration": "2 weeks",
+            "fee": "$1500",
+            "slot": 70
+        },
+        {
+            "id": 4,
+            "title": "PHP ",
+            "duration": "1 week",
+            "fee": "$1500",
+            "slot": 25
+        },
+        {
+            "id": 5,
+            "title": "C++ ",
+            "duration": "3 weeks",
+            "fee": "$7000",
+            "slot": "20"
+        }
+    ]
+}

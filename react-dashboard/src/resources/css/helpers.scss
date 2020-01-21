@@ -1,0 +1,197 @@
+$spaceamounts: (
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  12,
+  14,
+  15,
+  16,
+  18,
+  20,
+  24,
+  25,
+  30,
+  32,
+  35,
+  40,
+  42,
+  45,
+  48,
+  50,
+  55,
+  60,
+  70,
+  75,
+  80,
+  100,
+  110,
+  120,
+  125,
+  130,
+  150,
+  200
+);
+$spaceamounts-percentages: (0, 25, 50, 75, 100);
+$sides: (top, bottom, left, right);
+$displays: (inline, inline-block, block, flex);
+$positions: (relative, absolute, fixed, static);
+
+/*
+    Helper to automatically generate classes to add margin and padding (Fixed values)
+    e.g. m-t-10 will add margin top of 10
+*/
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px;
+      margin-#{$side}: #{$space/16}rem;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px;
+      padding-#{$side}: #{$space/16}rem;
+    }
+
+    .#{str-slice($side, 0, 1)}-#{$space} {
+      #{$side}: #{$space}px;
+      #{$side}: #{$space/16}rem;
+    }
+  }
+}
+
+// Extra large screens
+@media screen and (min-width: 1601px) {
+  @each $space in $spaceamounts {
+    @each $side in $sides {
+      .m-#{str-slice($side, 0, 1)}-#{$space}-xl {
+        margin-#{$side}: #{$space}px;
+        margin-#{$side}: #{$space/16}rem;
+      }
+
+      .p-#{str-slice($side, 0, 1)}-#{$space}-xl {
+        padding-#{$side}: #{$space}px;
+        padding-#{$side}: #{$space/16}rem;
+      }
+
+      .#{str-slice($side, 0, 1)}-#{$space}-xl {
+        #{$side}: #{$space}px;
+        #{$side}: #{$space/16}rem;
+      }
+    }
+  }
+}
+
+// Large screens
+@media screen and (max-width: 1600px) {
+  @each $space in $spaceamounts {
+    @each $side in $sides {
+      .m-#{str-slice($side, 0, 1)}-#{$space}-l {
+        margin-#{$side}: #{$space}px;
+        margin-#{$side}: #{$space/16}rem;
+      }
+
+      .p-#{str-slice($side, 0, 1)}-#{$space}-l {
+        padding-#{$side}: #{$space}px;
+        padding-#{$side}: #{$space/16}rem;
+      }
+
+      .#{str-slice($side, 0, 1)}-#{$space}-l {
+        #{$side}: #{$space}px;
+        #{$side}: #{$space/16}rem;
+      }
+    }
+  }
+}
+
+// Medium screens
+@media screen and (max-width: 1024px) {
+  @each $space in $spaceamounts {
+    @each $side in $sides {
+      .m-#{str-slice($side, 0, 1)}-#{$space}-m {
+        margin-#{$side}: #{$space}px;
+        margin-#{$side}: #{$space/16}rem;
+      }
+
+      .p-#{str-slice($side, 0, 1)}-#{$space}-m {
+        padding-#{$side}: #{$space}px;
+        padding-#{$side}: #{$space/16}rem;
+      }
+
+      .#{str-slice($side, 0, 1)}-#{$space}-m {
+        #{$side}: #{$space}px;
+        #{$side}: #{$space/16}rem;
+      }
+    }
+  }
+}
+
+// Small Screens
+@media screen and (max-width: 768px) {
+  @each $space in $spaceamounts {
+    @each $side in $sides {
+      .m-#{str-slice($side, 0, 1)}-#{$space}-sm {
+        margin-#{$side}: #{$space}px;
+        margin-#{$side}: #{$space/16}rem;
+      }
+
+      .p-#{str-slice($side, 0, 1)}-#{$space}-sm {
+        padding-#{$side}: #{$space}px;
+        padding-#{$side}: #{$space/16}rem;
+      }
+
+      .#{str-slice($side, 0, 1)}-#{$space}-sm {
+        #{$side}: #{$space}px;
+        #{$side}: #{$space/16}rem;
+      }
+    }
+  }
+}
+
+/*
+    Helper to automatically generate classes to add margin and padding in all sides (top, right, bottom, left, Fixed values)
+    e.g. m-a-10 will add margin of 10
+*/
+
+@each $space in $spaceamounts {
+  .m-a-#{$space} {
+    margin: #{$space}px;
+    margin: #{$space/16}rem;
+  }
+
+  .p-a-#{$space} {
+    padding: #{$space}px;
+    padding: #{$space/16}rem;
+  }
+}
+
+/*
+    Helper to automatically generate classes for width (Percentage values)
+    e.g. w-50-perc will make the width of the element of 50%
+*/
+
+@each $space in $spaceamounts {
+  .w-#{$space}-perc {
+    width: #{$space}#{"%"};
+  }
+}
+
+@each $display in $displays {
+  .#{$display} {
+    display: $display;
+  }
+}
+
+@each $position in $positions {
+  .pos-#{$position} {
+    position: $position;
+  }
+}

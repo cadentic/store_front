@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "primary": "Total Student attendance",
+        "secondary": "80/yr",
+        "avatar": "one"
+    },
+    {
+        "id": 2,
+        "primary": "Average Student attendance",
+        "secondary": "10/mth",
+        "avatar": "two"
+    },
+    {
+        "id": 3,
+        "primary": "Lowest student attendance",
+        "secondary": "10/mth",
+        "avatar": "three"
+    },
+    {
+        "id": 4,
+        "primary": "Peak month attendance",
+        "secondary": "Sepy",
+        "avatar": "four"
+    }
+]
