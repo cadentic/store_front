@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "color": "success",
+        "type": "Line",
+        "title": "Daily Sales",
+        "text": "55% increase in today sales.",
+        "footerIcon": "access-time",
+        "footerText": "updated 4 minutes ago",
+        "data": {
+            "labels": ["L", "M", "M", "J", "V", "S", "D"],
+            "series": [[10, 2, 5, 20, 25, 4, 7]],
+            "high": 30
+        }
+    },
+    {
+        "id": 2,
+        "color": "warning",
+        "type": "Bar",
+        "title": "Email Subscriptions",
+        "text": "Last campaign performance",
+        "footerIcon": "access-time",
+        "footerText": "campaign sent 2 days ago",
+        "data": {
+            "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Agu", "Sep", "Oct", "Nov", "Dec"],
+            "series": [[20, 4, 7, 10, 31, 10, 12, 13, 9, 17, 35, 14]],
+            "high": 40
+        }
+    },
+    {
+        "id": 3,
+        "color": "danger",
+        "type": "Line",
+        "title": "Completed Tasks",
+        "text": "Last campaign performance",
+        "footerIcon": "access-time",
+        "footerText": "campaign sent 2 days ago",
+        "data": {
+            "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Agu", "Sep", "Oct", "Nov", "Dec"],
+            "series": [[11, 3, 0, 20, 13, 16, 14, 3, 9, 7, 5, 4]],
+            "high": 25
+        }
+    }
+]

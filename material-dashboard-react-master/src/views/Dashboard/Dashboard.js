@@ -32,10 +32,10 @@ import CardFooter from "components/Card/CardFooter.js";
 import { bugs, website, server } from "variables/general.js";
 
 import {
-  dailySalesChart,
-  emailsSubscriptionChart,
-  completedTasksChart
-} from "variables/charts.js";
+  options as chartsOptions,
+  animation as chartsAnimation,
+  responsiveOptions as chartResponsiveOptions
+} from "variables/charts-options.js";
 
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
 
@@ -72,10 +72,13 @@ const colorizedIcon = (color, icon) => {
 export default function Dashboard() {
   const classes = useStyles();
   const [informationalCards, setInformationalCards] = useState([]);
+  const [charts, setCharts] = useState([]);
 
   useEffect(() => {
     axios.get("/json/dashboard-informational-cards.json")
          .then(({data}) => setInformationalCards(data));
+    axios.get("/json/charts.json")
+         .then(({data}) => setCharts(data));
   }, []);
 
   return (
@@ -108,78 +111,33 @@ export default function Dashboard() {
         ))}
       </GridContainer>
       <GridContainer>
+        {charts.map(chart => (
         <GridItem xs={12} sm={12} md={4}>
           <Card chart>
-            <CardHeader color="success">
+            <CardHeader color={chart.color}>
               <ChartistGraph
                 className="ct-chart"
-                data={dailySalesChart.data}
-                type="Line"
-                options={dailySalesChart.options}
-                listener={dailySalesChart.animation}
+                data={chart.data}
+                type={chart.type}
+                options={{...chartsOptions, high: chart.data.high}}
+                listener={chartsAnimation}
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Daily Sales</h4>
+              <h4 className={classes.cardTitle}>{chart.title}</h4>
               <p className={classes.cardCategory}>
-                <span className={classes.successText}>
-                  <ArrowUpward className={classes.upArrowCardCategory} /> 55%
-                </span>{" "}
-                increase in today sales.
+                {chart.text}
               </p>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
-                <AccessTime /> updated 4 minutes ago
+                {colorizedIcon(chart.footerIconColor, chart.footerIcon)}
+                {chart.footerText}
               </div>
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
-          <Card chart>
-            <CardHeader color="warning">
-              <ChartistGraph
-                className="ct-chart"
-                data={emailsSubscriptionChart.data}
-                type="Bar"
-                options={emailsSubscriptionChart.options}
-                responsiveOptions={emailsSubscriptionChart.responsiveOptions}
-                listener={emailsSubscriptionChart.animation}
-              />
-            </CardHeader>
-            <CardBody>
-              <h4 className={classes.cardTitle}>Email Subscriptions</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
-            </CardBody>
-            <CardFooter chart>
-              <div className={classes.stats}>
-                <AccessTime /> campaign sent 2 days ago
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
-          <Card chart>
-            <CardHeader color="danger">
-              <ChartistGraph
-                className="ct-chart"
-                data={completedTasksChart.data}
-                type="Line"
-                options={completedTasksChart.options}
-                listener={completedTasksChart.animation}
-              />
-            </CardHeader>
-            <CardBody>
-              <h4 className={classes.cardTitle}>Completed Tasks</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
-            </CardBody>
-            <CardFooter chart>
-              <div className={classes.stats}>
-                <AccessTime /> campaign sent 2 days ago
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
+        ))}
       </GridContainer>
       <GridContainer>
         <GridItem xs={12} sm={12} md={6}>
