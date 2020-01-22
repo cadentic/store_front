@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "color": "primary",
+        "title": "Simple table",
+        "text": "Here is a subtitle for this table",
+        "head": ["Name", "Country", "City", "Salary"],
+        "data": [
+            ["Dakota Rice", "Niger", "Oud-Turnhout", "$36,738"],
+            ["Minerva Hooper", "Curaçao", "Sinaai-Waas", "$23,789"],
+            ["Sage Rodriguez", "Netherlands", "Baileux", "$56,142"],
+            ["Philip Chaney", "Korea, South", "Overland Park", "$38,735"],
+            ["Doris Greene", "Malawi", "Feldkirchen in Kärnten", "$63,542"],
+            ["Mason Porter", "Chile", "Gloucester", "$78,615"]
+        ]
+    },
+    {
+        "id": 2,
+        "color": "danger",
+        "title": "Second table",
+        "text": "Subtitle",
+        "head": ["ID", "Name", "Country", "City", "Salary"],
+        "data": [
+            ["1", "Dakota Rice", "Niger", "Oud-Turnhout", "$36,738"],
+            ["2", "Minerva Hooper", "Curaçao", "Sinaai-Waas", "$23,789"],
+            ["3", "Sage Rodriguez", "Netherlands", "Baileux", "$56,142"],
+            ["4", "Philip Chaney", "Korea, South", "Overland Park", "$38,735"],
+            ["5", "Doris Greene", "Malawi", "Feldkirchen in Kärnten", "$63,542"],
+            ["6", "Mason Porter", "Chile", "Gloucester", "$78,615"]
+        ]
+    }
+]
