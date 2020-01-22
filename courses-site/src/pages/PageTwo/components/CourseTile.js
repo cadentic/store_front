@@ -56,7 +56,7 @@ const CourseTile = props => {
 
     return (
         <Paper className={classes.root} style={{ background: background }}>
-            <img src={require('../../../resources/images/courseImage.png')} alt='course' />
+            <img src="/assets/images/courseImage.png" alt='course' />
             <Typography variant='h5' className={classes.title}>Course Title</Typography>
             <Typography variant='h5' className={classes.price}>$ 500</Typography>
             <Fab variant="" className={classes.buy}>

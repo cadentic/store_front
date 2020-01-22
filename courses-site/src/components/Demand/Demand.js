@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles, withStyles, lighten } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
@@ -9,6 +9,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import LinearProgress from "@material-ui/core/LinearProgress";
+import axios from "axios";
 
 const BorderLinearProgress = withStyles({
   root: {
@@ -44,6 +45,13 @@ const useStyles = makeStyles(theme => ({
 
 const Demand = () => {
   const classes = useStyles();
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    axios.get("/json/courses-demands.json")
+         .then(({data}) => setCourses(data));
+  }, []);
+
   return (
     <Box className={classes.root}>
       <Typography variant="h5" className={classes.title}>
@@ -51,21 +59,22 @@ const Demand = () => {
         In Demand Courses
       </Typography>
       <Grid container spacing={3} className={classes.gridCointainer}>
-        <Grid item xs={6} md={3}>
+        {courses.map(course => (
+        <Grid item xs={6} md={3} key={course.id}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia
                 component="img"
                 height="140"
-                image={require("../../resources/images/courseImage.png")}
-                title="Title"
+                image={course.img}
+                title={course.title}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  Course Title
+                  {course.title}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  By: Instructor Name
+                  By: {course.instructor}
                 </Typography>
                 <Typography
                   variant="body2"
@@ -73,7 +82,7 @@ const Demand = () => {
                   component="p"
                   className={classes.price}
                 >
-                  500$
+                  {course.price}$
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -82,263 +91,12 @@ const Demand = () => {
                 className={classes.cardActions}
                 variant="determinate"
                 color="secondary"
-                value={50}
+                value={course.progress}
               />
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={6} md={3}>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={require("../../resources/images/courseImage.png")}
-                title="Title"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Course Title
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  By: Instructor Name
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                  component="p"
-                  className={classes.price}
-                >
-                  500$
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <BorderLinearProgress
-                className={classes.cardActions}
-                variant="determinate"
-                color="secondary"
-                value={50}
-              />
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={require("../../resources/images/courseImage.png")}
-                title="Title"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Course Title
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  By: Instructor Name
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                  component="p"
-                  className={classes.price}
-                >
-                  500$
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <BorderLinearProgress
-                className={classes.cardActions}
-                variant="determinate"
-                color="secondary"
-                value={50}
-              />
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={require("../../resources/images/courseImage.png")}
-                title="Title"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Course Title
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  By: Instructor Name
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                  component="p"
-                  className={classes.price}
-                >
-                  500$
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <BorderLinearProgress
-                className={classes.cardActions}
-                variant="determinate"
-                color="secondary"
-                value={50}
-              />
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={require("../../resources/images/courseImage.png")}
-                title="Title"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Course Title
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  By: Instructor Name
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                  component="p"
-                  className={classes.price}
-                >
-                  500$
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <BorderLinearProgress
-                className={classes.cardActions}
-                variant="determinate"
-                color="secondary"
-                value={50}
-              />
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={require("../../resources/images/courseImage.png")}
-                title="Title"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Course Title
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  By: Instructor Name
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                  component="p"
-                  className={classes.price}
-                >
-                  500$
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <BorderLinearProgress
-                className={classes.cardActions}
-                variant="determinate"
-                color="secondary"
-                value={50}
-              />
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={require("../../resources/images/courseImage.png")}
-                title="Title"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Course Title
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  By: Instructor Name
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                  component="p"
-                  className={classes.price}
-                >
-                  500$
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <BorderLinearProgress
-                className={classes.cardActions}
-                variant="determinate"
-                color="secondary"
-                value={50}
-              />
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={require("../../resources/images/courseImage.png")}
-                title="Title"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Course Title
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  By: Instructor Name
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                  component="p"
-                  className={classes.price}
-                >
-                  500$
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <BorderLinearProgress
-                className={classes.cardActions}
-                variant="determinate"
-                color="secondary"
-                value={50}
-              />
-            </CardActions>
-          </Card>
-        </Grid>
+        ))}
       </Grid>
     </Box>
   );
