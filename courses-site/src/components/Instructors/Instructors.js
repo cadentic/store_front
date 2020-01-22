@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
@@ -7,6 +7,7 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
+import axios from "axios";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -29,19 +30,26 @@ const useStyles = makeStyles(theme => ({
 
 const Instructors = () => {
   const classes = useStyles();
+  const [instructors, setInstructors] = useState([]);
+
+  useEffect(() => {
+    axios.get("/json/instructors.json")
+         .then(({data}) => setInstructors(data));
+  }, []);
 
   return (
     <Box className={classes.root}>
       <Typography variant="h5"> Meet our Instructors</Typography>
       <Grid container spacing={3} className={classes.gridContainer}>
-        <Grid item xs={6} md={3}>
+        {instructors.map(instructor => (
+        <Grid item xs={6} md={3} key={instructor.id}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia
                 component="img"
                 height="140"
-                image={require("../../resources/images/avatar.png")}
-                title="Title"
+                image={instructor.img}
+                title={instructor.name}
                 className={classes.image}
               />
               <CardContent>
@@ -51,97 +59,16 @@ const Instructors = () => {
                   component="h2"
                   className={classes.title}
                 >
-                  Name
+                  {instructor.name}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer nec odio.
+                  {instructor.intro}
                 </Typography>
               </CardContent>
             </CardActionArea>
           </Card>
         </Grid>
-        <Grid item xs={6} md={3}>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={require("../../resources/images/avatar.png")}
-                title="Title"
-                className={classes.image}
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="h2"
-                  className={classes.title}
-                >
-                  Name
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer nec odio.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={require("../../resources/images/avatar.png")}
-                title="Title"
-                className={classes.image}
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="h2"
-                  className={classes.title}
-                >
-                  Name
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer nec odio.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={require("../../resources/images/avatar.png")}
-                title="Title"
-                className={classes.image}
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="h2"
-                  className={classes.title}
-                >
-                  Name
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer nec odio.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </Grid>
+        ))}
       </Grid>
     </Box>
   );
