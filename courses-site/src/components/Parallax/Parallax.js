@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import Grid from '@material-ui/core/Grid';
@@ -9,6 +9,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import PurpleSquare from "../../resources/svg/PurpleSquare"
 import { Typography } from "@material-ui/core";
+import axios from "axios";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -52,6 +53,13 @@ const useStyles = makeStyles(theme => ({
 
 const Parallaxx = () => {
   const classes = useStyles();
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    axios.get("/json/parallax-items.json")
+         .then(({data}) => setItems(data));
+  }, []);
+
   return (
     <ParallaxProvider>
       <Grid container spacing={0} className={classes.container}>
@@ -100,35 +108,17 @@ const Parallaxx = () => {
             <Typography className={classes.typo} component='p'>Lorem ipsum dolor sit amet, consectetuer  </Typography>
             <Typography className={classes.typo} component='p'>Lorem ipsum dolor sit amet, consectetuer  </Typography>
             <List className={classes.list}>
+              {items.map(item => (
               <ListItem alignItems="flex-start">
                 <ListItemAvatar className="avatar">
                   <PurpleSquare />
                 </ListItemAvatar>
                 <ListItemText
-                  primary="Lorem ipsum dolor sit amet, consectetuer"
-                  secondary="Lorem ipsum dolor sit amet, consectetuer ."
+                  primary={item.primary}
+                  secondary={item.secondary}
                 />
               </ListItem>
-
-              <ListItem alignItems="flex-start">
-                <ListItemAvatar className="avatar">
-                  <PurpleSquare />
-                </ListItemAvatar>
-                <ListItemText
-                  primary="Lorem ipsum dolor sit amet, consectetuer"
-                  secondary="Lorem ipsum dolor sit amet, consectetuer ."
-                />
-              </ListItem>
-
-              <ListItem alignItems="flex-start">
-                <ListItemAvatar className="avatar">
-                  <PurpleSquare />
-                </ListItemAvatar>
-                <ListItemText
-                  primary="Lorem ipsum dolor sit amet, consectetuer"
-                  secondary="Lorem ipsum dolor sit amet, consectetuer ."
-                />
-              </ListItem>
+              ))}
             </List>
           </Box>
         </Grid>
