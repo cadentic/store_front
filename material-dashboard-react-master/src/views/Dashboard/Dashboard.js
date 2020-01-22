@@ -120,6 +120,7 @@ export default function Dashboard() {
                 data={chart.data}
                 type={chart.type}
                 options={{...chartsOptions, high: chart.data.high}}
+                responsiveOptions={chartResponsiveOptions}
                 listener={chartsAnimation}
               />
             </CardHeader>
