@@ -136,7 +136,7 @@ export default function Dashboard() {
                 className="ct-chart"
                 data={chart.data}
                 type={chart.type}
-                options={{...chartsOptions, high: chart.data.high}}
+                options={{...chartsOptions, low: chart.data.low, high: chart.data.high}}
                 responsiveOptions={chartResponsiveOptions}
                 listener={chartsAnimation}
               />

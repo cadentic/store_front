@@ -15,7 +15,6 @@ export const options = {
   lineSmooth: Chartist.Interpolation.cardinal({
     tension: 0
   }),
-  low: 0,
   chartPadding: {
     top: 0,
     right: 0,
