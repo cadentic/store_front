@@ -29,8 +29,6 @@ import CardIcon from "components/Card/CardIcon.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 
-import { bugs, website, server } from "variables/general.js";
-
 import {
   options as chartsOptions,
   animation as chartsAnimation,
@@ -43,42 +41,61 @@ import axios from "axios";
 
 const useStyles = makeStyles(styles);
 
-const getIcon = icon => {
+const getIcon = (icon, component = false) => {
   switch(icon) {
-    case "store": return <Store />;
-    case "warning": return <Warning />;
-    case "date-range": return <DateRange />;
-    case "local-offer": return <LocalOffer />;
-    case "update": return <Update />;
-    case "arrow-upward": return <ArrowUpward />;
-    case "access-time": return <AccessTime />;
-    case "accessibility": return <Accessibility />;
-    case "bug-report": return <BugReport />;
-    case "code": return <Code />;
-    case "cloud": return <Cloud />;
+    case "store": return component ? Store : <Store />;
+    case "warning": return component ? Warning : <Warning />;
+    case "date-range": return component ? DateRange : <DateRange />;
+    case "local-offer": return component ? LocalOffer : <LocalOffer />;
+    case "update": return component ? Update : <Update />;
+    case "arrow-upward": return component ? ArrowUpward : <ArrowUpward />;
+    case "access-time": return component ? AccessTime : <AccessTime />;
+    case "accessibility": return component ? Accessibility : <Accessibility />;
+    case "bug-report": return component ? BugReport : <BugReport />;
+    case "code": return component ? Code : <Code />;
+    case "cloud": return component ? Cloud : <Cloud />;
+    default: return component ? Icon : <Icon>{icon}</Icon>;
   }
-
-  return <Icon>{icon}</Icon>;
 };
 
 const colorizedIcon = (color, icon) => {
-  let result;
   switch(color) {
     case "danger": return <Danger>{getIcon(icon)}</Danger>;
+    default: return getIcon(icon);
   }
-  return getIcon(icon);
+};
+
+const getTableContent = content => {
+  const result = [];
+  content.forEach(item => {
+    result.push({
+      tabName: item.name,
+      tabIcon: getIcon(item.icon, true),
+      tabContent: (
+        <Tasks
+          checkedIndexes={item.checkedIndexes}
+          tasksIndexes={item.tasksIndexes}
+          tasks={item.tasks}
+        />
+      )
+    });
+  });
+  return result;
 };
 
 export default function Dashboard() {
   const classes = useStyles();
   const [informationalCards, setInformationalCards] = useState([]);
   const [charts, setCharts] = useState([]);
+  const [tables, setTables] = useState([]);
 
   useEffect(() => {
     axios.get("/json/dashboard-informational-cards.json")
          .then(({data}) => setInformationalCards(data));
     axios.get("/json/charts.json")
          .then(({data}) => setCharts(data));
+    axios.get("/json/dashboard-tables.json")
+         .then(({data}) => setTables(data));
   }, []);
 
   return (
@@ -141,69 +158,31 @@ export default function Dashboard() {
         ))}
       </GridContainer>
       <GridContainer>
-        <GridItem xs={12} sm={12} md={6}>
+        {tables.map(table => (
+        <GridItem xs={12} sm={12} md={6} key={table.id}>
+          {table.type === "tabs" && (
           <CustomTabs
-            title="Tasks:"
-            headerColor="primary"
-            tabs={[
-              {
-                tabName: "Bugs",
-                tabIcon: BugReport,
-                tabContent: (
-                  <Tasks
-                    checkedIndexes={[0, 3]}
-                    tasksIndexes={[0, 1, 2, 3]}
-                    tasks={bugs}
-                  />
-                )
-              },
-              {
-                tabName: "Website",
-                tabIcon: Code,
-                tabContent: (
-                  <Tasks
-                    checkedIndexes={[0]}
-                    tasksIndexes={[0, 1]}
-                    tasks={website}
-                  />
-                )
-              },
-              {
-                tabName: "Server",
-                tabIcon: Cloud,
-                tabContent: (
-                  <Tasks
-                    checkedIndexes={[1]}
-                    tasksIndexes={[0, 1, 2]}
-                    tasks={server}
-                  />
-                )
-              }
-            ]}
-          />
-        </GridItem>
-        <GridItem xs={12} sm={12} md={6}>
-          <Card>
-            <CardHeader color="warning">
-              <h4 className={classes.cardTitleWhite}>Employees Stats</h4>
+            title={table.title+":"}
+            headerColor={table.color}
+            tabs={getTableContent(table.content)}
+          />)}
+          {table.type === "card" && (
+            <Card>
+            <CardHeader color={table.color}>
+              <h4 className={classes.cardTitleWhite}>{table.title}</h4>
               <p className={classes.cardCategoryWhite}>
-                New employees on 15th September, 2016
+                {table.text}
               </p>
             </CardHeader>
             <CardBody>
               <Table
-                tableHeaderColor="warning"
-                tableHead={["ID", "Name", "Salary", "Country"]}
-                tableData={[
-                  ["1", "Dakota Rice", "$36,738", "Niger"],
-                  ["2", "Minerva Hooper", "$23,789", "Curaçao"],
-                  ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
-                  ["4", "Philip Chaney", "$38,735", "Korea, South"]
-                ]}
+                tableHeaderColor={table.color}
+                tableHead={table.head}
+                tableData={table.data}
               />
             </CardBody>
-          </Card>
-        </GridItem>
+          </Card>)}
+        </GridItem>))}
       </GridContainer>
     </div>
   );
