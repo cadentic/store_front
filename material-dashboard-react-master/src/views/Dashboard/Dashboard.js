@@ -89,13 +89,20 @@ export default function Dashboard() {
   const [charts, setCharts] = useState([]);
   const [tables, setTables] = useState([]);
 
+  const handleError = error => {
+    console.log(error);
+  };
+
   useEffect(() => {
     axios.get("/json/dashboard-informational-cards.json")
-         .then(({data}) => setInformationalCards(data));
+         .then(({data}) => setInformationalCards(data))
+         .catch(handleError);
     axios.get("/json/charts.json")
-         .then(({data}) => setCharts(data));
+         .then(({data}) => setCharts(data))
+         .catch(handleError);
     axios.get("/json/dashboard-tables.json")
-         .then(({data}) => setTables(data));
+         .then(({data}) => setTables(data))
+         .catch(handleError);
   }, []);
 
   return (
