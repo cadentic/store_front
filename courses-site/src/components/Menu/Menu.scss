@@ -1,0 +1,15 @@
+.menu-component {
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    //border-bottom: 12px solid rgba(0, 0, 0, 0.7);
+    border-bottom: 12px solid #000000;
+    position: absolute;
+    top: 0;
+    left: 9px;
+    transform: translate(0, -100%);
+  }
+}

@@ -1,0 +1,54 @@
+@import "~video-react/styles/scss/video-react";
+@import "./resources/css/helpers.scss";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.video-react-control-bar {
+  opacity: 1;
+  background: #7a7878 !important;
+  border-radius: 11px;
+  margin-left: 19px;
+  margin-right: 19px;
+  width: auto !important;
+}
+
+.video-react-volume-menu-button-horizontal {
+  width: 12em !important;
+
+  .video-react-menu {
+    display: "block" !important;
+    opacity: 1 !important;
+  }
+
+  .video-react-volume-level {
+    background: #03c2c5;
+  }
+
+  .video-react-volume-bar {
+    background: #ebb302 !important;
+  }
+}
+
+.video-react-load-progress {
+  background: #ebb302 !important;
+}
+
+.video-react-play-progress {
+  background: #03c2c5 !important;
+}
+
+.video-react .video-react-load-progress div {
+  background: none !important;
+}
