@@ -23,10 +23,13 @@ const useStyles = makeStyles(theme => ({
 const PageTwo = () => {
     const classes = useStyles();
     const [coursesTiles, setCoursesTiles] = useState([]);
+    const [coursesSections, setCoursesSections] = useState([]);
 
     useEffect(() => {
       axios.get("/json/courses-tiles.json")
            .then(({data}) => setCoursesTiles(data));
+      axios.get("/json/courses-sections.json")
+           .then(({data}) => setCoursesSections(data));
     }, []);
 
     return (
@@ -45,18 +48,21 @@ const PageTwo = () => {
                       title={course.title} />
                   ))}
                 </Grid>
+                {coursesSections.map(course => (
+                <>
                 <Grid item xs={3}>
-                    <CourseTitle background='#C1272D' src='../../../resources/images/p5.png' />
+                    <CourseTitle
+                      background={course.courseTitle.background}
+                      src={course.courseTitle.img}
+                      price={course.courseTitle.price}
+                      discount={course.courseTitle.discount}
+                      description={course.courseTitle.description} />
                 </Grid>
                 <Grid item xs={9}>
-                    <CourseTable />
+                    <CourseTable contents={course.courseTable} />
                 </Grid>
-                <Grid item xs={3}>
-                    <CourseTitle background='#22B573' src='../../../resources/images/p5.png' />
-                </Grid>
-                <Grid item xs={9}>
-                    <CourseTable />
-                </Grid>
+                </>
+                ))}
             </Grid>
         </Box>);
 }

@@ -53,18 +53,19 @@ const CourseTitle = props => {
     const { background } = props
     const classes = useStyles();
     return (<><Box className={classes.root} style={{ background: background }}>
-        <img src={require('../../../resources/images/p5.png')} alt='course-title' />
-        <Typography className={classes.title} variant='h3'>Course Title</Typography>
+        <img src={props.src} alt={props.title} />
+        <Typography className={classes.title} variant='h3'>{props.title}</Typography>
         <Box className={classes.priceContainer}>
-            <Typography className={classes.price} variant='h5'>$ 200</Typography>
-            <Typography className={classes.discount}>-11%</Typography>
+            <Typography className={classes.price} variant='h5'>$ {props.price}</Typography>
+            <Typography className={classes.discount}>{props.discount}</Typography>
         </Box>
         <Box className={classes.buttonsContainer}>
             <Button variant='contained' className={classes.buy}>Buy Now</Button>
             <Button variant='contained' className={classes.add}>Add to Cart</Button>
         </Box>
     </Box>
-        <Typography component='p' className={classes.description}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla.
+        <Typography component='p' className={classes.description}>
+          {props.description}
 </Typography></>);
 }
 

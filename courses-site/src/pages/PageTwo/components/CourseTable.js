@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const CourseTable = () => {
+const CourseTable = props => {
     const classes = useStyles();
     return (<Table className={classes.table} aria-label="simple table">
         <TableHead>
@@ -48,72 +48,21 @@ const CourseTable = () => {
             </TableRow>
         </TableHead>
         <TableBody>
+            {props.contents.map(content => (
+              <>
             <TableRow className={classes.relative}>
-                <TableCell scope="row" colSpan={4} className={classes.section}>+ Introduction</TableCell>
+                <TableCell scope="row" colSpan={4} className={classes.section}>+ {content.title}</TableCell>
             </TableRow>
+              {content.items.map(item => (
             <TableRow>
-                <TableCell component="th" scope="row" className={classes.startCell}><PlayCircle className={classes.play} />Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.</TableCell>
-                <TableCell align="right">2:50 m</TableCell>
+                <TableCell component="th" scope="row" className={classes.startCell}><PlayCircle className={classes.play} />{item.content}</TableCell>
+                <TableCell align="right">{item.duration}</TableCell>
                 <TableCell align="right"><AddShoppingCart className={classes.tableIcon} /></TableCell>
                 <TableCell align="right"><CloudDownLoad className={classes.tableIcon} /></TableCell>
             </TableRow>
-            <TableRow>
-                <TableCell component="th" scope="row" className={classes.startCell}><PlayCircle className={classes.play} />Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.</TableCell>
-                <TableCell align="right">2:50 m</TableCell>
-                <TableCell align="right"><AddShoppingCart className={classes.tableIcon} /></TableCell>
-                <TableCell align="right"><CloudDownLoad className={classes.tableIcon} /></TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell component="th" scope="row" className={classes.startCell}><PlayCircle className={classes.play} />Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.</TableCell>
-                <TableCell align="right">2:50 m</TableCell>
-                <TableCell align="right"><AddShoppingCart className={classes.tableIcon} /></TableCell>
-                <TableCell align="right"><CloudDownLoad className={classes.tableIcon} /></TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell component="th" scope="row" className={classes.startCell}><PlayCircle className={classes.play} />Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.</TableCell>
-                <TableCell align="right">2:50 m</TableCell>
-                <TableCell align="right"><AddShoppingCart className={classes.tableIcon} /></TableCell>
-                <TableCell align="right"><CloudDownLoad className={classes.tableIcon} /></TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell component="th" scope="row" className={classes.startCell}><PlayCircle className={classes.play} />Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.</TableCell>
-                <TableCell align="right">2:50 m</TableCell>
-                <TableCell align="right"><AddShoppingCart className={classes.tableIcon} /></TableCell>
-                <TableCell align="right"><CloudDownLoad className={classes.tableIcon} /></TableCell>
-            </TableRow>
-            <TableRow className={classes.relative}>
-                <TableCell scope="row" colSpan={4} className={classes.section}>+ Basic</TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell component="th" scope="row" className={classes.startCell}><PlayCircle className={classes.play} />Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.</TableCell>
-                <TableCell align="right">2:50 m</TableCell>
-                <TableCell align="right"><AddShoppingCart className={classes.tableIcon} /></TableCell>
-                <TableCell align="right"><CloudDownLoad className={classes.tableIcon} /></TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell component="th" scope="row" className={classes.startCell}><PlayCircle className={classes.play} />Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.</TableCell>
-                <TableCell align="right">2:50 m</TableCell>
-                <TableCell align="right"><AddShoppingCart className={classes.tableIcon} /></TableCell>
-                <TableCell align="right"><CloudDownLoad className={classes.tableIcon} /></TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell component="th" scope="row" className={classes.startCell}><PlayCircle className={classes.play} />Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.</TableCell>
-                <TableCell align="right">2:50 m</TableCell>
-                <TableCell align="right"><AddShoppingCart className={classes.tableIcon} /></TableCell>
-                <TableCell align="right"><CloudDownLoad className={classes.tableIcon} /></TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell component="th" scope="row" className={classes.startCell}><PlayCircle className={classes.play} />Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.</TableCell>
-                <TableCell align="right">2:50 m</TableCell>
-                <TableCell align="right"><AddShoppingCart className={classes.tableIcon} /></TableCell>
-                <TableCell align="right"><CloudDownLoad className={classes.tableIcon} /></TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell component="th" scope="row" className={classes.startCell}><PlayCircle className={classes.play} />Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.</TableCell>
-                <TableCell align="right">2:50 m</TableCell>
-                <TableCell align="right"><AddShoppingCart className={classes.tableIcon} /></TableCell>
-                <TableCell align="right"><CloudDownLoad className={classes.tableIcon} /></TableCell>
-            </TableRow>
+              ))}
+                </>
+            ))}
         </TableBody>
     </Table>);
 }
