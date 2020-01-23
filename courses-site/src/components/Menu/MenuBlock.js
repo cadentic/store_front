@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ChevronRight from "@material-ui/icons/ChevronRight";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Cloud from "../../resources/svg/Cloud";
+import MenuRow from "./MenuRow";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -29,9 +30,11 @@ const useStyles = makeStyles(theme => ({
 
 const MenuBlock = props => {
   const classes = useStyles();
-  const { title, content, onClick } = props;
+  const { title, content } = props;
+  const [rowOpened, openRow] = useState(false);
+
   return (
-    <Paper className={classes.root} onClick={onClick}>
+    <Paper className={classes.root} onClick={() => openRow(s => !s)}>
       <ChevronRight className={classes.right} />
       <Typography variant="h5" component="h3" className={classes.title}>
         <Cloud className={classes.cloud} />
@@ -40,6 +43,11 @@ const MenuBlock = props => {
       <Typography component="p" className={classes.content}>
         {content}
       </Typography>
+    {rowOpened && (
+      <MenuRow
+        img={props.row.img}
+        color={props.row.color}
+        buttonText={props.row.buttonText} />)}
     </Paper>
   );
 };

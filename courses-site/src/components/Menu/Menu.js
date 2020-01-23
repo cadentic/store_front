@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Search from "@material-ui/icons/Search";
@@ -6,6 +6,7 @@ import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import MenuBlock from "./MenuBlock";
+import axios from "axios";
 
 import "./Menu.scss";
 
@@ -56,10 +57,7 @@ const useStyles = makeStyles(theme => ({
 
 const Menu = props => {
   const classes = useStyles();
-  const [rowOne, openRowOne] = React.useState(false);
-  const [rowTwo, openRowTwo] = React.useState(false);
-  const [rowThree, openRowThree] = React.useState(false);
-  const [rowFour, openRowFour] = React.useState(false);
+  const [categories, setCategories] = useState([]);
 
   const closeMenu = evt => {
     const flyoutElement = document.getElementById("flyout-example");
@@ -90,6 +88,9 @@ const Menu = props => {
     // Update the document title using the browser API
     document.addEventListener("click", closeMenu);
     document.addEventListener('scroll', checkPosition)
+
+    axios.get("/json/courses-category.json")
+         .then(({data}) => setCategories(data));
     return function cleanup() {
       document.removeEventListener("click", closeMenu);
       document.removeEventListener('scroll', checkPosition)
@@ -101,111 +102,19 @@ const Menu = props => {
       <Search className={classes.searchIcon} />
       <TextField className={classes.searchInput} variant="outlined" />
       <Typography variant="p">SEARCH BY TYPE</Typography>
+      {categories.map(categorie => (
+        <>
+          {categorie.title && (
+            <Typography variant="p" className="m-t-24">
+              {categorie.title}
+            </Typography>)}
       <Box className={`${classes.rowOption} m-b-24`}>
-        <MenuBlock title="Cloud" content="Browse in demand web" />
-        <MenuBlock title="Cloud" content="Browse in demand web" />
-        <MenuBlock
-          title="Cloud"
-          content="Browse in demand web"
-          onClick={() => openRowOne(true)}
-        />
-        {rowOne && (
-          <Box className={classes.optionsContainer}>
-            <img src={require('../../resources/images/p3.png')} alt='option' height={66} />
-            <Button
-              variant="contained"
-              color="secondary"
-              className={`${classes.button} `}
-            >
-              Button
-          </Button>
-          </Box>
-        )}
+        {categorie.blocks.map(block => (
+        <MenuBlock title={block.title} content={block.content} row={block.row} />
+        ))}
       </Box>
-      <Typography variant="p" className="m-t-24">
-        OUR PRODUCTS
-      </Typography>
-      <Box className={classes.rowOption}>
-        <MenuBlock
-          title="Web Dev"
-          content="Browse in demand web courses online"
-        />
-        <MenuBlock
-          title="Web Dev"
-          content="Browse in demand web courses online"
-        />
-        <MenuBlock
-          title="Cloud"
-          content="Browse in demand web"
-          onClick={() => openRowTwo(true)}
-        />
-        {rowTwo && (
-          <Box className={classes.optionsContainer}>
-            <img src={require('../../resources/images/p3.png')} alt='option' height={66} />
-            <Button
-              variant="contained"
-              color="secondary"
-              className={classes.button}
-            >
-              Button
-          </Button>
-          </Box>
-        )}
-      </Box>
-      <Box className={classes.rowOption}>
-        <MenuBlock
-          title="Web Dev"
-          content="Browse in demand web courses online"
-        />
-        <MenuBlock
-          title="Web Dev"
-          content="Browse in demand web courses online"
-        />
-        <MenuBlock
-          title="Cloud"
-          content="Browse in demand web"
-          onClick={() => openRowThree(true)}
-        />
-        {rowThree && (
-          <Box className={classes.optionsContainer}>
-            <img src={require('../../resources/images/p3.png')} alt='option' height={66} />
-            <Button
-              variant="contained"
-              color="secondary"
-              className={classes.button}
-            >
-              Button
-          </Button>
-          </Box>
-        )}
-      </Box>
-      <Box className={classes.rowOption}>
-        <MenuBlock
-          title="Web Dev"
-          content="Browse in demand web courses online"
-        />
-        <MenuBlock
-          title="Web Dev"
-          content="Browse in demand web courses online"
-        />
-        <MenuBlock
-          title="Cloud"
-          content="Browse in demand web"
-          onClick={() => openRowFour(true)}
-        />
-        {rowFour && (
-          <Box className={classes.optionsContainer}>
-            <img src={require('../../resources/images/p3.png')} alt='option' height={66} />
-            <Button
-              variant="contained"
-              color="secondary"
-              className={classes.button}
-            >
-              Button
-          </Button>
-          </Box>
-        )}
-      </Box>
+        </>
+      ))}
     </Box>
   );
 };

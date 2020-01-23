@@ -1,0 +1,83 @@
+[
+    {
+        "blocks": [
+            {
+                "title": "Cloud",
+                "content": "Browse in demand web",
+                "row": {
+                    "img": "/assets/images/p3.png",
+                    "color": "secondary",
+                    "buttonText": "Button"
+                }
+            },
+            {
+                "title": "Cloud",
+                "content": "Browse in demand web",
+                "row": {
+                    "img": "/assets/images/p3.png",
+                    "color": "secondary",
+                    "buttonText": "Button"
+                }
+            },
+            {
+                "title": "Cloud",
+                "content": "Browse in demand web",
+                "row": {
+                    "img": "/assets/images/p3.png",
+                    "color": "secondary",
+                    "buttonText": "Button"
+                }
+            },
+            {
+                "title": "Cloud",
+                "content": "Browse in demand web",
+                "row": {
+                    "img": "/assets/images/p3.png",
+                    "color": "secondary",
+                    "buttonText": "Button"
+                }
+            }
+        ]
+    },
+    {
+        "title": "OUR PRODUCTS",
+        "blocks": [
+            {
+                "title": "Cloud",
+                "content": "Browse in demand web",
+                "row": {
+                    "img": "/assets/images/p3.png",
+                    "color": "secondary",
+                    "buttonText": "Button"
+                }
+            },
+            {
+                "title": "Cloud",
+                "content": "Browse in demand web",
+                "row": {
+                    "img": "/assets/images/p3.png",
+                    "color": "secondary",
+                    "buttonText": "Button"
+                }
+            },
+            {
+                "title": "Cloud",
+                "content": "Browse in demand web",
+                "row": {
+                    "img": "/assets/images/p3.png",
+                    "color": "secondary",
+                    "buttonText": "Button"
+                }
+            },
+            {
+                "title": "Cloud",
+                "content": "Browse in demand web",
+                "row": {
+                    "img": "/assets/images/p3.png",
+                    "color": "secondary",
+                    "buttonText": "Button"
+                }
+            }
+        ]
+    }
+]
