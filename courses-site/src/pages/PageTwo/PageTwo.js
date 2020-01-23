@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Grid from '@material-ui/core/Grid';
@@ -6,6 +6,7 @@ import CoursesList from './components/CoursesList';
 import CourseTile from './components/CourseTile'
 import CourseTitle from './components/CourseTitle'
 import CourseTable from './components/CourseTable'
+import axios from "axios";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -21,6 +22,13 @@ const useStyles = makeStyles(theme => ({
 
 const PageTwo = () => {
     const classes = useStyles();
+    const [coursesTiles, setCoursesTiles] = useState([]);
+
+    useEffect(() => {
+      axios.get("/json/courses-tiles.json")
+           .then(({data}) => setCoursesTiles(data));
+    }, []);
+
     return (
         <Box className={classes.root}>
             <Grid container spacing={3}>
@@ -28,15 +36,14 @@ const PageTwo = () => {
                     <CoursesList />
                 </Grid>
                 <Grid item xs={10} className={classes.courseListContainer}>
-                    <CourseTile fillCorner='#4D41B3' background='#22B573' src='../../../resources/images/courseImage.png' />
-                    <CourseTile fillCorner='#22B573' background='#B3DAFB' src='../../../resources/images/courseImage.png' />
-                    <CourseTile fillCorner='#C1272D' background='#22B573' src='../../../resources/images/courseImage.png' />
-                    <CourseTile fillCorner='#29ABE2' background='#FBB03B' src='../../../resources/images/courseImage.png' />
-                    <CourseTile fillCorner='#C1272D' background='#00A99D' src='../../../resources/images/courseImage.png' />
-                    <CourseTile fillCorner='#22B573' background='#D4145A' src='../../../resources/images/courseImage.png' />
-                    <CourseTile fillCorner='#C1272D' background='#00A99D' src='../../../resources/images/courseImage.png' />
-                    <CourseTile fillCorner='#FBB03B' background='#C1272D' src='../../../resources/images/courseImage.png' />
-                    <CourseTile fillCorner='#22B573' background='#4D41B3' src='../../../resources/images/courseImage.png' />
+                  {coursesTiles.map(course => (
+                    <CourseTile
+                      key={course.id}
+                      fillCorner={course.cornerColor}
+                      background={course.background}
+                      img={course.img}
+                      title={course.title} />
+                  ))}
                 </Grid>
                 <Grid item xs={3}>
                     <CourseTitle background='#C1272D' src='../../../resources/images/p5.png' />

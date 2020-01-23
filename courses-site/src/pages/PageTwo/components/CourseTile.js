@@ -56,9 +56,9 @@ const CourseTile = props => {
 
     return (
         <Paper className={classes.root} style={{ background: background }}>
-            <img src="/assets/images/courseImage.png" alt='course' />
-            <Typography variant='h5' className={classes.title}>Course Title</Typography>
-            <Typography variant='h5' className={classes.price}>$ 500</Typography>
+            <img src={props.img} alt='course' />
+            <Typography variant='h5' className={classes.title}>{props.title}</Typography>
+            <Typography variant='h5' className={classes.price}>$ {props.price}</Typography>
             <Fab variant="" className={classes.buy}>
                 Buy Now
             </Fab>

@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "cornerColor": "#4D41B3",
+        "background": "#22B573",
+        "img": "/assets/images/courseImage.png",
+        "title": "Course Tile",
+        "price": 500
+    },
+    {
+        "id": 2,
+        "cornerColor": "#266942",
+        "background": "#25DF12",
+        "img": "/assets/images/courseImage.png",
+        "title": "Course Tile",
+        "price": 200
+    },
+    {
+        "id": 3,
+        "cornerColor": "#489435",
+        "background": "#AB4562",
+        "img": "/assets/images/courseImage.png",
+        "title": "Course Tile",
+        "price": 100
+    },
+    {
+        "id": 4,
+        "cornerColor": "#4D41B3",
+        "background": "#22B573",
+        "img": "/assets/images/courseImage.png",
+        "title": "Course Tile",
+        "price": 650
+    },
+    {
+        "id": 5,
+        "cornerColor": "#216720",
+        "background": "#895622",
+        "img": "/assets/images/courseImage.png",
+        "title": "Course Tile",
+        "price": 650
+    },
+    {
+        "id": 6,
+        "cornerColor": "#DEA125",
+        "background": "#225912",
+        "img": "/assets/images/courseImage.png",
+        "title": "Course Tile",
+        "price": 650
+    },
+    {
+        "id": 7,
+        "cornerColor": "#216720",
+        "background": "#895622",
+        "img": "/assets/images/courseImage.png",
+        "title": "Course Tile",
+        "price": 650
+    },
+    {
+        "id": 8,
+        "cornerColor": "#DEA125",
+        "background": "#225912",
+        "img": "/assets/images/courseImage.png",
+        "title": "Course Tile",
+        "price": 650
+    }
+]
