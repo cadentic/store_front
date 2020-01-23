@@ -98,7 +98,7 @@ const Video = props => {
             open={open}
             onClose={handleClose}
         >
-            <Player src={require('../../../../resources/video/video.mp4')} autoPlay aspectRatio='16:9' />
+            <Player src={props.src} autoPlay aspectRatio='16:9' />
             <Fab className={classes.close} onClick={handleClose}>
                 <Close />
             </Fab>

@@ -1,27 +1,12 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Fab from '@material-ui/core/Fab';
 import Video from './Video'
 import ChevronLeft from '@material-ui/icons/ChevronLeft';
 import ChevronRight from '@material-ui/icons/ChevronRight';
+import axios from "axios";
 
-const videos = [{
-    title: 'Go Full Stack With Spring Boot and Angular 7',
-    progress: 75
-}, {
-    title: 'SAP HANA Installation, Operation and Administration',
-    progress: 10
-}, {
-    title: 'React for begginers',
-    progress: 90
-}, {
-    title: 'NoSql Databases',
-    progress: 50
-}, {
-    title: 'Advances CSS3',
-    progress: 32
-}]
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -51,6 +36,12 @@ const useStyles = makeStyles(theme => ({
 const VideoBanner = () => {
     const classes = useStyles();
     const [activeCourses, setActive] = useState([0, 1]);
+    const [videos, setVideos] = useState([]);
+
+    useEffect(() => {
+      axios.get("/json/courses-videos.json")
+           .then(({data}) => setVideos(data));
+    }, []);
 
     return (<Box className={classes.root}>
         {videos.map((item, index) => {
@@ -63,7 +54,7 @@ const VideoBanner = () => {
                             <ChevronLeft fontSize='large' />
                         </Fab>
                     }
-                    <Video title={item.title} progress={item.progress} />
+                    <Video title={item.title} progress={item.progress} src={item.src} />
                     {
                         activeCourses[1] < videos.length - 1 &&
                         index === activeCourses[1] &&

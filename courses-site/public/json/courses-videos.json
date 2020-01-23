@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Go Full Stack With Spring Boot and Angular 7",
+        "progress": 75,
+        "src": "/assets/videos/video.mp4"
+    },
+    {
+        "title": "SAP HANA Installation, Operation and Administration",
+        "progress": 10,
+        "src": "/assets/videos/video.mp4"
+    },
+    {
+        "title": "React for begginers",
+        "progress": 90,
+        "src": "/assets/videos/video.mp4"
+    },
+    {
+        "title": "NoSql Databases",
+        "progress": 50,
+        "src": "/assets/videos/video.mp4"
+    },
+    {
+        "title": "Advances CSS3",
+        "progress": 32,
+        "src": "/assets/videos/video.mp4"
+    }
+]
