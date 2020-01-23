@@ -15,9 +15,9 @@ const Web = () => (
         y2="0.5"
         gradientUnits="objectBoundingBox"
       >
-        <stop offset="0.006" stop-color="#fce6f0" />
-        <stop offset="0.449" stop-color="#f9c9de" />
-        <stop offset="1" stop-color="#f7b2d0" />
+        <stop offset="0.006" stopColor="#fce6f0" />
+        <stop offset="0.449" stopColor="#f9c9de" />
+        <stop offset="1" stopColor="#f7b2d0" />
       </linearGradient>
     </defs>
     <g id="Group_68" data-name="Group 68" transform="translate(-626.529 -553)">

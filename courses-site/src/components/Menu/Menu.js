@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Search from "@material-ui/icons/Search";
@@ -102,8 +102,8 @@ const Menu = props => {
       <Search className={classes.searchIcon} />
       <TextField className={classes.searchInput} variant="outlined" />
       <Typography variant="p">SEARCH BY TYPE</Typography>
-      {categories.map(categorie => (
-        <>
+      {categories.map((categorie, index) => (
+        <Fragment key={index}>
           {categorie.title && (
             <Typography variant="p" className="m-t-24">
               {categorie.title}
@@ -113,7 +113,7 @@ const Menu = props => {
         <MenuBlock title={block.title} content={block.content} row={block.row} />
         ))}
       </Box>
-        </>
+        </Fragment>
       ))}
     </Box>
   );

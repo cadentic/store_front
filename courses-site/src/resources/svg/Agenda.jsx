@@ -20,8 +20,8 @@ const Agenda = () => (
         transform="translate(912.065 139.328)"
         fill="#3fa2f7"
         stroke="#fff"
-        stroke-miterlimit="10"
-        stroke-width="1"
+        strokeMiterlimit="10"
+        strokeWidth="1"
       />
       <rect
         id="Rectangle_43"
@@ -31,8 +31,8 @@ const Agenda = () => (
         transform="translate(912.065 144.448)"
         fill="#3fa2f7"
         stroke="#fff"
-        stroke-miterlimit="10"
-        stroke-width="1"
+        strokeMiterlimit="10"
+        strokeWidth="1"
       />
       <rect
         id="Rectangle_44"
@@ -42,8 +42,8 @@ const Agenda = () => (
         transform="translate(916.254 137)"
         fill="#3fa2f7"
         stroke="#fff"
-        stroke-miterlimit="10"
-        stroke-width="1"
+        strokeMiterlimit="10"
+        strokeWidth="1"
       />
       <rect
         id="Rectangle_45"
@@ -53,8 +53,8 @@ const Agenda = () => (
         transform="translate(929.289 137)"
         fill="#3fa2f7"
         stroke="#fff"
-        stroke-miterlimit="10"
-        stroke-width="1"
+        strokeMiterlimit="10"
+        strokeWidth="1"
       />
       <circle
         id="Ellipse_1"
@@ -65,8 +65,8 @@ const Agenda = () => (
         transform="translate(928.892 155.457)"
         fill="#3fa2f7"
         stroke="#fff"
-        stroke-miterlimit="10"
-        stroke-width="0.75"
+        strokeMiterlimit="10"
+        strokeWidth="0.75"
       />
       <path
         id="Path_11"
@@ -74,8 +74,8 @@ const Agenda = () => (
         d="M923.935,147.94l1.482,3,3.313.481-2.4,2.337.566,3.3-2.963-1.558-2.963,1.558.566-3.3-2.4-2.337,3.313-.481Z"
         fill="#3fa2f7"
         stroke="#fff"
-        stroke-miterlimit="10"
-        stroke-width="1"
+        strokeMiterlimit="10"
+        strokeWidth="1"
       />
       <path
         id="Path_12"
@@ -83,8 +83,8 @@ const Agenda = () => (
         d="M931.752,160.543l1.132.944,3.548-3.133"
         fill="none"
         stroke="#fff"
-        stroke-miterlimit="10"
-        stroke-width="1"
+        strokeMiterlimit="10"
+        strokeWidth="1"
       />
     </g>
   </svg>

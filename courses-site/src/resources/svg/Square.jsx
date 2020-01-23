@@ -15,8 +15,8 @@ const Square = () => (
       transform="translate(0.5 0.5)"
       fill="none"
       stroke="#297fca"
-      stroke-miterlimit="10"
-      stroke-width="1"
+      strokeMiterlimit="10"
+      strokeWidth="1"
     />
   </svg>
 );

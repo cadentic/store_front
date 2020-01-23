@@ -16,8 +16,8 @@ const PurpleSquare = () => {
         transform="translate(1 1)"
         fill="none"
         stroke="#662d91"
-        stroke-miterlimit="10"
-        stroke-width="2"
+        strokeMiterlimit="10"
+        strokeWidth="2"
       />
     </svg>
   );

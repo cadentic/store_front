@@ -1,13 +1,16 @@
 [
     {
+        "id": 1,
         "primary": "Free downloads",
         "secondary": "Lorem 1"
     },
     {
+        "id": 2,
         "primary": "Free downloads",
         "secondary": "Lorem 2"
     },
     {
+        "id": 3,
         "primary": "Free downloads",
         "secondary": "Lorem 3"
     }

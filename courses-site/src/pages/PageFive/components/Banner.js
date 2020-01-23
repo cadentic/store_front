@@ -77,17 +77,17 @@ const Banner = () => {
         <img src={require('../../../resources/images/banner.jpg')} alt='banner' />
         <Box className={classes.content}>
             <Box className={classes.options}>
-              {banner.header.map(item => (
-                <Typography component='p'>{item}</Typography>
+              {banner.header.map((item, index) => (
+                <Typography component='p' key={index}>{item}</Typography>
               ))}
-                <Fab variant='' className={classes.fab}>Take Our Exam</Fab>
-                <Fab variant='' className={classes.fab}>Take Our Placement</Fab>
+                <Fab variant='extended' className={classes.fab}>Take Our Exam</Fab>
+                <Fab variant='extended' className={classes.fab}>Take Our Placement</Fab>
             </Box>
             <Box className={classes.listContainer}>
-              {banner.content.map(row => (
-                <List>
-                  {row.map(item => (
-                    <ListItem>
+              {banner.content.map((row, index) => (
+                <List key={index}>
+                  {row.map((item, index) => (
+                    <ListItem key={index}>
                         <ListItemText
                             primary={item.primary}
                             secondary={item.secondary}
@@ -98,8 +98,8 @@ const Banner = () => {
               ))}
             </Box>
             <Box className={`${classes.options} ${classes.bottom}`}>
-              {banner.footer.map(item => (
-                <Typography variant='h3'>{item}</Typography>
+              {banner.footer.map((item, index) => (
+                <Typography variant='h3' key={index}>{item}</Typography>
               ))}
             </Box>
         </Box>

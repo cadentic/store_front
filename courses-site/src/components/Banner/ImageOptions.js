@@ -88,27 +88,27 @@ const ImageOptions = props => {
         </Typography>
         <Box>
           <Box className="text-center option-buttons">
-            <Fab variant="" className={classes.start}>
+            <Fab variant="extended" className={classes.start}>
               START NOW
             </Fab>
-            <Fab variant="" className={classes.learn}>
+            <Fab variant="extended" className={classes.learn}>
               LEARN NOW
             </Fab>
           </Box>
           <Box className="text-center toggle-buttons">
-            <Button variant={`${activeTab === 0 ? 'contained' : ''}`} onClick={() => setTab(0)}>
+            <Button variant={`${activeTab === 0 ? 'contained' : 'text'}`} onClick={() => setTab(0)}>
               <Motorcycle />
               INVENT
           </Button>
-            <Button variant={`${activeTab === 1 ? 'contained' : ''}`} onClick={() => setTab(1)}>
+            <Button variant={`${activeTab === 1 ? 'contained' : 'text'}`} onClick={() => setTab(1)}>
               <SingleBed />
               DREAM
           </Button>
-            <Button variant={`${activeTab === 2 ? 'contained' : ''}`} onClick={() => setTab(2)}>
+            <Button variant={`${activeTab === 2 ? 'contained' : 'text'}`} onClick={() => setTab(2)}>
               <Android />
               TECH
           </Button>
-            <Button variant={`${activeTab === 3 ? 'contained' : ''}`} onClick={() => setTab(3)}>
+            <Button variant={`${activeTab === 3 ? 'contained' : 'text'}`} onClick={() => setTab(3)}>
               <Videocam />
               VIDEO
           </Button>

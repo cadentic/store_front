@@ -20,8 +20,8 @@ const TopMenu = () => {
     }, []);
 
     return (<Box className={classes.root}>
-      {menu.map(item => (
-        <Button>{item}</Button>
+      {menu.map((item, index) => (
+        <Button key={index}>{item}</Button>
       ))}
     </Box>);
 }

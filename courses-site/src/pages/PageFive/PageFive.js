@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Grid from '@material-ui/core/Grid';
@@ -55,7 +55,7 @@ const PageFive = () => {
             <VideoBanner />
             <Grid container spacing={3} className={classes.courses}>
                 {coursesSections.map(course => (
-                <>
+                <Fragment key={course.id}>
                 <Grid item xs={3}>
                     <CourseTitle
                       background={course.courseTitle.background}
@@ -67,7 +67,7 @@ const PageFive = () => {
                 <Grid item xs={9}>
                     <CourseTable contents={course.courseTable} />
                 </Grid>
-                </>
+                </Fragment>
                 ))}
             </Grid>
             <Box className={classes.takeContainer}>
@@ -75,10 +75,10 @@ const PageFive = () => {
                 <Button color='primary' variant='contained'>View All</Button>
             </Box>
             <Box className={classes.takeContainer}>
-              {coursesListSelect.map(course => (
-                <List  className={classes.list} component="nav" aria-label="main mailbox folders">
-                  {course.map(item => (
-                    <ListItem button>
+              {coursesListSelect.map((course, index) => (
+                <List  className={classes.list} component="nav" aria-label="main mailbox folders" key={index}>
+                  {course.map((item, index) => (
+                    <ListItem button key={index}>
                         <ListItemIcon>
                         <Edit />
                         </ListItemIcon>

@@ -14,8 +14,8 @@ const Online = () => (
         d="M390.915,570.607v-9.167H465v63.051H406.477"
         fill="none"
         stroke="#fff"
-        stroke-miterlimit="10"
-        stroke-width="2"
+        strokeMiterlimit="10"
+        strokeWidth="2"
       />
       <circle
         id="Ellipse_2"

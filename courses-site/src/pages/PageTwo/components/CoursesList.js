@@ -47,7 +47,7 @@ const CoursesList = () => {
             </Box>
             <List component="nav" aria-label="main mailbox folders">
               {courses.map(course => (
-                <ListItem button>
+                <ListItem button key={course.id}>
                     <ListItemIcon>
                       {getIcon(course.icon)}
                     </ListItemIcon>

@@ -108,8 +108,8 @@ const Parallaxx = () => {
             <Typography className={classes.typo} component='p'>Lorem ipsum dolor sit amet, consectetuer  </Typography>
             <Typography className={classes.typo} component='p'>Lorem ipsum dolor sit amet, consectetuer  </Typography>
             <List className={classes.list}>
-              {items.map(item => (
-              <ListItem alignItems="flex-start">
+              {items.map((item, index) => (
+              <ListItem alignItems="flex-start" key={index}>
                 <ListItemAvatar className="avatar">
                   <PurpleSquare />
                 </ListItemAvatar>

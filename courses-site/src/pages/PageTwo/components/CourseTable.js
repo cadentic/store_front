@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -48,20 +48,20 @@ const CourseTable = props => {
             </TableRow>
         </TableHead>
         <TableBody>
-            {props.contents.map(content => (
-              <>
+            {props.contents.map((content, index) => (
+              <Fragment key={index}>
             <TableRow className={classes.relative}>
                 <TableCell scope="row" colSpan={4} className={classes.section}>+ {content.title}</TableCell>
             </TableRow>
-              {content.items.map(item => (
-            <TableRow>
+              {content.items.map((item, index) => (
+            <TableRow key={index}>
                 <TableCell component="th" scope="row" className={classes.startCell}><PlayCircle className={classes.play} />{item.content}</TableCell>
                 <TableCell align="right">{item.duration}</TableCell>
                 <TableCell align="right"><AddShoppingCart className={classes.tableIcon} /></TableCell>
                 <TableCell align="right"><CloudDownLoad className={classes.tableIcon} /></TableCell>
             </TableRow>
               ))}
-                </>
+                </Fragment>
             ))}
         </TableBody>
     </Table>);

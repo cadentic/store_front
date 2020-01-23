@@ -59,7 +59,7 @@ const CourseTile = props => {
             <img src={props.img} alt='course' />
             <Typography variant='h5' className={classes.title}>{props.title}</Typography>
             <Typography variant='h5' className={classes.price}>$ {props.price}</Typography>
-            <Fab variant="" className={classes.buy}>
+            <Fab variant="extended" className={classes.buy}>
                 Buy Now
             </Fab>
             <Corner fill={fillCorner} className={classes.corner} />

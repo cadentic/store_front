@@ -84,7 +84,7 @@ const Banner = () => {
           <Box>
             <List className={classes.list}>
               {items.map(item => (
-              <ListItem alignItems="flex-start">
+              <ListItem alignItems="flex-start" key={item.id}>
                 <ListItemAvatar className="avatar">
                   <Square />
                 </ListItemAvatar>

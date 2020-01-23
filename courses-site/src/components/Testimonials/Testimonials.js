@@ -43,7 +43,7 @@ const Testimonials = () => {
       <Typography variant="h5"> Student Testimonials</Typography>
       <Grid container spacing={3} className={classes.gridContainer}>
         {testimonials.map(testimonial => (
-        <Grid item xs={6} md={3}>
+        <Grid item xs={6} md={3} key={testimonial.id}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia

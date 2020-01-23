@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Grid from '@material-ui/core/Grid';
@@ -49,7 +49,7 @@ const PageTwo = () => {
                   ))}
                 </Grid>
                 {coursesSections.map(course => (
-                <>
+                <Fragment key={course.id}>
                 <Grid item xs={3}>
                     <CourseTitle
                       background={course.courseTitle.background}
@@ -61,7 +61,7 @@ const PageTwo = () => {
                 <Grid item xs={9}>
                     <CourseTable contents={course.courseTable} />
                 </Grid>
-                </>
+                </Fragment>
                 ))}
             </Grid>
         </Box>);
