@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import CloudStack from '../../../resources/svg/cloudStack';
 import Tasks from '../../../resources/svg/tasks';
 import Edit from '../../../resources/svg/Edit';
+import axios from "axios";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -21,56 +22,38 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
+const getIcon = icon => {
+  switch(icon) {
+    case "cloud-stack": return <CloudStack />;
+    case "tasks": return <Tasks />;
+    case "edit": return <Edit/>;
+    default: return <CloudStack />;
+  }
+};
+
 const CoursesList = () => {
     const classes = useStyles();
+    const [courses, setCourses] = useState([]);
+
+    useEffect(() => {
+      axios.get("/json/courses-list.json")
+           .then(({data}) => setCourses(data));
+    }, []);
+
     return (
         <Box className={classes.root}>
             <Box className={classes.title}>
                 <Typography variant='h5' align='center'>Courses</Typography>
             </Box>
             <List component="nav" aria-label="main mailbox folders">
+              {courses.map(course => (
                 <ListItem button>
                     <ListItemIcon>
-                        <CloudStack />
+                      {getIcon(course.icon)}
                     </ListItemIcon>
-                    <ListItemText primary="Lorem ipsum lorum" />
+                    <ListItemText primary={course.text} />
                 </ListItem>
-                <ListItem button>
-                    <ListItemIcon>
-                        <Tasks />
-                    </ListItemIcon>
-                    <ListItemText primary="Lorem ipsum lorum" />
-                </ListItem>
-                <ListItem button>
-                    <ListItemIcon>
-                        <Edit />
-                    </ListItemIcon>
-                    <ListItemText primary="Lorem ipsum lorum" />
-                </ListItem>
-                <ListItem button>
-                    <ListItemIcon>
-                        <CloudStack />
-                    </ListItemIcon>
-                    <ListItemText primary="Lorem ipsum lorum" />
-                </ListItem>
-                <ListItem button>
-                    <ListItemIcon>
-                        <Tasks />
-                    </ListItemIcon>
-                    <ListItemText primary="Lorem ipsum lorum" />
-                </ListItem>
-                <ListItem button>
-                    <ListItemIcon>
-                        <Edit />
-                    </ListItemIcon>
-                    <ListItemText primary="Lorem ipsum lorum" />
-                </ListItem>
-                <ListItem button>
-                    <ListItemIcon>
-                        <CloudStack />
-                    </ListItemIcon>
-                    <ListItemText primary="Lorem ipsum lorum" />
-                </ListItem>
+              ))}
             </List>
         </Box>);
 }

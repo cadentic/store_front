@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "icon": "cloud-stack",
+        "text": "Lorem ipsum lorum"
+    },
+    {
+        "id": 2,
+        "icon": "tasks",
+        "text": "Lorem ipsum lorum"
+    },
+    {
+        "id": 3,
+        "icon": "edit",
+        "text": "Lorem ipsum lorum"
+    },
+    {
+        "id": 4,
+        "icon": "cloud-stack",
+        "text": "Lorem ipsum lorum"
+    },
+    {
+        "id": 5,
+        "icon": "tasks",
+        "text": "Lorem ipsum lorum"
+    },
+    {
+        "id": 6,
+        "icon": "edit",
+        "text": "Lorem ipsum lorum"
+    },
+    {
+        "id": 7,
+        "icon": "edit",
+        "text": "Lorem ipsum lorum"
+    }
+]
