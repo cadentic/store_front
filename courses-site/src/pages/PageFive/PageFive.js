@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Grid from '@material-ui/core/Grid';
@@ -13,6 +13,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Edit from '../../resources/svg/Edit';
+import axios from "axios";
 
 
 const useStyles = makeStyles(theme => ({
@@ -37,83 +38,55 @@ const useStyles = makeStyles(theme => ({
 
 const PageFive = () => {
     const classes = useStyles();
+    const [coursesSections, setCoursesSections] = useState([]);
+    const [coursesListSelect, setCoursesListSelect] = useState([]);
+
+    useEffect(() => {
+      axios.get("/json/courses-sections.json")
+           .then(({data}) => setCoursesSections(data));
+      axios.get("/json/courses-list-select.json")
+           .then(({data}) => setCoursesListSelect(data));
+    }, []);
+
     return (
         <Box className={classes.root}>
             <TopMenu />
             <Banner />
             <VideoBanner />
             <Grid container spacing={3} className={classes.courses}>
+                {coursesSections.map(course => (
+                <>
                 <Grid item xs={3}>
-                    <CourseTitle background='#C1272D' src='../../../resources/images/p5.png' />
+                    <CourseTitle
+                      background={course.courseTitle.background}
+                      src={course.courseTitle.img}
+                      price={course.courseTitle.price}
+                      discount={course.courseTitle.discount}
+                      description={course.courseTitle.description} />
                 </Grid>
                 <Grid item xs={9}>
-                    <CourseTable />
+                    <CourseTable contents={course.courseTable} />
                 </Grid>
-                <Grid item xs={3}>
-                    <CourseTitle background='#22B573' src='../../../resources/images/p5.png' />
-                </Grid>
-                <Grid item xs={9}>
-                    <CourseTable />
-                </Grid>
+                </>
+                ))}
             </Grid>
             <Box className={classes.takeContainer}>
                 <Button color='primary' variant='contained'>Take Your Exam</Button>
                 <Button color='primary' variant='contained'>View All</Button>
             </Box>
             <Box className={classes.takeContainer}>
+              {coursesListSelect.map(course => (
                 <List  className={classes.list} component="nav" aria-label="main mailbox folders">
+                  {course.map(item => (
                     <ListItem button>
                         <ListItemIcon>
                         <Edit />
                         </ListItemIcon>
-                        <ListItemText primary="Lorem ipsum lorum" />
+                        <ListItemText primary={item} />
                     </ListItem>
-                    <ListItem button>
-                        <ListItemIcon>
-                        <Edit />
-                        </ListItemIcon>
-                        <ListItemText primary="Lorem ipsum lorum" />
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <Edit />
-                        </ListItemIcon>
-                        <ListItemText primary="Lorem ipsum lorum" />
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <Edit />
-                        </ListItemIcon>
-                        <ListItemText primary="Lorem ipsum lorum" />
-                    </ListItem>
+                  ))}
                 </List>
-
-                <List className={classes.list} component="nav" aria-label="main mailbox folders">
-                <ListItem button>
-                        <ListItemIcon>
-                        <Edit />
-                        </ListItemIcon>
-                        <ListItemText primary="Lorem ipsum lorum" />
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon>
-                        <Edit />
-                        </ListItemIcon>
-                        <ListItemText primary="Lorem ipsum lorum" />
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <Edit />
-                        </ListItemIcon>
-                        <ListItemText primary="Lorem ipsum lorum" />
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <Edit />
-                        </ListItemIcon>
-                        <ListItemText primary="Lorem ipsum lorum" />
-                    </ListItem>
-                </List>
+              ))}
             </Box>
         </Box>
     );
