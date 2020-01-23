@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from '@material-ui/core/Typography';
@@ -6,6 +6,7 @@ import Fab from '@material-ui/core/Fab';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import axios from "axios";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -65,82 +66,41 @@ const useStyles = makeStyles(theme => ({
 
 const Banner = () => {
     const classes = useStyles();
+    const [banner, setBanner] = useState({header: [], content: [], footer: []});
+
+    useEffect(() => {
+      axios.get("/json/courses-banner.json")
+           .then(({data}) => setBanner(data));
+    }, []);
+
     return (<><Box className={classes.root}>
         <img src={require('../../../resources/images/banner.jpg')} alt='banner' />
         <Box className={classes.content}>
             <Box className={classes.options}>
-                <Typography component='p'>Lorem ipsum</Typography>
-                <Typography component='p'>Lorem ipsum</Typography>
-                <Typography component='p'>Lorem ipsum</Typography>
-                <Typography component='p'>Lorem ipsum</Typography>
-                <Typography component='p'>Lorem ipsum</Typography>
+              {banner.header.map(item => (
+                <Typography component='p'>{item}</Typography>
+              ))}
                 <Fab variant='' className={classes.fab}>Take Our Exam</Fab>
                 <Fab variant='' className={classes.fab}>Take Our Placement</Fab>
             </Box>
             <Box className={classes.listContainer}>
+              {banner.content.map(row => (
                 <List>
+                  {row.map(item => (
                     <ListItem>
                         <ListItemText
-                            primary="Lorem Ipsum"
-                            secondary='Lorem Ipsum'
+                            primary={item.primary}
+                            secondary={item.secondary}
                         />
                     </ListItem>
-                    <ListItem>
-                        <ListItemText
-                            primary="Lorem Ipsum"
-                            secondary='Lorem Ipsum'
-                        />
-                    </ListItem>
+                  ))}
                 </List>
-                <List>
-                    <ListItem>
-                        <ListItemText
-                            primary="Lorem Ipsum"
-                            secondary='Lorem Ipsum'
-                        />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText
-                            primary="Lorem Ipsum"
-                            secondary='Lorem Ipsum'
-                        />
-                    </ListItem>
-                </List>
-                <List>
-                    <ListItem>
-                        <ListItemText
-                            primary="Lorem Ipsum"
-                            secondary='Lorem Ipsum'
-                        />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText
-                            primary="Lorem Ipsum"
-                            secondary='Lorem Ipsum'
-                        />
-                    </ListItem>
-                </List>
-                <List>
-                    <ListItem>
-                        <ListItemText
-                            primary="Lorem Ipsum"
-                            secondary='Lorem Ipsum'
-                        />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText
-                            primary="Lorem Ipsum"
-                            secondary='Lorem Ipsum'
-                        />
-                    </ListItem>
-                </List>
+              ))}
             </Box>
             <Box className={`${classes.options} ${classes.bottom}`}>
-                <Typography variant='h3'>Lorem ipsum</Typography>
-                <Typography variant='h3'>Lorem ipsum</Typography>
-                <Typography variant='h3'>Lorem ipsum</Typography>
-                <Typography variant='h3'>Lorem ipsum</Typography>
-                <Typography variant='h3'>Lorem ipsum</Typography>
+              {banner.footer.map(item => (
+                <Typography variant='h3'>{item}</Typography>
+              ))}
             </Box>
         </Box>
 

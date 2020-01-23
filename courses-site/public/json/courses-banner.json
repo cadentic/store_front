@@ -1,0 +1,48 @@
+{
+    "header": [
+        "Lorem ipsum.",
+        "Lorem ipsum.",
+        "Lorem ipsum.",
+        "Lorem ipsum.",
+        "Lorem ipsum."
+    ],
+    "content": [
+        [
+            {
+                "primary": "Lorem ipsum.",
+                "secondary": "Lorem ipsum."
+            },
+            {
+                "primary": "Lorem ipsum.",
+                "secondary": "Lorem ipsum."
+            }
+        ],
+        [
+            {
+                "primary": "Lorem ipsum.",
+                "secondary": "Lorem ipsum."
+            },
+            {
+                "primary": "Lorem ipsum.",
+                "secondary": "Lorem ipsum."
+            }
+        ],
+        [
+            {
+                "primary": "Lorem ipsum.",
+                "secondary": "Lorem ipsum."
+            },
+            {
+                "primary": "Lorem ipsum.",
+                "secondary": "Lorem ipsum."
+            }
+        ]
+    ],
+    "footer": [
+        "Lorem ipsum.",
+        "Lorem ipsum.",
+        "Lorem ipsum.",
+        "Lorem ipsum.",
+        "Lorem ipsum"
+    ]
+}
