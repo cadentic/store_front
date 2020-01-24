@@ -228,10 +228,10 @@
             </div>
             <div class="add_cart_part">
               <div class="d-flex flex-wrap align-items-center">
-                <a href="javascript:;" class="add_cart_btn">
+                <button class="add_cart_btn" @click="addToCart">
                   <span class="fa fa-shopping-cart"></span>
                   ADD to My ZOQOLO
-                </a>
+                </button>
                 <div class="like_share_part">
                   <a href="javascript:;" class="like_btn">
                     <span class="fa fa-heart-o"></span>
@@ -256,6 +256,18 @@ export default {
     data: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    async addToCart() {
+      const id = this.$route.params.id;
+      try {
+        await axios.post("/add-to-cart/"+id);
+        alert("Added to cart successfully!");
+      } catch (error) {
+        alert("An error occured!");
+        console.log(error);
+      }
     }
   }
 };
