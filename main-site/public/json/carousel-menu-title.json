@@ -1,1 +1,30 @@
-["Deals of the Day", "Featured Brands", "Trending Offers", "Kitchen and Home Essentials", "Home Improvement Range", "Fashion Accessories", "Household Essentials"]
+[
+    {
+        "title": "Deals of the Day",
+        "link": "#"
+    },
+    {
+        "title": "Featured Brands",
+        "link": "#"
+    },
+    {
+        "title": "Trending Offers",
+        "link": "#"
+    },
+    {
+        "title": "Kitchen and Home Essentials",
+        "link": "#"
+    },
+    {
+        "title": "Home Improvement Range",
+        "link": "#"
+    },
+    {
+        "title": "Fashion Accessories",
+        "link": "#"
+    },
+    {
+        "title": "Household Essentials",
+        "link": "#"
+    }
+]

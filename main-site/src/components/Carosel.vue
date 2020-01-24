@@ -10,8 +10,8 @@
                 </div>
                 <div class="market_left_list">
                     <ul>
-                        <li v-for="name in menu_title">
-                            <a href="#">{{ name }}</a>
+                        <li v-for="(item, index) in menu_title" :key="index">
+                            <a :href="item.link">{{ item.title }}</a>
                         </li>
                     </ul>
                 </div>
