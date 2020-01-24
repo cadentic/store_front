@@ -221,42 +221,16 @@
                     <h2 class="title">One - Stop Solution</h2>
                 </div>
                 <div class="market_right_contain">
-                    <div class="market_right_products">
+                    <div class="market_right_products" v-for="item in solutions" :key="item.id">
                         <div class="product_heading">
-                            <h2 class="title">Home Appliances</h2>
+                          <h2 class="title">{{ item.title }}</h2>
                         </div>
                         <div class="d-flex flex-wrap align-items-center justify-content-between">
                             <div class="source_now_btn_part">
-                                <a class="source_btn" href="#">Source now</a>
+                                <a class="source_btn" :href="item.link">Source now</a>
                             </div>
                             <div class="products_img">
-                                <img src="assets/img/freeze.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="market_right_products">
-                        <div class="product_heading">
-                            <h2 class="title">Fashion Accessories</h2>
-                        </div>
-                        <div class="d-flex flex-wrap align-items-center justify-content-between">
-                            <div class="source_now_btn_part">
-                                <a class="source_btn" href="#">Source now</a>
-                            </div>
-                            <div class="products_img">
-                                <img src="assets/img/products2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="market_right_products">
-                        <div class="product_heading">
-                            <h2 class="title">Baby &amp; Kids</h2>
-                        </div>
-                        <div class="d-flex flex-wrap align-items-center justify-content-between">
-                            <div class="source_now_btn_part">
-                                <a class="source_btn" href="#">Source now</a>
-                            </div>
-                            <div class="products_img">
-                                <img src="assets/img/child.png" alt="">
+                                <img :src="item.img" :alt="item.title">
                             </div>
                         </div>
                     </div>
@@ -267,14 +241,22 @@
 </template>
 
 <script>
+import axios from "axios";
 import Slide from '../components/Slide'
 export default {
   // name: 'Carosel',
   components: {
       Slide
   },
+  async mounted() {
+    let res = await axios.get("/json/carousel-menu-title.json");
+    this.menu_title = res.data;
+    res = await axios.get("/json/carousel-one-stop-solution.json");
+    this.solutions = res.data;
+  },
   data: () => ({
-    menu_title:['Deals of the Day', 'Featured Brands', 'Trending Offers', 'Kitchen and Home Essentials', 'Home Improvement Range', 'Fashion Accessories', 'Household Essentials']
+    menu_title: [],
+    solutions: []
   }),
 };
 </script>
