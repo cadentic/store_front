@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "img":"/assets/img/products6.png",
+        "subtitle":"LEVIS",
+        "price":"25"
+    },
+    {
+        "id": 2,
+        "img":"/assets/img/products7.png",
+        "subtitle":"Adidas",
+        "price":"20"
+    },
+    {
+        "id": 3,
+        "img":"/assets/img/products8.png",
+        "subtitle":"Samsung",
+        "price":"10"
+    },
+    {
+        "id": 4,
+        "img":"/assets/img/products9.png",
+        "subtitle":"Tommy",
+        "price":"20"
+    },
+    {
+        "id": 5,
+        "img":"/assets/img/products10.png",
+        "subtitle":"Dawlance",
+        "price":"30"
+    }
+]
