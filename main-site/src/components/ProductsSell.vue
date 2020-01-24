@@ -1,32 +1,17 @@
 <template>
   <div class="products_sell_info_part">
-    <div class="d-flex flex-wrap justify-content-between">
+    <div class="d-flex flex-wrap justify-content-between" style="width: 100%">
       <div class="products_sell_img_part">
         <div class="products_sell_img_contain">
           <div class="products_top_img_part">
-            <img src="assets/img/cloth1.png" alt="" />
+            <img :src="data.topImg" alt="" />
           </div>
 
           <div class="products_sell_thumb_img_part">
             <div class="d-flex flex-wrap justify-content-between">
-              <div class="thumb_img">
+              <div class="thumb_img" v-for="(img, index) in data.images" :key="index">
                 <a href="javascript:;">
-                  <img src="assets/img/cloth2.png" alt="" />
-                </a>
-              </div>
-              <div class="thumb_img">
-                <a href="javascript:;">
-                  <img src="assets/img/cloth3.png" alt="" />
-                </a>
-              </div>
-              <div class="thumb_img">
-                <a href="javascript:;">
-                  <img src="assets/img/cloth4.png" alt="" />
-                </a>
-              </div>
-              <div class="thumb_img">
-                <a href="javascript:;">
-                  <img src="assets/img/cloth5.png" alt="" />
+                  <img :src="img" />
                 </a>
               </div>
             </div>
@@ -39,8 +24,8 @@
           <div class="products_info_top_part">
             <div class="d-flex flex-wrap justify-content-between">
               <div class="products_info_heading">
-                <h2 class="title">Embroidered Panel Kurta</h2>
-                <p class="text">Embroidered Panel Kurta Khaki by Khaadi</p>
+                <h2 class="title">{{ data.title }}</h2>
+                <p class="text">{{ data.text }}</p>
                 <div class="star_rating">
                   <div class="d-flex flex-wrap">
                     <div
@@ -52,90 +37,8 @@
                       <div class="jq-ry-group-wrapper">
                         <div class="jq-ry-normal-group jq-ry-group">
                           <!--?xml version="1.0" encoding="utf-8"?--><svg
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 12.705 512 486.59"
-                            x="0px"
-                            y="0px"
-                            xml:space="preserve"
-                            width="20px"
-                            height="20px"
-                            fill="gray"
-                          >
-                            <polygon
-                              points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "
-                            ></polygon>
-                          </svg>
-                          <!--?xml version="1.0" encoding="utf-8"?--><svg
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 12.705 512 486.59"
-                            x="0px"
-                            y="0px"
-                            xml:space="preserve"
-                            width="20px"
-                            height="20px"
-                            fill="gray"
-                            style="margin-left: 0px;"
-                          >
-                            <polygon
-                              points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "
-                            ></polygon>
-                          </svg>
-                          <!--?xml version="1.0" encoding="utf-8"?--><svg
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 12.705 512 486.59"
-                            x="0px"
-                            y="0px"
-                            xml:space="preserve"
-                            width="20px"
-                            height="20px"
-                            fill="gray"
-                            style="margin-left: 0px;"
-                          >
-                            <polygon
-                              points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "
-                            ></polygon>
-                          </svg>
-                          <!--?xml version="1.0" encoding="utf-8"?--><svg
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 12.705 512 486.59"
-                            x="0px"
-                            y="0px"
-                            xml:space="preserve"
-                            width="20px"
-                            height="20px"
-                            fill="gray"
-                            style="margin-left: 0px;"
-                          >
-                            <polygon
-                              points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "
-                            ></polygon>
-                          </svg>
-                          <!--?xml version="1.0" encoding="utf-8"?--><svg
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 12.705 512 486.59"
-                            x="0px"
-                            y="0px"
-                            xml:space="preserve"
-                            width="20px"
-                            height="20px"
-                            fill="gray"
-                            style="margin-left: 0px;"
-                          >
-                            <polygon
-                              points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "
-                            ></polygon>
-                          </svg>
-                        </div>
-                        <div
-                          class="jq-ry-rated-group jq-ry-group"
-                          style="width: 90%;"
-                        >
-                          <!--?xml version="1.0" encoding="utf-8"?--><svg
+                            v-for="i in Math.floor(data.rankPoint)"
+                            :key="i"
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 12.705 512 486.59"
@@ -151,7 +54,6 @@
                             ></polygon>
                           </svg>
                           <!--?xml version="1.0" encoding="utf-8"?--><svg
-                            version="1.1"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 12.705 512 486.59"
                             x="0px"
@@ -159,55 +61,7 @@
                             xml:space="preserve"
                             width="20px"
                             height="20px"
-                            fill="#ffcc33"
-                            style="margin-left: 0px;"
-                          >
-                            <polygon
-                              points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "
-                            ></polygon>
-                          </svg>
-                          <!--?xml version="1.0" encoding="utf-8"?--><svg
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 12.705 512 486.59"
-                            x="0px"
-                            y="0px"
-                            xml:space="preserve"
-                            width="20px"
-                            height="20px"
-                            fill="#ffcc33"
-                            style="margin-left: 0px;"
-                          >
-                            <polygon
-                              points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "
-                            ></polygon>
-                          </svg>
-                          <!--?xml version="1.0" encoding="utf-8"?--><svg
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 12.705 512 486.59"
-                            x="0px"
-                            y="0px"
-                            xml:space="preserve"
-                            width="20px"
-                            height="20px"
-                            fill="#ffcc33"
-                            style="margin-left: 0px;"
-                          >
-                            <polygon
-                              points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "
-                            ></polygon>
-                          </svg>
-                          <!--?xml version="1.0" encoding="utf-8"?--><svg
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 12.705 512 486.59"
-                            x="0px"
-                            y="0px"
-                            xml:space="preserve"
-                            width="20px"
-                            height="20px"
-                            fill="#ffcc33"
+                            fill=""
                             style="margin-left: 0px;"
                           >
                             <polygon
@@ -217,8 +71,8 @@
                         </div>
                       </div>
                     </div>
-                    <p class="rank_point">(4.5)</p>
-                    <p class="review">1532<span>Reviews</span></p>
+                    <p class="rank_point">({{ data.rankPoint }})</p>
+                    <p class="review">{{ data.reviews }}<span>Reviews</span></p>
                   </div>
                 </div>
               </div>
@@ -229,13 +83,14 @@
                     class="d-flex flex-wrap align-items-center justify-content-end"
                   >
                     <p class="price_holder">Actual Price</p>
-                    <h2 class="price"><del>$145</del></h2>
+                    <h2 class="price"><del>${{ data.price }}</del></h2>
                   </li>
                   <li
                     class="d-flex flex-wrap align-items-center justify-content-end discount"
+                    v-if="data.discountedPrice"
                   >
                     <p class="price_holder">Discounted Price</p>
-                    <h2 class="price">$105</h2>
+                    <h2 class="price">${{ data.discountedPrice }}</h2>
                   </li>
                 </ul>
               </div>
@@ -245,28 +100,13 @@
           <div class="products_info_description_part">
             <div class="description_heading">
               <h2 class="title">Description :</h2>
+              <p>{{ data.description }}</p>
             </div>
             <div class="item_information">
               <ul>
-                <li class="d-flex flex-wrap align-items-center">
-                  <p class="item_holder">Item weight :</p>
-                  <p class="item_info">150g</p>
-                </li>
-                <li class="d-flex flex-wrap align-items-center">
-                  <p class="item_holder">Item part number :</p>
-                  <p class="item_info">KSF181926-khaki</p>
-                </li>
-                <li class="d-flex flex-wrap align-items-center">
-                  <p class="item_holder">ASTN :</p>
-                  <p class="item_info">B65789E7</p>
-                </li>
-                <li class="d-flex flex-wrap align-items-center">
-                  <p class="item_holder">Date First Available at ZOQOLO :</p>
-                  <p class="item_info">1st April 2019</p>
-                </li>
-                <li class="d-flex flex-wrap align-items-center">
-                  <p class="item_holder">Average Customer Reviews :</p>
-                  <p class="item_info">(4.5) 1532 Reviews</p>
+                <li class="d-flex flex-wrap align-items-center" v-for="(item, index) in data.informations" :key="index">
+                  <p class="item_holder">{{ item.name }} :</p>
+                  <p class="item_info">{{ item.value }}</p>
                 </li>
               </ul>
             </div>
@@ -410,9 +250,13 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
-  data: () => ({
-    //
-  })
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
+  }
 };
 </script>

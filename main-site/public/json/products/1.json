@@ -1,0 +1,75 @@
+{
+    "topImg": "/assets/img/products1.png",
+    "images": [
+        "/assets/img/products2.png",
+        "/assets/img/products3.png",
+        "/assets/img/products4.png",
+        "/assets/img/products5.png"
+    ],
+    "title": "Embroidered Panel Kurta",
+    "text": "Embroidered Panel Kurta Khaki by Khaadi",
+    "rankPoint": 4.5,
+    "reviews": 1532,
+    "price": 145,
+    "discountedPrice": 105,
+    "description": "A description text.",
+    "informations": [
+        {
+            "name": "Item weight",
+            "value": "150g"
+        },
+        {
+            "name": "Item part number",
+            "value": "KSF181926-khaki"
+        },
+        {
+            "name": "ASTN",
+            "value": "B65789E7"
+        },
+        {
+            "name": "Date First Available at ZOQOLO",
+            "value": "1st April 2019"
+        },
+        {
+            "name": "Average Customer Reviews",
+            "value": "(4.5) 1532 Reviews"
+        }
+    ],
+    "customerReviews": {
+        "overalRating": "4",
+        "comments": [
+            {
+                "avatar": "/assets/img/customer.png",
+                "name": "John Doe",
+                "comment": "The product was as described and reccommended",
+                "rating": 3
+            },
+            {
+                "avatar": "/assets/img/customer.png",
+                "name": "John Doe",
+                "comment": "The product was as described and reccommended",
+                "rating": 4
+            }
+        ]
+    },
+    "suggestions": [
+        {
+            "img": "/assets/img/products1.png",
+            "name": "Black Embroidered",
+            "username": "J. Alexander",
+            "rating": 4
+        },
+        {
+            "img": "/assets/img/products2.png",
+            "name": "Chiffon Peplum",
+            "username": "F_nadeem",
+            "rating": 4.5
+        },
+        {
+            "img": "/assets/img/products3.png",
+            "name": "Open Shirt Peplum",
+            "username": "Arsaln_butt",
+            "rating": 5
+        }
+    ]
+}

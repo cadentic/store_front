@@ -9,10 +9,10 @@
               <div class="products_sell_section">
                 <div class="products_sell_content">
                   <Menu />
-                  <ProductsSell />
-                  <CustomerReview />
+                  <ProductsSell :data="data"/>
+                  <CustomerReview :data="data"/>
                   <!-- <Manufacturer/> -->
-                  <Suggestion />
+                  <Suggestion :data="data"/>
                 </div>
               </div>
             </div>
@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import Menu from "../components/Menu";
 import ProductsSell from "../components/ProductsSell";
 import CustomerReview from "../components/CustomerReview";
@@ -40,6 +41,22 @@ export default {
     Manufacturer,
     Suggestion
   },
-  data: () => ({})
+  mounted() {
+    this.fetchData();
+  },
+  data: () => ({
+    data: {}
+  }),
+  methods: {
+    async fetchData() {
+      const { data } = await axios.get("/json/products/"+this.$route.params.id+".json");
+      this.data = data;
+    }
+  },
+  watch: {
+    $route: function (oldRoute, newRoute) {
+      if (oldRoute.params.id != newRoute.params.id) this.fetchData();
+    }
+  }
 };
 </script>
