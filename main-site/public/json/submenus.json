@@ -1,0 +1,1312 @@
+[
+    {
+        "id": 1,
+        "content": {
+            "title": "Women's Wear & Items",
+            "links": [
+                {
+                    "heading": "Home Appliances",
+                    "content": [
+                        {
+                            "html": "Air Conditioners<span class=\"wstmenutag greentag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Air Coolers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Fans",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwaves",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Refrigerators",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Jars &amp; Containers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "LED &amp; CFL bulbs",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Drying Racks ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Laundry Baskets<span class=\"wstmenutag orangetag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Bedsheets",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Kitchen Appliances",
+                    "content": [
+                        {
+                            "html": "Air Fryers ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Espresso Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Food Processors<span class=\"wstmenutag bluetag\">Popular</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Hand Blenders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Induction Cooktops",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwave Ovens",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Mixers &amp; Grinders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Rice Cookers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Stand Mixers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Sandwich Makers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Tandoor &amp; Grills",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Toasters",
+                            "link": "#"
+                        }
+                    ]
+                }
+            ],
+            "side": [
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                },
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                },
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                }
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "content": {
+            "title": "Men's Wear & Items",
+            "links": [
+                {
+                    "heading": "Home Appliances",
+                    "content": [
+                        {
+                            "html": "Air Conditioners<span class=\"wstmenutag greentag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Air Coolers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Fans",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwaves",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Refrigerators",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Jars &amp; Containers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "LED &amp; CFL bulbs",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Drying Racks ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Laundry Baskets<span class=\"wstmenutag orangetag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Bedsheets",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Kitchen Appliances",
+                    "content": [
+                        {
+                            "html": "Air Fryers ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Espresso Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Food Processors<span class=\"wstmenutag bluetag\">Popular</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Hand Blenders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Induction Cooktops",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwave Ovens",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Mixers &amp; Grinders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Rice Cookers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Stand Mixers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Sandwich Makers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Tandoor &amp; Grills",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Toasters",
+                            "link": "#"
+                        }
+                    ]
+                }
+            ],
+            "side": [
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "content": {
+            "title": "Movies, Music & Games",
+            "links": [
+                {
+                    "heading": "Latest Movies",
+                    "content": [
+                        {
+                            "html": "Action &amp; Adventure<span class=\"wstmenutag greentag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Bollywood",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Documentary",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Educational",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Exercise &amp; Fitness",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Faith &amp; Spirituality",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Fantasy",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Romance",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Newest Games",
+                    "content": [
+                        {
+                            "html": "PlayStation 4",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Xbox 1<span class=\"wstmenutag orangetag\">Most Viewed</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Nintendo DS",
+                            "link": "#"
+                        },
+                        {
+                            "html": "PlayStation Vita",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Retro Gaming",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Digital Games",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microconsoles",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Kids &amp; Family",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Popular Music Genre",
+                    "content": [
+                        {
+                            "html": "Alternative &amp; Indie Rock",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Broadway &amp; Vocalists",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Children's Music",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Christian <span class=\"wstmenutag bluetag\">50% off</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Classic Rock",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Comedy &amp; Miscellaneous",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Country",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Dance &amp; Electronic",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Popular Music Genre",
+                    "content": [
+                        {
+                            "html": "Alternative &amp; Indie Rock",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Broadway &amp; Vocalists",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Children's Music",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Christian <span class=\"wstmenutag bluetag\">50% off</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Classic Rock",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Comedy &amp; Miscellaneous",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Country",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Dance &amp; Electronic",
+                            "link": "#"
+                        }
+                    ]
+                }
+            ],
+            "side": []
+        }
+    },
+    {
+        "id": 4,
+        "content": {
+            "title": "Home & Kitchen",
+            "links": [
+                {
+                    "heading": "Home Appliances",
+                    "content": [
+                        {
+                            "html": "Air Conditioners<span class=\"wstmenutag greentag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Air Coolers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Fans",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwaves",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Refrigerators",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Jars &amp; Containers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "LED &amp; CFL bulbs",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Drying Racks ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Laundry Baskets<span class=\"wstmenutag orangetag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Bedsheets",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Kitchen Appliances",
+                    "content": [
+                        {
+                            "html": "Air Fryers ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Espresso Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Food Processors<span class=\"wstmenutag bluetag\">Popular</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Hand Blenders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Induction Cooktops",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwave Ovens",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Mixers &amp; Grinders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Rice Cookers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Stand Mixers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Sandwich Makers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Tandoor &amp; Grills",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Toasters",
+                            "link": "#"
+                        }
+                    ]
+                }
+            ],
+            "side": [
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                },
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                },
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                }
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "content": {
+            "title": "Electronics Appliances",
+            "links": [
+                {
+                    "heading": "TV & Audio",
+                    "content": [
+                        {
+                            "html": "4K Ultra HD TVs",
+                            "link": "#"
+                        },
+                        {
+                            "html": "LED &amp; LCD TVs",
+                            "link": "#"
+                        },
+                        {
+                            "html": "OLED TVs<span class=\"wstmenutag bluetag\">Popular</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Plasma TVs",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Smart TVs",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Home Theater",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Wireless &amp; streaming",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Stereo System",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Camera, Photo & Video",
+                    "content": [
+                        {
+                            "html": "Accessories <span class=\"wstcount\">(1145)</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Bags &amp; Cases <span class=\"wstcount\">(445)</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Binoculars &amp; Scopes <span class=\"wstcount\">(45)</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Digital Cameras <span class=\"wstcount\">(845)</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Film Photography <span class=\"wstcount\">(245)</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Video <span class=\"wstcount\">(145)</span><span class=\"wstmenutag bluetag\">Popular</span>",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Phones & Accessories",
+                    "content": [
+                        {
+                            "html": "Unlocked Cell Phones",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Smartwatches ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Carrier Phones",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Cell Phone Cases<span class=\"wstmenutag orangetag\">Hot</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Bluetooth Headsets",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Cell Phone Accessories",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Fashion Tech",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Headphone",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Wearable Device",
+                    "content": [
+                        {
+                            "html": "Activity Trackers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Sports &amp; GPS Watches",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Smart Watches<span class=\"wstmenutag greentag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Virtual Reality Headsets",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Wearable Cameras",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Smart Glasses",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Kids &amp; Pets",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Smart Sport Accessories",
+                            "link": "#"
+                        }
+                    ]
+                }
+            ],
+            "side": []
+        }
+    },
+    {
+        "id": 6,
+        "content": {
+            "title": "Computers & Game",
+            "links": [
+                {
+                    "heading": "Home Appliances",
+                    "content": [
+                        {
+                            "html": "Air Conditioners<span class=\"wstmenutag greentag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Air Coolers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Fans",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwaves",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Refrigerators",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Jars &amp; Containers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "LED &amp; CFL bulbs",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Drying Racks ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Laundry Baskets<span class=\"wstmenutag orangetag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Bedsheets",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Kitchen Appliances",
+                    "content": [
+                        {
+                            "html": "Air Fryers ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Espresso Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Food Processors<span class=\"wstmenutag bluetag\">Popular</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Hand Blenders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Induction Cooktops",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwave Ovens",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Mixers &amp; Grinders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Rice Cookers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Stand Mixers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Sandwich Makers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Tandoor &amp; Grills",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Toasters",
+                            "link": "#"
+                        }
+                    ]
+                }
+            ],
+            "side": [
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                },
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                },
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                }
+            ]
+        }
+    },
+    {
+        "id": 7,
+        "content": {
+            "title": "Auto accessories",
+            "links": [
+                {
+                    "heading": "Home Appliances",
+                    "content": [
+                        {
+                            "html": "Air Conditioners<span class=\"wstmenutag greentag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Air Coolers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Fans",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwaves",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Refrigerators",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Jars &amp; Containers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "LED &amp; CFL bulbs",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Drying Racks ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Laundry Baskets<span class=\"wstmenutag orangetag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Bedsheets",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Kitchen Appliances",
+                    "content": [
+                        {
+                            "html": "Air Fryers ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Espresso Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Food Processors<span class=\"wstmenutag bluetag\">Popular</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Hand Blenders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Induction Cooktops",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwave Ovens",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Mixers &amp; Grinders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Rice Cookers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Stand Mixers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Sandwich Makers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Tandoor &amp; Grills",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Toasters",
+                            "link": "#"
+                        }
+                    ]
+                }
+            ],
+            "side": [
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                },
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                },
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                }
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "content": {
+            "title": "Sports & Books",
+            "links": [
+                {
+                    "heading": "Home Appliances",
+                    "content": [
+                        {
+                            "html": "Air Conditioners<span class=\"wstmenutag greentag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Air Coolers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Fans",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwaves",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Refrigerators",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Jars &amp; Containers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "LED &amp; CFL bulbs",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Drying Racks ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Laundry Baskets<span class=\"wstmenutag orangetag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Bedsheets",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Kitchen Appliances",
+                    "content": [
+                        {
+                            "html": "Air Fryers ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Espresso Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Food Processors<span class=\"wstmenutag bluetag\">Popular</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Hand Blenders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Induction Cooktops",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwave Ovens",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Mixers &amp; Grinders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Rice Cookers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Stand Mixers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Sandwich Makers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Tandoor &amp; Grills",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Toasters",
+                            "link": "#"
+                        }
+                    ]
+                }
+            ],
+            "side": [
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                },
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                },
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                }
+            ]
+        }
+    },
+    {
+        "id": 9,
+        "content": {
+            "title": "Baby & Kids",
+            "links": [
+                {
+                    "heading": "Home Appliances",
+                    "content": [
+                        {
+                            "html": "Air Conditioners<span class=\"wstmenutag greentag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Air Coolers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Fans",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwaves",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Refrigerators",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Jars &amp; Containers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "LED &amp; CFL bulbs",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Drying Racks ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Laundry Baskets<span class=\"wstmenutag orangetag\">New</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Washing Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Bedsheets",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Kitchen Appliances",
+                    "content": [
+                        {
+                            "html": "Air Fryers ",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Espresso Machines",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Food Processors<span class=\"wstmenutag bluetag\">Popular</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Hand Blenders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Induction Cooktops",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Microwave Ovens",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Mixers &amp; Grinders",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Rice Cookers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Stand Mixers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Sandwich Makers",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Tandoor &amp; Grills",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Toasters",
+                            "link": "#"
+                        }
+                    ]
+                }
+            ],
+            "side": [
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                },
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                },
+                {
+                    "title": "Blog",
+                    "description": "Read the latest blogs on topics covering Data Lakes, Compute, and more"
+                }
+            ]
+        }
+    },
+    {
+        "id": 10,
+        "content": {
+            "title": "Health Care Products",
+            "links": [
+                {
+                    "heading": "Health Care",
+                    "content": [
+                        {
+                            "html": "Diabetes",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Incontinence",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Cough &amp; Cold",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Baby Care<span class=\"wstmenutag orangetag\">Hot</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Women's Health",
+                            "link": "#"
+                        },
+                        {
+                            "html": "First Aid",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Smoking Cessation",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Sleep &amp; Snoring",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Personal Care",
+                    "content": [
+                        {
+                            "html": "Hair Removal",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Feminine Hygiene",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Oral <span class=\"wstmenutag bluetag\">Popular</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Foot Care",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Hand Care",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Personal Care Appliances",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Foams &amp; Creams",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Hair Removal Creams",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Medical Equipment",
+                    "content": [
+                        {
+                            "html": "Tapes <span class=\"wstmenutag redtag\">Sale</span>",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Neck Supports",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Arm Supports",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Elbow Braces",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Knee &amp; Leg Braces",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Ankle Braces",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Foot Supports",
+                            "link": "#"
+                        },
+                        {
+                            "html": "Crepe Bandages",
+                            "link": "#"
+                        }
+                    ]
+                }
+            ],
+            "side": []
+        }
+    }
+]

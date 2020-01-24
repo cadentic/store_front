@@ -15,16 +15,7 @@
               <div class="wsshoptabing wtsdepartmentmenu clearfix">
                 <div class="wsshopwp clearfix" style="height: 400px;">
                   <ul class="wstabitem clearfix">
-                    <SubMenu1 />
-                    <SubMenu2 />
-                    <SubMenu3 />
-                    <SubMenu4 />
-                    <SubMenu5 />
-                    <SubMenu6 />
-                    <SubMenu7 />
-                    <SubMenu8 />
-                    <SubMenu9 />
-                    <SubMenu10 />
+                    <SubMenu v-for="submenu in submenus" :key="submenu.id" :content="submenu.content"/>
                   </ul>
                 </div>
               </div>
@@ -38,40 +29,25 @@
 </template>
 
 <script>
-import SubMenu1 from "./SubMenu1";
-import SubMenu2 from "./SubMenu2";
-import SubMenu3 from "./SubMenu3";
-import SubMenu4 from "./SubMenu4";
-import SubMenu5 from "./SubMenu5";
-import SubMenu6 from "./SubMenu6";
-import SubMenu7 from "./SubMenu7";
-import SubMenu8 from "./SubMenu8";
-import SubMenu9 from "./SubMenu9";
-import SubMenu10 from "./SubMenu10";
+import SubMenu from "./SubMenu";
 import Offer from "./Offer";
 import axios from "axios";
 export default {
   //   name: 'Menu',
   components: {
     Offer,
-    SubMenu1,
-    SubMenu2,
-    SubMenu3,
-    SubMenu4,
-    SubMenu5,
-    SubMenu6,
-    SubMenu7,
-    SubMenu8,
-    SubMenu9,
-    SubMenu10
+    SubMenu
   },
   async mounted() {
-    const { data } = await axios.get("/json/menu-title.json");
-    this.menu_title = data;
+    let res = await axios.get("/json/menu-title.json");
+    this.menu_title = res.data;
+    res = await axios.get("/json/submenus.json");
+    this.submenus = res.data;
   },
   data: () => ({
     menu_title: [
-    ]
+    ],
+    submenus: []
   })
 };
 </script>

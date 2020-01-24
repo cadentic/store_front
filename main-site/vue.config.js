@@ -5,6 +5,7 @@ const proxyOptions = {
 };
 
 module.exports = {
+  lintOnSave: true,
   outputDir: "../backend/public",
   indexPath: "../resources/views/main-site.blade.php",
   productionSourceMap: false,
