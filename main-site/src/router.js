@@ -39,7 +39,7 @@ export default new Router({
       component: Payment
     },
     {
-      path: "/product",
+      path: "/product/:id",
       name: "product",
       component: Product
     }

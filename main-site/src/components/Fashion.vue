@@ -14,7 +14,7 @@
       <div class="d-flex flex-wrap justify-content-between">
         <div class="products_box" v-for="pd in products_detail" :key="pd.id">
           <div class="products_img">
-            <a href="products.html"><img v-bind:src="pd.img" alt=""/></a>
+            <router-link :to="{name: 'product', params: {id: pd.id}}"><img v-bind:src="pd.img" alt=""/></router-link>
           </div>
           <div class="products_info">
             <h2 class="title">{{ pd.subtitle }}</h2>
@@ -23,7 +23,7 @@
               <span style="font-size:30px; color:red">{{ pd.price }}%</span> off
             </p>
             <div class="buy_now_btn_part d-flex justify-content-end">
-              <a href="products.html" class="buy_now_btn">Buy Now</a>
+              <router-link :to="{name: 'product', params: {id: pd.id}}" class="buy_now_btn">Buy Now</router-link>
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ export default {
   //   name: 'SubMenu1',
   props: {
     content: {
-      type: Array,
+      type: Object,
       required: true
     }
   },
