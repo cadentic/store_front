@@ -1,6 +1,6 @@
 <template>
     <div class="banner_market_part">
-        <div class="d-flex flex-wrap justify-content-between">
+        <div class="d-flex flex-wrap justify-content-between" style="width: 100%; height: 100%">
             <div class="market_left_part">
                 <div class="market_left_heading">
                     <div class="d-flex flex-wrap align-items-center">
