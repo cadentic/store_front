@@ -11,24 +11,15 @@
 </template>
 
 <script>
+import axios from "axios";
   export default {
+    async mounted() {
+      const { data } = await axios.get("/json/slide.json");
+      this.items = data;
+    },
     data () {
       return {
         items: [
-          {
-            src: 'assets/img/women.png',
-            title:'Women’s Fashion',
-            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna'
-          },
-          {
-            src: 'assets/img/women.png',
-          },
-          {
-            src: 'assets/img/women.png',
-          },
-          {
-            src: 'assets/img/women.png',
-          },
         ],
       }
     },
