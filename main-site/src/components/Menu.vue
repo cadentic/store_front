@@ -49,6 +49,7 @@ import SubMenu8 from "./SubMenu8";
 import SubMenu9 from "./SubMenu9";
 import SubMenu10 from "./SubMenu10";
 import Offer from "./Offer";
+import axios from "axios";
 export default {
   //   name: 'Menu',
   components: {
@@ -64,15 +65,12 @@ export default {
     SubMenu9,
     SubMenu10
   },
+  async mounted() {
+    const { data } = await axios.get("/json/menu-title.json");
+    this.menu_title = data;
+  },
   data: () => ({
     menu_title: [
-      "Electronics",
-      "Tv & Appliences",
-      "Men",
-      "Women",
-      "Kids",
-      "Home & Furniture",
-      "Sports,Books & More"
     ]
   })
 };
