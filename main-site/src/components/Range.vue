@@ -12,9 +12,9 @@
         </div>
         <div class="products_list">
             <div class="d-flex flex-wrap justify-content-between">
-                <div class="products_box" v-for="pd in products_detail">
+                <div class="products_box" v-for="pd in products_detail" :key="pd.id">
                     <div class="products_img">
-                        <a href="products.html"><img v-bind:src="'assets/img/'+pd.img+'.png'" alt=""></a>
+                        <a href="products.html"><img v-bind:src="pd.img" alt=""></a>
                     </div>
                     <div class="products_info">
                         <h2 class="title">{{ pd.subtitle }}</h2>
@@ -30,39 +30,19 @@
 </template>
 
 <script>
+import axios from "axios";
 
     export default {
         // name: 'MainContent',
         components: {
-            
+
+        },
+        async mounted() {
+          const { data } = await axios.get("/json/range.json");
+          this.products_detail = data;
         },
         data: () => ({
            products_detail:[
-            {
-                img:"products6",
-                subtitle:"LEVIS",
-                price:"25"
-            },
-            {
-                img:"products7",
-                subtitle:"Adidas",
-                price:"20"
-            },
-            {
-                img:"products8",
-                subtitle:"Samsung",
-                price:"10"
-            },
-            {
-                img:"products9",
-                subtitle:"Tommy",
-                price:"20"
-            },
-            {
-                img:"products10",
-                subtitle:"Dawlance",
-                price:"30"
-            }
            ]
         }),
     };
