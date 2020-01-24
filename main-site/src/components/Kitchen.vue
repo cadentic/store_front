@@ -12,9 +12,9 @@
         </div>
         <div class="products_list">
             <div class="d-flex flex-wrap justify-content-between">
-                <div class="products_box" v-for="pd in products_detail">
+                <div class="products_box" v-for="pd in products_detail" :key="pd.id">
                     <div class="products_img">
-                        <a href="products.html"><img v-bind:src="'assets/img/'+pd.img+'.png'" alt=""></a>
+                        <a href="products.html"><img v-bind:src="pd.img" alt=""></a>
                     </div>
                     <div class="products_info">
                         <h2 class="title">{{ pd.subtitle }}</h2>
@@ -30,39 +30,19 @@
 </template>
 
 <script>
+import axios from "axios";
 
     export default {
         // name: 'MainContent',
         components: {
-            
+
+        },
+        async mounted() {
+          const { data } = await axios.get("/json/kitchen.json");
+          this.products_detail = data;
         },
         data: () => ({
            products_detail:[
-            {
-                img:"kitchen1",
-                subtitle:"Food Processor",
-                subcontent:"Lorem ipsum dolor sit amet, consectetur.",
-            },
-            {
-                img:"kitchen2",
-                subtitle:"Cooking Utensils",
-                subcontent:"Lorem ipsum dolor sit amet, consectetur.",
-            },
-            {
-                img:"kitchen3",
-                subtitle:"Microvave Oven",
-                subcontent:"Lorem ipsum dolor sit amet, consectetur.",
-            },
-            {
-                img:"kitchen4",
-                subtitle:"Blender",
-                subcontent:"Lorem ipsum dolor sit amet, consectetur.",
-            },
-            {
-                img:"kitchen5",
-                subtitle:"Freezer",
-                subcontent:"Lorem ipsum dolor sit amet, consectetur.",
-            }
            ]
         }),
     };
