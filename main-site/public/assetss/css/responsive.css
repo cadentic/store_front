@@ -1,0 +1,77 @@
+
+/* ***Responsive media query*** */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width:1500px){ 
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .card-wrapper {
+        width: 227px;
+        height: 150px;
+    }
+    .timeline-bar:after {
+        width: 230px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .card-wrapper {
+        margin-bottom: 30px;
+        width: 330px;
+        height: 200px;
+    }
+    .font-img.master-card img {
+        max-width: 155px;
+    }
+    .timeline-bar:after {
+        width: 206px;
+    }
+    .form-card-wrapper {
+        width: 100%;
+        max-width: 300px;
+        display: inline-block;
+    }
+
+}
+
+/* Extra small devices (portrait phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    .card-wrapper {
+        margin-bottom: 30px;
+        width: 100%;
+        height: 200px;
+    }
+    .font-img.master-card img {
+        max-width: 165px;
+    }
+    .back-img.master-card img {
+        max-width: 130px;
+    }
+    .form-card-wrapper {
+        width: 100%;
+        max-width: 300px;
+        display: inline-block;
+    }
+
+
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .card-wrapper {
+        margin-bottom: 30px;
+        width: 100%;
+        height: 250px;
+    }
+    .back-img.master-card img {
+        max-width: 175px;
+    }
+    .font-img.master-card img {
+        max-width: 200px;
+    }
+}

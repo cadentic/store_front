@@ -1,0 +1,27 @@
+[
+    {
+        "img":"/assets/img/products6.png",
+        "subtitle":"LEVIS",
+        "price":"25"
+    },
+    {
+        "img":"/assets/img/products7.png",
+        "subtitle":"Adidas",
+        "price":"20"
+    },
+    {
+        "img":"/assets/img/products8.png",
+        "subtitle":"Samsung",
+        "price":"10"
+    },
+    {
+        "img":"/assets/img/products9.png",
+        "subtitle":"Tommy",
+        "price":"20"
+    },
+    {
+        "img":"/assets/img/products10.png",
+        "subtitle":"Dawlance",
+        "price":"30"
+    }
+]

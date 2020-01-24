@@ -1,0 +1,74 @@
+.app{
+	background: #f3b8af;
+}
+
+.head{
+	height: 100px;
+	
+}
+
+.menu{
+	list-style: none;
+    	text-align: center;
+    	margin-top: 20px;
+    	margin-bottom: 20px;
+}
+
+.MainContent{
+	margin-top: 20px;
+}
+
+.view_btn{
+	margin:20px; 
+	width:117px; 
+	height:40px;
+	background: #0076a3;
+	color: #fff;
+}
+
+.footer{
+	height: 400px;
+	background: #94261e;
+}
+
+.footer .head{
+	width: 1229px;
+	height: 260px;
+	background: #94261e;
+	margin: 57px auto 38px auto;
+}
+
+
+.footer .head .left{
+	width: 303px;
+	color: #fff;
+	float: left;
+}
+
+.footer .head .left p{
+	margin-top: 28px;
+}
+
+.footer .head .center{
+	width: 303px;
+	color: #fff;
+	float: left;
+	margin-left: 160px;
+}
+
+.footer .head .center p{
+	margin-top: 28px;
+}
+
+.footer .head .right{
+	width: 303px;
+	color: #fff;
+	float: left;
+	margin-left: 160px;
+}
+
+
+.footer .foot{
+	height: 140px;
+	background: #94261e;
+}

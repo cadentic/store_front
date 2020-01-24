@@ -1,0 +1,27 @@
+[
+    {
+        "img":"/assets/img/products1.png",
+        "subtitle":"omen’s Bags",
+        "price":"25"
+    },
+    {
+        "img":"/assets/img/products2.png",
+        "subtitle":"Men’s Bracellets",
+        "price":"20"
+    },
+    {
+        "img":"/assets/img/products3.png",
+        "subtitle":"England Shoes",
+        "price":"10"
+    },
+    {
+        "img":"/assets/img/products4.png",
+        "subtitle":"Women’s Tops",
+        "price":"20"
+    },
+    {
+        "img":"/assets/img/products5.png",
+        "subtitle":"Kids’ Toys",
+        "price":"30"
+    }
+]
