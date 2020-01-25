@@ -424,7 +424,6 @@ import {
   smallChartData3,
   smallChartData4
 } from '@/data/charts'
-import logs from '@/data/logs'
 import profileStatuses from '@/data/profileStatuses'
 import cakes from '@/data/cakes'
 import { apiUrl } from '@/constants/config'
@@ -470,7 +469,7 @@ export default {
       lineChartData,
       products: [],
       polarAreaChartData,
-      logs,
+      logs: [],
       tickets: [],
       calendar: {
         showDate: this.thisMonth(1),
@@ -567,6 +566,7 @@ export default {
     }, 50)
     this.products = await fetch('/json/vue-products.json')
     this.tickets = await fetch('/json/vue-tickets.json')
+    this.logs = await fetch('/json/vue-logs.json')
   },
   methods: {
     refreshButtonClick () {
