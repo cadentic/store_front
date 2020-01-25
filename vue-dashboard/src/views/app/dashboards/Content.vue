@@ -170,9 +170,9 @@ import ListWithUserItem from '@/components/Listing/ListWithUserItem'
 
 import { areaChartData, conversionChartData } from '@/data/charts'
 import cakes from '@/data/cakes'
-import comments from '@/data/comments'
 import { getDirection } from '@/utils'
 import { apiUrl } from '@/constants/config'
+import { fetch } from '@/utils'
 
 export default {
   components: {
@@ -216,7 +216,7 @@ export default {
       areaChartData,
       conversionChartData,
       cakes,
-      comments,
+      comments: [],
       bestsellers: {
         apiUrl: apiUrl + '/cakes/fordatatable',
         fields: [{
@@ -247,10 +247,11 @@ export default {
       }
     }
   },
-  mounted () {
+  async mounted () {
     setTimeout(() => {
       this.handleSwipersResize()
     }, 50)
+    this.comments = await fetch('/json/vue-comments.json')
   },
   methods: {
     refreshButtonClick () {
