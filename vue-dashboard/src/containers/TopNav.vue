@@ -123,9 +123,9 @@
             menu-class="position-absolute mt-3 notificationDropdown"
             no-caret
           >
-            <template slot="button-content">
+           <template slot="button-content">
               <i class="simple-icon-bell" />
-              <span class="count">3</span>
+              <span class="count" v-if="notifications.length > 0">{{ notifications.length }}</span>
             </template>
             <vue-perfect-scrollbar :settings="{ suppressScrollX: true, wheelPropagation: false }">
               <div
@@ -192,7 +192,6 @@ import { mapGetters, mapMutations, mapActions } from 'vuex'
 import { MenuIcon, MobileMenuIcon } from '@/components/Svg'
 import Switches from 'vue-switches'
 
-import notifications from '@/data/notifications'
 import {
   searchPath,
   menuHiddenBreakpoint,
@@ -201,6 +200,7 @@ import {
   defaultColor
 } from '@/constants/config'
 import { getDirection, setDirection } from '@/utils'
+import { fetch } from '@/utils'
 export default {
   components: {
     MenuIcon,
@@ -218,7 +218,7 @@ export default {
       searchPath,
       localeOptions,
       buyUrl,
-      notifications,
+      notifications: [],
       isDarkActive: false
     }
   },
@@ -318,6 +318,9 @@ export default {
   created () {
     const color = this.getThemeColor()
     this.isDarkActive = color.indexOf('dark') > -1
+  },
+  async mounted() {
+    this.notifications = await fetch("/json/vue-notifications.json")
   },
   watch: {
     '$i18n.locale' (to, from) {
