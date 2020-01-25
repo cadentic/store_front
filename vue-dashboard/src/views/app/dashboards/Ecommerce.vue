@@ -172,7 +172,6 @@ import ListWithUserItem from '@/components/Listing/ListWithUserItem'
 import TwoColumnList from '@/components/Listing/TwoColumnList'
 
 import { lineChartData, doughnutChartData } from '@/data/charts'
-import cakes from '@/data/cakes'
 import { apiUrl } from '@/constants/config'
 import { fetch } from '@/utils'
 
@@ -207,7 +206,7 @@ export default {
       lineChartData,
       doughnutChartData,
       products: [],
-      cakes,
+      cakes: [],
       tickets: [],
       calendar: {
         showDate: this.thisMonth(1),
@@ -280,6 +279,7 @@ export default {
     }, 50)
     this.products = await fetch('/json/vue-products.json')
     this.tickets = await fetch('/json/vue-tickets.json')
+    this.cakes = await fetch('/json/vue-cakes.json')
   },
   methods: {
     refreshButtonClick () {

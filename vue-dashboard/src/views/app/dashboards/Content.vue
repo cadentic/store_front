@@ -169,7 +169,6 @@ import TwoColumnList from '@/components/Listing/TwoColumnList'
 import ListWithUserItem from '@/components/Listing/ListWithUserItem'
 
 import { areaChartData, conversionChartData } from '@/data/charts'
-import cakes from '@/data/cakes'
 import { getDirection, fetch } from '@/utils'
 import { apiUrl } from '@/constants/config'
 
@@ -214,7 +213,7 @@ export default {
       direction: getDirection().direction,
       areaChartData,
       conversionChartData,
-      cakes,
+      cakes: [],
       comments: [],
       bestsellers: {
         apiUrl: apiUrl + '/cakes/fordatatable',
@@ -251,6 +250,7 @@ export default {
       this.handleSwipersResize()
     }, 50)
     this.comments = await fetch('/json/vue-comments.json')
+    this.cakes = await fetch('/json/vue-cakes.json')
   },
   methods: {
     refreshButtonClick () {

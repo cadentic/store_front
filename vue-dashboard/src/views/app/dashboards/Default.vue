@@ -425,7 +425,6 @@ import {
   smallChartData4
 } from '@/data/charts'
 import profileStatuses from '@/data/profileStatuses'
-import cakes from '@/data/cakes'
 import { apiUrl } from '@/constants/config'
 import { fetch } from '@/utils'
 
@@ -535,7 +534,7 @@ export default {
         ]
       },
       profileStatuses,
-      cakes,
+      cakes: [],
       areaChartData,
       conversionChartData,
       selectData: [
@@ -567,6 +566,7 @@ export default {
     this.products = await fetch('/json/vue-products.json')
     this.tickets = await fetch('/json/vue-tickets.json')
     this.logs = await fetch('/json/vue-logs.json')
+    this.cakes = await fetch('/json/vue-cakes.json')
   },
   methods: {
     refreshButtonClick () {
