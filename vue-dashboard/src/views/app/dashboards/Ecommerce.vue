@@ -46,7 +46,7 @@
             <b-card :title="$t('dashboards.sales')">
               <b-refresh-button @click="refreshButtonClick"/>
               <div class="dashboard-line-chart">
-                <line-shadow-chart :data="lineChartData" :height="300"/>
+                <line-shadow-chart v-if="chartsDataLoaded" :data="lineChartData" :height="300"/>
               </div>
             </b-card>
           </b-colxx>
@@ -75,7 +75,7 @@
       <b-colxx lg="4" md="12" class="mb-4">
         <b-card :title="$t('dashboards.product-categories')">
           <div class="dashboard-donut-chart">
-            <doughnut-shadow-chart :data="doughnutChartData" :height="300"/>
+            <doughnut-shadow-chart v-if="chartsDataLoaded" :data="doughnutChartData" :height="300"/>
           </div>
         </b-card>
       </b-colxx>
@@ -174,6 +174,7 @@ import TwoColumnList from '@/components/Listing/TwoColumnList'
 import { lineChartData, doughnutChartData } from '@/data/charts'
 import { apiUrl } from '@/constants/config'
 import { fetch } from '@/utils'
+import { merge } from 'lodash'
 
 export default {
   components: {
@@ -203,6 +204,8 @@ export default {
           1800: { slidesPerView: 3 }
         }
       },
+      charts: {},
+      chartsDataLoaded: false,
       lineChartData,
       doughnutChartData,
       products: [],
@@ -280,6 +283,10 @@ export default {
     this.products = await fetch('/json/vue-products.json')
     this.tickets = await fetch('/json/vue-tickets.json')
     this.cakes = await fetch('/json/vue-cakes.json')
+    this.charts = await fetch('/json/vue-charts.json')
+    this.lineChartData = merge(lineChartData, this.charts['lineChartData'])
+    this.doughnutChartData = merge(doughnutChartData, this.charts['doughnutChartData'])
+    this.chartsDataLoaded = true
   },
   methods: {
     refreshButtonClick () {

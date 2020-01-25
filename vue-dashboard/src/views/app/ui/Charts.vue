@@ -33,14 +33,14 @@
                 <b-colxx xxs="12" lg="6" class="mb-4">
                    <h6 class="card-subtitle">{{ $t('charts.shadow') }}</h6>
                     <div class="chart-container">
-                        <polar-area-shadow-chart :data="polarAreaChartData" :height="300"/>
+                        <polar-area-shadow-chart v-if="chartsDataLoaded" :data="polarAreaChartData" :height="300"/>
                     </div>
                 </b-colxx>
 
                 <b-colxx xxs="12" lg="6" class="mb-4">
                    <h6 class="card-subtitle">{{ $t('charts.no-shadow') }}</h6>
                     <div class="chart-container">
-                        <polar-area-chart :data="polarAreaChartData" :height="300"/>
+                        <polar-area-chart v-if="chartsDataLoaded" :data="polarAreaChartData" :height="300"/>
                     </div>
                 </b-colxx>
             </b-row>
@@ -53,14 +53,14 @@
                 <b-colxx xxs="12" lg="6" class="mb-4">
                    <h6 class="card-subtitle">{{ $t('charts.shadow') }}</h6>
                     <div class="chart-container">
-                        <area-shadow-chart :data="areaChartData" :height="300"/>
+                        <area-shadow-chart v-if="chartsDataLoaded" :data="areaChartData" :height="300"/>
                     </div>
                 </b-colxx>
 
                 <b-colxx xxs="12" lg="6" class="mb-4">
                    <h6 class="card-subtitle">{{ $t('charts.no-shadow') }}</h6>
                     <div class="chart-container">
-                        <area-chart :data="areaChartData" :height="300"/>
+                        <area-chart v-if="chartsDataLoaded" :data="areaChartData" :height="300"/>
                     </div>
                 </b-colxx>
             </b-row>
@@ -73,14 +73,14 @@
                 <b-colxx xxs="12" lg="6" class="mb-4">
                    <h6 class="card-subtitle">{{ $t('charts.shadow') }}</h6>
                     <div class="chart-container">
-                        <scatter-shadow-chart :data="scatterChartData" :height="300"/>
+                        <scatter-shadow-chart v-if="chartsDataLoaded" :data="scatterChartData" :height="300"/>
                     </div>
                 </b-colxx>
 
                 <b-colxx xxs="12" lg="6" class="mb-4">
                    <h6 class="card-subtitle">{{ $t('charts.no-shadow') }}</h6>
                     <div class="chart-container">
-                        <scatter-chart :data="scatterChartData" :height="300"/>
+                        <scatter-chart v-if="chartsDataLoaded" :data="scatterChartData" :height="300"/>
                     </div>
                 </b-colxx>
             </b-row>
@@ -93,7 +93,7 @@
                 <b-colxx xxs="12" lg="6" class="mb-4">
                    <h6 class="card-subtitle">{{ $t('charts.shadow') }}</h6>
                     <div class="chart-container">
-                        <bar-shadow-chart :data="barChartData" :height="300"/>
+                        <bar-shadow-chart v-if="chartsDataLoaded" :data="barChartData" :height="300"/>
                     </div>
                 </b-colxx>
 
@@ -113,14 +113,14 @@
                 <b-colxx xxs="12" lg="6" class="mb-4">
                    <h6 class="card-subtitle">{{ $t('charts.shadow') }}</h6>
                     <div class="chart-container">
-                        <radar-shadow-chart :data="radarChartData" :height="300"/>
+                        <radar-shadow-chart v-if="chartsDataLoaded" :data="radarChartData" :height="300"/>
                     </div>
                 </b-colxx>
 
                 <b-colxx xxs="12" lg="6" class="mb-4">
                    <h6 class="card-subtitle">{{ $t('charts.no-shadow') }}</h6>
                     <div class="chart-container">
-                        <radar-chart :data="radarChartData" :height="300"/>
+                        <radar-chart v-if="chartsDataLoaded" :data="radarChartData" :height="300"/>
                     </div>
                 </b-colxx>
             </b-row>
@@ -133,14 +133,14 @@
                 <b-colxx xxs="12" lg="6" class="mb-4">
                    <h6 class="card-subtitle">{{ $t('charts.shadow') }}</h6>
                     <div class="chart-container">
-                        <pie-shadow-chart :data="pieChartData" :height="300"/>
+                        <pie-shadow-chart v-if="chartsDataLoaded" :data="pieChartData" :height="300"/>
                     </div>
                 </b-colxx>
 
                 <b-colxx xxs="12" lg="6" class="mb-4">
                    <h6 class="card-subtitle">{{ $t('charts.no-shadow') }}</h6>
                     <div class="chart-container">
-                        <pie-chart :data="pieChartData" :height="300"/>
+                        <pie-chart v-if="chartsDataLoaded" :data="pieChartData" :height="300"/>
                     </div>
                 </b-colxx>
             </b-row>
@@ -153,14 +153,14 @@
                 <b-colxx xxs="12" lg="6" class="mb-4">
                    <h6 class="card-subtitle">{{ $t('charts.shadow') }}</h6>
                     <div class="chart-container">
-                        <doughnut-shadow-chart :data="doughnutChartData" :height="300"/>
+                        <doughnut-shadow-chart v-if="chartsDataLoaded" :data="doughnutChartData" :height="300"/>
                     </div>
                 </b-colxx>
 
                 <b-colxx xxs="12" lg="6" class="mb-4">
                    <h6 class="card-subtitle">{{ $t('charts.no-shadow') }}</h6>
                     <div class="chart-container">
-                        <doughnut-chart :data="doughnutChartData" :height="300"/>
+                        <doughnut-chart v-if="chartsDataLoaded" :data="doughnutChartData" :height="300"/>
                     </div>
                 </b-colxx>
             </b-row>
@@ -189,6 +189,8 @@ import PieShadowChart from '@/components/Charts/PieShadow'
 import PieChart from '@/components/Charts/Pie'
 import DoughnutShadowChart from '@/components/Charts/DoughnutShadow'
 import DoughnutChart from '@/components/Charts/Doughnut'
+import { fetch } from '@/utils'
+import { merge } from 'lodash'
 
 export default {
   components: {
@@ -211,6 +213,8 @@ export default {
   },
   data () {
     return {
+      chartsDataLoaded: false,
+      charts: {},
       lineChartData,
       polarAreaChartData,
       areaChartData,
@@ -220,6 +224,18 @@ export default {
       pieChartData,
       doughnutChartData
     }
+  },
+  async mounted () {
+    this.charts = await fetch('/json/vue-charts.json')
+    this.lineChartData = merge(lineChartData, this.charts['lineChartData'])
+    this.polarAreaChartData = merge(polarAreaChartData, this.charts['polarAreaChartData'])
+    this.areaChartData = merge(areaChartData, this.charts['areaChartData'])
+    this.scatterChartData = merge(scatterChartData, this.charts['scatterChartData'])
+    this.barChartData = merge(barChartData, this.charts['barChartData'])
+    this.radarChartData = merge(radarChartData, this.charts['radarChartData'])
+    this.pieChartData = merge(pieChartData, this.charts['pieChartData'])
+    this.doughnutChartData = merge(doughnutChartData, this.charts['doughnutChartData'])
+    this.chartsDataLoaded = true
   }
 
 }

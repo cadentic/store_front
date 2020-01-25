@@ -94,7 +94,7 @@
           </b-dropdown>
         </b-card-body>
         <div class="chart card-body pt-0">
-          <area-shadow-chart :data="areaChartData" :height="195"/>
+          <area-shadow-chart v-if="chartsDataLoaded" :data="areaChartData" :height="195"/>
         </div>
       </b-card>
     </b-colxx>
@@ -113,7 +113,7 @@
           </b-dropdown>
         </b-card-body>
         <div class="chart card-body pt-0">
-          <area-shadow-chart :data="conversionChartData" :height="195"/>
+          <area-shadow-chart v-if="chartsDataLoaded" :data="conversionChartData" :height="195"/>
         </div>
       </b-card>
     </b-colxx>
@@ -171,6 +171,7 @@ import ListWithUserItem from '@/components/Listing/ListWithUserItem'
 import { areaChartData, conversionChartData } from '@/data/charts'
 import { getDirection, fetch } from '@/utils'
 import { apiUrl } from '@/constants/config'
+import { merge } from 'lodash'
 
 export default {
   components: {
@@ -211,6 +212,8 @@ export default {
         category: ''
       },
       direction: getDirection().direction,
+      charts: {},
+      chartsDataLoaded: false,
       areaChartData,
       conversionChartData,
       cakes: [],
@@ -251,6 +254,10 @@ export default {
     }, 50)
     this.comments = await fetch('/json/vue-comments.json')
     this.cakes = await fetch('/json/vue-cakes.json')
+    this.charts = await fetch('/json/vue-charts.json')
+    this.areaChartData = merge(areaChartData, this.charts['areaChartData'])
+    this.conversionChartData = merge(conversionChartData, this.charts['conversionChartData'])
+    this.chartsDataLoaded = true
   },
   methods: {
     refreshButtonClick () {

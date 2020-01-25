@@ -61,21 +61,21 @@
             <b-colxx xxs="12" lg="8">
               <b-row v-if="isLoad">
                  <b-colxx xxs="6" class="mb-4">
-                    <small-line-chart-card class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData1"/>
+                    <small-line-chart-card v-if="chartsDataLoaded" class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData1"/>
                 </b-colxx>
                 <b-colxx xxs="6" class="mb-4">
-                    <small-line-chart-card class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData2"/>
+                    <small-line-chart-card v-if="chartsDataLoaded" class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData2"/>
                 </b-colxx>
                 <b-colxx xxs="6" class="mb-4">
-                    <small-line-chart-card class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData3"/>
+                    <small-line-chart-card v-if="chartsDataLoaded" class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData3"/>
                 </b-colxx>
                 <b-colxx xxs="6" class="mb-4">
-                    <small-line-chart-card class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData4"/>
+                    <small-line-chart-card v-if="chartsDataLoaded" class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData4"/>
                 </b-colxx>
               </b-row>
               <b-card class="mb-4" :title="$t('pages.popularity')"  v-if="isLoad">
                 <div class="chart-container">
-                  <area-shadow-chart :data="areaChartData" :height="300"/>
+                  <area-shadow-chart v-if="chartsDataLoaded" :data="areaChartData" :height="300"/>
                 </div>
               </b-card>
               <b-card class="mb-4" :title="$t('pages.comments')">
@@ -108,6 +108,7 @@ import OrderItem from '@/components/Listing/OrderItem'
 
 import { smallChartData1, smallChartData2, smallChartData3, smallChartData4, areaChartData } from '@/data/charts'
 import { fetch } from '@/utils'
+import { merge } from 'lodash'
 
 export default {
   components: {
@@ -121,6 +122,7 @@ export default {
   data () {
     return {
       isLoad: false,
+      charts: {},
       smallChartData1,
       smallChartData2,
       smallChartData3,
@@ -140,6 +142,13 @@ export default {
     this.comments = await fetch('/json/vue-comments.json')
     this.comments = this.comments.slice(0, 5)
     this.orders = await fetch('/json/vue-orders.json')
+    this.charts = await fetch('/json/vue-charts.json')
+    this.smallChartData1 = merge(smallChartData1, this.charts['smallChartData1'])
+    this.smallChartData2 = merge(smallChartData2, this.charts['smallChartData2'])
+    this.smallChartData3 = merge(smallChartData3, this.charts['smallChartData3'])
+    this.smallChartData4 = merge(smallChartData4, this.charts['smallChartData4'])
+    this.areaChartData = merge(areaChartData, this.charts['areaChartData'])
+    this.chartsDataLoaded = true
   }
 }
 </script>

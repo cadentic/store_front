@@ -47,7 +47,7 @@
             <b-card :title="$t('dashboards.sales')">
               <b-refresh-button @click="refreshButtonClick"/>
               <div class="dashboard-line-chart">
-                <line-shadow-chart :data="lineChartData" :height="300"/>
+                <line-shadow-chart v-if="chartsDataLoaded" :data="lineChartData" :height="300"/>
               </div>
             </b-card>
           </b-colxx>
@@ -76,7 +76,7 @@
       <b-colxx lg="4" md="12" class="mb-4">
         <b-card :title="$t('dashboards.product-categories')">
           <div class="dashboard-donut-chart">
-            <polar-area-shadow-chart :data="polarAreaChartData" :height="270"/>
+            <polar-area-shadow-chart v-if="chartsDataLoaded" :data="polarAreaChartData" :height="270"/>
           </div>
         </b-card>
       </b-colxx>
@@ -217,7 +217,7 @@
             </b-dropdown>
           </b-card-body>
           <div class="chart card-body pt-0">
-            <area-shadow-chart :data="areaChartData" :height="195"/>
+            <area-shadow-chart v-if="chartsDataLoaded" :data="areaChartData" :height="195"/>
           </div>
         </b-card>
       </b-colxx>
@@ -242,7 +242,7 @@
             </b-dropdown>
           </b-card-body>
           <div class="chart card-body pt-0">
-            <area-shadow-chart :data="conversionChartData" :height="195"/>
+            <area-shadow-chart v-if="chartsDataLoaded" :data="conversionChartData" :height="195"/>
           </div>
         </b-card>
       </b-colxx>
@@ -314,6 +314,7 @@
         <b-row>
           <b-colxx xxs="6" class="mb-4">
             <small-line-chart-card
+              v-if="chartsDataLoaded"
               class="dashboard-small-chart"
               label-prefix="$"
               :data="smallChartData1"
@@ -321,6 +322,7 @@
           </b-colxx>
           <b-colxx xxs="6" class="mb-4">
             <small-line-chart-card
+              v-if="chartsDataLoaded"
               class="dashboard-small-chart"
               label-prefix="$"
               :data="smallChartData2"
@@ -328,6 +330,7 @@
           </b-colxx>
           <b-colxx xxs="6" class="mb-4">
             <small-line-chart-card
+              v-if="chartsDataLoaded"
               class="dashboard-small-chart"
               label-prefix="$"
               :data="smallChartData3"
@@ -335,6 +338,7 @@
           </b-colxx>
           <b-colxx xxs="6" class="mb-4">
             <small-line-chart-card
+              v-if="chartsDataLoaded"
               class="dashboard-small-chart"
               label-prefix="$"
               :data="smallChartData4"
@@ -426,6 +430,7 @@ import {
 } from '@/data/charts'
 import { apiUrl } from '@/constants/config'
 import { fetch } from '@/utils'
+import { merge } from 'lodash'
 
 export default {
   components: {
@@ -464,6 +469,8 @@ export default {
           1800: { slidesPerView: 3 }
         }
       },
+      charts: {},
+      chartsDataLoaded: false,
       lineChartData,
       products: [],
       polarAreaChartData,
@@ -567,6 +574,16 @@ export default {
     this.logs = await fetch('/json/vue-logs.json')
     this.cakes = await fetch('/json/vue-cakes.json')
     this.profileStatuses = await fetch('/json/vue-profilestatuses.json')
+    this.charts = await fetch('/json/vue-charts.json')
+    this.lineChartData = merge(lineChartData, this.charts['lineChartData'])
+    this.polarAreaChartData = merge(polarAreaChartData, this.charts['polarAreaChartData'])
+    this.areaChartData = merge(areaChartData, this.charts['areaChartData'])
+    this.conversionChartData = merge(conversionChartData, this.charts['conversionChartData'])
+    this.smallChartData1 = merge(smallChartData1, this.charts['smallChartData1'])
+    this.smallChartData2 = merge(smallChartData2, this.charts['smallChartData2'])
+    this.smallChartData3 = merge(smallChartData3, this.charts['smallChartData3'])
+    this.smallChartData4 = merge(smallChartData4, this.charts['smallChartData4'])
+    this.chartsDataLoaded = true
   },
   methods: {
     refreshButtonClick () {

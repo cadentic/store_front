@@ -23,7 +23,7 @@
           </b-dropdown>
         </b-card-body>
         <div class="chart card-body pt-0">
-          <area-shadow-chart :data="areaChartData" :height="195"/>
+          <area-shadow-chart v-if="chartsDataLoaded" :data="areaChartData" :height="195"/>
         </div>
       </b-card>
     </b-colxx>
@@ -42,7 +42,7 @@
           </b-dropdown>
         </b-card-body>
         <div class="chart card-body pt-0">
-          <area-shadow-chart :data="conversionChartData" :height="195"/>
+          <area-shadow-chart v-if="chartsDataLoaded" :data="conversionChartData" :height="195"/>
         </div>
       </b-card>
     </b-colxx>
@@ -52,7 +52,7 @@
     <b-colxx xl="4" lg="6" md="12" class="mb-4">
       <b-card class="h-100" :title="$t('dashboards.product-categories')">
         <div class="dashboard-donut-chart">
-          <doughnut-shadow-chart :data="doughnutChartData" :height="300"/>
+          <doughnut-shadow-chart v-if="chartsDataLoaded" :data="doughnutChartData" :height="300"/>
         </div>
       </b-card>
     </b-colxx>
@@ -70,16 +70,16 @@
     <b-colxx xl="4" lg="12" md="12">
       <b-row>
         <b-colxx xxs="6" class="mb-4">
-            <small-line-chart-card class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData1"/>
+            <small-line-chart-card v-if="chartsDataLoaded" class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData1"/>
         </b-colxx>
         <b-colxx xxs="6" class="mb-4">
-            <small-line-chart-card class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData2"/>
+            <small-line-chart-card v-if="chartsDataLoaded" class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData2"/>
         </b-colxx>
         <b-colxx xxs="6" class="mb-4">
-            <small-line-chart-card class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData3"/>
+            <small-line-chart-card v-if="chartsDataLoaded" class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData3"/>
         </b-colxx>
         <b-colxx xxs="6" class="mb-4">
-            <small-line-chart-card class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData4"/>
+            <small-line-chart-card v-if="chartsDataLoaded" class="dashboard-small-chart-analytics" label-prefix="$" :data="smallChartData4"/>
         </b-colxx>
       </b-row>
     </b-colxx>
@@ -103,14 +103,14 @@
     <b-colxx lg="6" xxs="12" class="mb-4">
       <b-card :title="$t('dashboards.order-stock')">
         <div class="chart-container">
-          <radar-shadow-chart :data="radarChartData" :height="300"/>
+          <radar-shadow-chart v-if="chartsDataLoaded" :data="radarChartData" :height="300"/>
         </div>
       </b-card>
     </b-colxx>
     <b-colxx lg="6" xxs="12" class="mb-4">
       <b-card :title="$t('dashboards.categories')">
         <div class="chart-container">
-          <polar-area-shadow-chart :data="polarAreaChartData" :height="300"/>
+          <polar-area-shadow-chart v-if="chartsDataLoaded" :data="polarAreaChartData" :height="300"/>
         </div>
       </b-card>
     </b-colxx>
@@ -120,7 +120,7 @@
     <b-colxx xxs="12" class="mb-4">
       <b-card :title="$t('dashboards.sales')">
         <div class="dashboard-line-chart">
-          <line-shadow-chart :data="lineChartData" :height="285"/>
+          <line-shadow-chart v-if="chartsDataLoaded" :data="lineChartData" :height="285"/>
         </div>
       </b-card>
     </b-colxx>
@@ -142,6 +142,7 @@ import draggable from 'vuedraggable'
 
 import { areaChartData, conversionChartData, doughnutChartData, smallChartData1, smallChartData2, smallChartData3, smallChartData4, polarAreaChartData, radarChartData, lineChartData } from '@/data/charts'
 import { fetch } from '@/utils'
+import { merge } from 'lodash'
 
 export default {
   components: {
@@ -156,6 +157,8 @@ export default {
   },
   data () {
     return {
+      chartsDataLoaded: false,
+      charts: {},
       areaChartData,
       conversionChartData,
       doughnutChartData,
@@ -172,6 +175,18 @@ export default {
   },
   async mounted () {
     this.profileStatuses = await fetch('/json/vue-profilestatuses.json')
+    this.charts = await fetch('/json/vue-charts.json')
+    this.areaChartData = merge(areaChartData, this.charts['areaChartData'])
+    this.conversionChartData = merge(conversionChartData, this.charts['conversionChartData'])
+    this.doughnutChartData = merge(doughnutChartData, this.charts['doughnutChartData'])
+    this.smallChartData1 = merge(smallChartData1, this.charts['smallChartData1'])
+    this.smallChartData2 = merge(smallChartData2, this.charts['smallChartData2'])
+    this.smallChartData3 = merge(smallChartData3, this.charts['smallChartData3'])
+    this.smallChartData4 = merge(smallChartData4, this.charts['smallChartData4'])
+    this.polarAreaChartData = merge(polarAreaChartData, this.charts['polarAreaChartData'])
+    this.radarChartData = merge(radarChartData, this.charts['radarChartData'])
+    this.lineChartData = merge(lineChartData, this.charts['lineChartData'])
+    this.chartsDataLoaded = true
   }
 }
 </script>
