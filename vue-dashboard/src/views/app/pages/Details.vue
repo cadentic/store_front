@@ -107,7 +107,6 @@ import CommentItem from '@/components/Listing/CommentItem'
 import OrderItem from '@/components/Listing/OrderItem'
 
 import { smallChartData1, smallChartData2, smallChartData3, smallChartData4, areaChartData } from '@/data/charts'
-import orders from '@/data/orders'
 import { fetch } from '@/utils'
 
 export default {
@@ -128,7 +127,7 @@ export default {
       smallChartData4,
       areaChartData,
       comments: [],
-      orders
+      orders:[]
     }
   },
   methods: {
@@ -140,6 +139,7 @@ export default {
     }, 50)
     this.comments = await fetch('/json/vue-comments.json')
     this.comments = this.comments.slice(0, 5)
+    this.orders = await fetch('/json/vue-orders.json')
   }
 }
 </script>
