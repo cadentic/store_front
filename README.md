@@ -13,6 +13,15 @@ Run the server:
 $ php artisan serve
 ```
 
+# Build frontend code for production
+
+In the root directory, you do:
+
+```bash
+$ npm run clean
+$ npm run build
+```
+
 # URLs list
 
 * / (main-site)
