@@ -1,0 +1,29 @@
+{
+  "name": "store_front",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "subpkg run build",
+    "clean": "rm -rf backend/public && git checkout backend/public && rm backend/resources/views/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cadentic/store_front.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cadentic/store_front/issues"
+  },
+  "homepage": "https://github.com/cadentic/store_front#readme",
+  "devDependencies": {
+    "subpackage": "^1.1.0"
+  },
+  "subPackages": [
+      "main-site",
+      "email-builder",
+      "courses-site",
+      "teacher-panel"
+  ]
+}
