@@ -1,0 +1,26 @@
+[
+    {
+        "html": "<span>deals</span>",
+        "height": 100
+    },
+    {
+        "html": "<span>featured</span>",
+        "height": 100
+    },
+    {
+        "html": "<span>trending</span>",
+        "height": 100
+    },
+    {
+        "html": "<span>kitchen</span>",
+        "height": 100
+    },
+    {
+        "html": "<span>range</span>",
+        "height": 100
+    },
+    {
+        "html": "<span>fashion</span>",
+        "height": 100
+    }
+]
