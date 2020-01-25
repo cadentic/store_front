@@ -231,13 +231,11 @@
                                 active-class="blue" v-on="on"
                                 @click="mini?mini=false:''"
                         >
-                        <v-btn @click="saveTheme">
                             <v-list-item-icon>
                                 <v-icon color="blue">mdi-save</v-icon>
                             </v-list-item-icon>
 
                             <v-list-item-title class="black--text">save theme</v-list-item-title>
-                        </v-btn>
                         </v-list-item>
                     </template>
                     <div class="pa-2">
@@ -278,9 +276,9 @@
                     </v-btn>
                 </v-row>
 
-                <v-btn block color="blue" class="my-3 white--text">
+                <v-btn block color="blue" class="my-3 white--text" @click="saveTheme">
                     <v-icon>mdi-download</v-icon>
-                    <span class="ml-1">Download HTML</span>
+                    <span class="ml-1">Save Theme</span>
                 </v-btn>
 
                 <v-btn block color="grey dark-2" class="white--text">
@@ -329,6 +327,7 @@
 </template>
 
 <script>
+    import axios from "axios";
     import PictureInput from 'vue-picture-input'
     export default {
         components: {
@@ -344,34 +343,6 @@
             logo: require('@/assets/img/logo.png'),
             mini: false,
             colorData: [
-                {
-                    color: '#3e4958',
-                    text: 'Body text'
-                },
-                {
-                    color: '#616d7e',
-                    text: 'Heading #1'
-                },
-                {
-                    color: '#85909f',
-                    text: 'Heading #2'
-                },
-                {
-                    color: '#23d3b4',
-                    text: 'Buttons'
-                },
-                {
-                    color: '#e5eaf2',
-                    text: 'White text'
-                },
-                {
-                    color: '#439afc',
-                    text: 'Icons'
-                },
-                {
-                    color: '#3e4958',
-                    text: 'Pricing table titles'
-                },
             ],
             imageChanges: [
                 'Header Images',
@@ -416,6 +387,19 @@
                 if (this.$refs.pictureInput.image) {
                     this.uploading = true
                 }
+            },
+            async saveTheme() {
+              try {
+                const theme = {
+                  colors: this.colorData,
+                  sections: this.$store.state.sections
+                };
+                await axios.post("/export-theme", theme);
+                alert("Theme saved successfully !");
+              } catch (error) {
+                alert("Unable to export theme !");
+                console.log(error);
+              }
             }
         },
         watch: {
@@ -425,13 +409,16 @@
                 setTimeout(() => (this.uploading = false), 3000)
             },
         },
-        mounted() {
+        async mounted() {
             this.$eventHub.$on('toggleMenu', () => {
                 this.mini = !this.mini
                 if (this.mini) {
 
                 }
             });
+
+            const { data } = await axios.get("/json/theme-colors.json");
+            this.colorData = data;
         },
     }
 </script>

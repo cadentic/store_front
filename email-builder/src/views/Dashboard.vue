@@ -143,7 +143,6 @@
     import PictureInput from 'vue-picture-input'
     import ClickOutside from 'vue-click-outside'
     import VResizable from "vue-resizable";
-    import store from "../store";
 
     export default {
         directives: {
@@ -191,7 +190,7 @@
         methods: {
             onDrop(dropResult) {
                 this.themeData = this.applyDrag(this.themeData, dropResult)
-                store.commit('SET_SECTIONS', this.themeData);
+                this.$store.commit('SET_SECTIONS', this.themeData);
             },
             applyDrag(arr, dragResult) {
                 const {removedIndex, addedIndex, payload} = dragResult
