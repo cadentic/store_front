@@ -5,34 +5,34 @@
  */
 export default [
   {
-    path: '',
+    path: '/email-builder',
     // Relative to /src/views
     view: 'Dashboard'
   },
   {
-    path: '/user-profile',
+    path: '/email-builder/user-profile',
     name: 'User Profile',
     view: 'UserProfile'
   },
   {
-    path: '/table-list',
+    path: '/email-builder//table-list',
     name: 'Table List',
     view: 'TableList'
   },
   {
-    path: '/typography',
+    path: '/email-builder//typography',
     view: 'Typography'
   },
   {
-    path: '/icons',
+    path: '/email-builder//icons',
     view: 'Icons'
   },
   {
-    path: '/maps',
+    path: '/email-builder//maps',
     view: 'Maps'
   },
   {
-    path: '/notifications',
+    path: '/email-builder//notifications',
     view: 'Notifications'
   },
   {
