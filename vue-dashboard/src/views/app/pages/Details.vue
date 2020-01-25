@@ -138,8 +138,8 @@ export default {
     setTimeout(() => {
       this.isLoad = true
     }, 50)
-    this.comments = await fetch("/json/vue-comments.json")
-    this.comments = this.comments.slice(0,5)
+    this.comments = await fetch('/json/vue-comments.json')
+    this.comments = this.comments.slice(0, 5)
   }
 }
 </script>

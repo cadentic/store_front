@@ -199,8 +199,8 @@ import {
   buyUrl,
   defaultColor
 } from '@/constants/config'
-import { getDirection, setDirection } from '@/utils'
-import { fetch } from '@/utils'
+import { getDirection, setDirection, fetch } from '@/utils'
+
 export default {
   components: {
     MenuIcon,
@@ -319,8 +319,8 @@ export default {
     const color = this.getThemeColor()
     this.isDarkActive = color.indexOf('dark') > -1
   },
-  async mounted() {
-    this.notifications = await fetch("/json/vue-notifications.json")
+  async mounted () {
+    this.notifications = await fetch('/json/vue-notifications.json')
   },
   watch: {
     '$i18n.locale' (to, from) {

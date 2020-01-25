@@ -279,7 +279,7 @@ export default {
     setTimeout(() => {
       this.handleSwipersResize()
     }, 50)
-    this.products = await fetch("/json/vue-products.json");
+    this.products = await fetch('/json/vue-products.json')
   },
   methods: {
     refreshButtonClick () {

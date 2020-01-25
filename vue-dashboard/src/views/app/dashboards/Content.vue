@@ -170,9 +170,8 @@ import ListWithUserItem from '@/components/Listing/ListWithUserItem'
 
 import { areaChartData, conversionChartData } from '@/data/charts'
 import cakes from '@/data/cakes'
-import { getDirection } from '@/utils'
+import { getDirection, fetch } from '@/utils'
 import { apiUrl } from '@/constants/config'
-import { fetch } from '@/utils'
 
 export default {
   components: {
