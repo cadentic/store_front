@@ -19,17 +19,14 @@ class App extends Component {
         <Router>
           <Header />
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/courses">
               <Home />
             </Route>
-            <Route exact path="/page-two">
+            <Route exact path="/courses/page-two">
               <PageTwo />
             </Route>
-            <Route exact path="/page-Five">
+            <Route exact path="/courses/page-Five">
               <PageFive />
-            </Route>
-            <Route path="/">
-              <Home />
             </Route>
           </Switch>
           <Footer />
