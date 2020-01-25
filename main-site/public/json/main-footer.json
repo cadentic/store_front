@@ -11,11 +11,11 @@
         }
     ],
     "flickerWidget": [
-      "assets/img/flicker1.png",
-      "assets/img/flicker2.png",
-      "assets/img/flicker3.png",
-      "assets/img/flicker4.png",
-      "assets/img/flicker5.png",
-      "assets/img/flicker6.png"
+      "/assets/img/flicker1.png",
+      "/assets/img/flicker2.png",
+      "/assets/img/flicker3.png",
+      "/assets/img/flicker4.png",
+      "/assets/img/flicker5.png",
+      "/assets/img/flicker6.png"
     ]
 }
