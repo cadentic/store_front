@@ -24,6 +24,7 @@
       "main-site",
       "email-builder",
       "courses-site",
-      "teacher-panel"
+      "teacher-panel",
+      "material-dashboard-react-master"
   ]
 }
