@@ -13,6 +13,7 @@ Route::post("/add-to-cart/{id}", "MainSiteController@addToCart");
 
 // email-builder routes
 Route::view("/email-builder", "email-builder");
+Route::post("/email-builder/export-theme", "ThemeController@exportTheme");
 
 // courses-site routes
 Route::view("/courses", "courses-site");

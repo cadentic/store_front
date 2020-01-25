@@ -394,7 +394,7 @@
                   colors: this.colorData,
                   sections: this.$store.state.sections
                 };
-                await axios.post("/export-theme", theme);
+                await axios.post("/email-builder/export-theme", theme);
                 alert("Theme saved successfully !");
               } catch (error) {
                 alert("Unable to export theme !");
