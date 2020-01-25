@@ -127,7 +127,7 @@ export default {
       smallChartData4,
       areaChartData,
       comments: [],
-      orders:[]
+      orders: []
     }
   },
   methods: {

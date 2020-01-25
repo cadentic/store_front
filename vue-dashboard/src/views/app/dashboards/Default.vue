@@ -424,7 +424,6 @@ import {
   smallChartData3,
   smallChartData4
 } from '@/data/charts'
-import profileStatuses from '@/data/profileStatuses'
 import { apiUrl } from '@/constants/config'
 import { fetch } from '@/utils'
 
@@ -533,7 +532,7 @@ export default {
           }
         ]
       },
-      profileStatuses,
+      profileStatuses: [],
       cakes: [],
       areaChartData,
       conversionChartData,
@@ -567,6 +566,7 @@ export default {
     this.tickets = await fetch('/json/vue-tickets.json')
     this.logs = await fetch('/json/vue-logs.json')
     this.cakes = await fetch('/json/vue-cakes.json')
+    this.profileStatuses = await fetch('/json/vue-profilestatuses.json')
   },
   methods: {
     refreshButtonClick () {

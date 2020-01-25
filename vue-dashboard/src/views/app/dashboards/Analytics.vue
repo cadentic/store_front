@@ -141,7 +141,7 @@ import RadialProgressCard from '@/components/Cards/RadialProgressCard'
 import draggable from 'vuedraggable'
 
 import { areaChartData, conversionChartData, doughnutChartData, smallChartData1, smallChartData2, smallChartData3, smallChartData4, polarAreaChartData, radarChartData, lineChartData } from '@/data/charts'
-import profileStatuses from '@/data/profileStatuses'
+import { fetch } from '@/utils'
 
 export default {
   components: {
@@ -159,7 +159,7 @@ export default {
       areaChartData,
       conversionChartData,
       doughnutChartData,
-      profileStatuses,
+      profileStatuses: [],
       smallChartData1,
       smallChartData2,
       smallChartData3,
@@ -169,6 +169,9 @@ export default {
       lineChartData
 
     }
+  },
+  async mounted () {
+    this.profileStatuses = await fetch('/json/vue-profilestatuses.json')
   }
 }
 </script>
