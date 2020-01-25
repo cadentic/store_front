@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "PUBLIC_URL=/ react-scripts build && cp -r build/* ../backend/public && mv ../backend/public/index.html ../backend/resources/views/react-dashboard.blade.php && rm -rf build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",

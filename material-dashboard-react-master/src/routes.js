@@ -36,57 +36,56 @@ import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.js";
 
 const dashboardRoutes = [
   {
-    path: "/dashboard",
+    path: "/dashboard/react",
     name: "Dashboard",
     icon: Dashboard,
     component: DashboardPage,
     layout: "/admin"
   },
   {
-    path: "/user",
+    path: "/dashboard/react/user",
     name: "User Profile",
     icon: Person,
     component: UserProfile,
     layout: "/admin"
   },
   {
-    path: "/table",
+    path: "/dashboard/react/table",
     name: "Table List",
     icon: "content_paste",
     component: TableList,
     layout: "/admin"
   },
   {
-    path: "/typography",
+    path: "/dashboard/react/typography",
     name: "Typography",
     icon: LibraryBooks,
     component: Typography,
     layout: "/admin"
   },
   {
-    path: "/icons",
+    path: "/dashboard/react/icons",
     name: "Icons",
     icon: BubbleChart,
     component: Icons,
     layout: "/admin"
   },
   {
-    path: "/maps",
+    path: "/dashboard/react/maps",
     name: "Maps",
-    rtlName: "خرائط",
     icon: LocationOn,
     component: Maps,
     layout: "/admin"
   },
   {
-    path: "/notifications",
+    path: "/dashboard/react/notifications",
     name: "Notifications",
     icon: Notifications,
     component: NotificationsPage,
     layout: "/admin"
   },
   {
-    path: "/upgrade-to-pro",
+    path: "/dashboard/react/upgrade-to-pro",
     name: "Upgrade To PRO",
     icon: Unarchive,
     component: UpgradeToPro,
