@@ -19,7 +19,7 @@ const App = () => {
   const [chatData, setChatData] = React.useState();
 
   const handleListItem = index => {
-    
+
     axios.get(`http://localhost:8000/getmsg`)
     .then(res => {
       setChatData(res.data);
@@ -51,8 +51,8 @@ const App = () => {
             <Grid item xs={10}>
               <Switch>
                 {/* <Route path="/" component={Meeting}></Route> */}
-                <Route path="/sales" component={Sales}></Route>
-                <Route path="/" component={Meeting}></Route>
+                <Route path="/teacher-panel/sales" component={Sales}></Route>
+                <Route path="/teacher-panel" component={Meeting}></Route>
               </Switch>
             </Grid>
           </Grid>

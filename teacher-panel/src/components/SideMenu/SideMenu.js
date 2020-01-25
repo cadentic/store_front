@@ -123,7 +123,7 @@ const SideMenu = () => {
         )}
       </ListItem>
       <NavLink
-        to="/"
+        to="/teacher-panel"
         className={`${openMeeting ? "selected" : ""}`}
         isActive={(match, location) => {
           if (!match) {
@@ -169,7 +169,7 @@ const SideMenu = () => {
       )}
 
       <NavLink
-        to="/sales"
+        to="/teacher-panel/sales"
         className={`${openSales ? "selected" : ""}`}
         isActive={(match, location) => {
           if (!match) {
