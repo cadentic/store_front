@@ -6,7 +6,7 @@
           <h3>Featured Brands</h3>
         </div>
         <div class="view_all_btn_part d-flex justify-content-end">
-          <a class="view_btn" href="javascript:;">View All</a>
+          <router-link :to="{name: 'addProduct', params: {type: 'featured'}}" class="view_btn">View All</router-link>
         </div>
       </div>
     </div>

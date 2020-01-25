@@ -10,25 +10,14 @@
     <div class="panel-body">
       <div class="recentActList">
         <ul class="list-unstyled">
-          <li>
+          <li v-for="(item, index) in data" :key="index">
             <div class="actIcon">
               <span class="entypo-basket"></span>
             </div>
             <div class="actContent">
-              <h3>Delivered Order</h3>
+              <h3>{{ item.title }}</h3>
               <h5>
-                Order of five washing machines delivered to user @johndoe.
-              </h5>
-            </div>
-          </li>
-          <li>
-            <div class="actIcon">
-              <span class="entypo-basket"></span>
-            </div>
-            <div class="actContent">
-              <h3>Delivered Order</h3>
-              <h5>
-                Order of five washing machines delivered to user @johndoe.
+                {{ item.text }}
               </h5>
             </div>
           </li>
@@ -39,5 +28,14 @@
 </template>
 
 <script>
-export default {};
+import axios from "axios";
+export default {
+  data: () => ({
+    data: []
+  }),
+  async mounted() {
+    const { data } = await axios.get("/json/main-dashboard-recent-activity.json");
+    this.data = data;
+  }
+};
 </script>

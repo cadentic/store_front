@@ -15,7 +15,7 @@
     <div class="container-fluid productsisecc">
       <div class="row">
         <Quickcol />
-        <Paading />
+        <Paading :type="$route.params.type" />
       </div>
     </div>
     <AppFooter />
@@ -34,9 +34,6 @@ export default {
     Menu,
     Quickcol,
     Paading
-  },
-  data: () => ({
-    //
-  })
+  }
 };
 </script>

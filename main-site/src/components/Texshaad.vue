@@ -3,7 +3,7 @@
     <div class="texshaad">
       <div class="addmewcraulselsection">
         <div class="fadein">
-          <img id="1" class="pgh howt" v-bind:src="imageUrl" />
+          <img id="1" class="pgh howt" :src="data.topImg" />
           <img
             id="2"
             class="pgh howt"
@@ -13,14 +13,12 @@
         </div>
       </div>
       <div class="texeadhig">
-        <p class="vivo">{{ title }}</p>
+        <p class="vivo">{{ data.title }}</p>
         <h6 class="ve" style="text-align:left;">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i
-          ><i class="fas fa-star"></i><i class="fas fa-star"></i
-          ><i class="fas fa-star"></i>
+          <i class="fas fa-star" v-for="i in Math.floor(data.rankPoint)" :key="i"></i>
         </h6>
         <p class="pik" style="text-align:left;padding-top: 5px;">
-          ₹ {{ price }}
+          ₹ {{ data.price }}
         </p>
       </div>
       <div class="texbtnflexy">
@@ -41,6 +39,11 @@
 
 <script>
 export default {
-  props: ["title", "imageUrl", "price"]
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
+  }
 };
 </script>

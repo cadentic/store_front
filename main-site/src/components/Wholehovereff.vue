@@ -2,7 +2,7 @@
   <div class="wholehovereff">
     <div class="row bodr">
       <div class="col-md-6">
-        <h4 class="mycart">My Cart (1)</h4>
+        <h4 class="mycart">{{ data.title }}</h4>
       </div>
       <div
         class="col-md-6"
@@ -122,7 +122,7 @@
       </div>
       <div class="col-md-3">
         <div class="wp_npsliderheadsec">
-          <img class="img-fluid phss zoom" v-bind:src="imageUrl" />
+          <img class="img-fluid phss zoom" :src="data.topImg" />
           <!-- Material unchecked -->
         </div>
       </div>
@@ -131,31 +131,26 @@
           <!--<div class="wpnpcon">-->
           <h6 class="smart">
             <div class="wpnpico"><i class="far fa-heart ecoheaart"></i></div>
-            {{ title }}
+            {{ data.title }}
           </h6>
           <div class="prostarrat_sec">
-            <div class="protista">4.2 <i class="fas fa-star"></i></div>
-            <div class="protiratnum">28,530 Ratings &amp; 4195 Reviews</div>
+            <div class="protista">{{ data.rankPoint }} <i class="fas fa-star"></i></div>
+            <div class="protiratnum"> {{ data.ratings }} Ratings &amp; {{ data.reviews }} Reviews</div>
           </div>
-          <span class="stk">In Stock</span>
+          <span class="stk" v-if="data.available > 0">In Stock</span>
           <div class="exxoo" style="    padding: 0px; margin-top: 5px;">
-            <i class="fas fa-rupee-sign"></i> 27,996 <strike>31,996</strike> 12%
-            Off <span class="dicolll"> 4 Offers Available</span>
+            <i class="fas fa-rupee-sign"></i> {{ data.price }} <strike>{{ data.discountedPrice }}</strike>
+            {{ Math.round(100 - data.discountedPrice*100/data.price) }}% Off <span class="dicolll"> {{ data.available }} Offers Available</span>
           </div>
           <!--</div>-->
         </div>
       </div>
       <div class="col-md-4">
         <div class="priquat_flexy">
-          <p class="pric">Price ₹479.00</p>
-          <select class="browser-default custom-select newecoselect">
-            <option selected=""> Select the Quantity</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="3">4</option>
-            <option value="3">5</option>
-            <option value="3">6</option>
+          <p class="pric">Price ₹{{ data.price }}</p>
+          <select class="browser-default custom-select newecoselect" v-model="quantity">
+            <option selected="" value="0"> Select the Quantity</option>
+            <option v-for="i in data.available" :key="i" :value="i">{{ i }}</option>
           </select>
         </div>
       </div>
@@ -165,6 +160,23 @@
 
 <script>
 export default {
-  props: ["title", "imageUrl"]
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
+  },
+  data: () => ({
+    quantity: 0
+  }),
+  watch: {
+    quantity: function (newQuantity, oldQuantity) {
+      newQuantity = parseInt(newQuantity);
+      oldQuantity = parseInt(oldQuantity);
+      const delta = newQuantity - oldQuantity;
+      this.$emit('price-change', delta * this.data.price);
+      this.$emit('quantity-change', delta);
+    }
+  }
 };
 </script>

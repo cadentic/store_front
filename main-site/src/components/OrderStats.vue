@@ -11,23 +11,25 @@
     </div>
     <!-- panel body -->
     <div class="panel-body">
-      <MyProgress :statName="statName[0]" :percent="percent[0]" />
-      <MyProgress :statName="statName[1]" :percent="percent[1]" />
-      <MyProgress :statName="statName[2]" :percent="percent[2]" />
+      <MyProgress v-for="(stat, index) in data" :key="index" :statName="stat.label" :percent="stat.percent" />
     </div>
   </div>
 </template>
 
 <script>
 import MyProgress from "../components/MyProgress";
+import axios from "axios";
 export default {
   name: "OrderStats",
   components: {
     MyProgress
   },
   data: () => ({
-    statName: ["Completed", "Pending", "Cancelled"],
-    percent: [100, 90, 30]
-  })
+    data: []
+  }),
+  async mounted() {
+    const { data } = await axios.get("/json/main-dashboard-order-stats.json");
+    this.data = data;
+  }
 };
 </script>

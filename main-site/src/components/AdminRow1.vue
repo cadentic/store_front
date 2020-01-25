@@ -1975,7 +1975,7 @@
         </div>
         <!-- panel body -->
         <div class="panel-body">
-          <h2 class="salesAmount">$433,534,300</h2>
+          <h2 class="salesAmount">${{ data.numbers }}</h2>
           <br />
           <div class="text-center">
             <div class="chartjs-size-monitor">
@@ -2002,5 +2002,14 @@
 </template>
 
 <script>
-export default {};
+import axios from "axios";
+export default {
+  data: () => ({
+    data: {}
+  }),
+  async mounted() {
+    const { data } = await axios.get("/json/main-dashboard-analytics.json");
+    this.data = data;
+  }
+};
 </script>

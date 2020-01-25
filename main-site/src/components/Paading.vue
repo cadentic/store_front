@@ -22,8 +22,8 @@
           </div>
 
           <div class="wpproneewheadinn">
-            Infinix Smart 3 Plus
-            <span class="shww">(Showing 1 – 3 products of 3 products)</span>
+            {{ data.title }}
+            <span class="shww">(Showing {{ data.firstProduct }} – {{ data.lastProduct }} products of {{ data.totalProductsNumber }} products)</span>
           </div>
 
           <div class="sorttsec">
@@ -40,13 +40,13 @@
             <div class="ssortheading" onclick="ShowSecond()">Newest First</div>
           </div>
         </div>
-        <div class="testimonial testi" v-for="i in idx">
+        <div class="testimonial testi" v-for="(item, index) in data.items" :key="index">
           <div class="wp_npslider_item">
             <div class="row">
               <div class="col-md-3">
                 <div class="wp_npsliderheadsec">
                   <div class="onn">ON OFFER</div>
-                  <img class="img-fluid phss" src="img/phs.png" />
+                  <img class="img-fluid phss" :src="item.img" />
                 </div>
                 <div
                   class="form-check"
@@ -67,54 +67,42 @@
                   <!--<div class="wpnpcon">-->
                   <h6 class="smart">
                     <div class="wpnpico"><i class="far fa-heart"></i></div>
-                    Infinix Smart 3 Plus (Sapphire Cyan, 32 GB)
+                    {{ item.title }}
                   </h6>
                   <div class="prostarrat_sec">
                     <div class="protista">4.2 <i class="fas fa-star"></i></div>
                     <div class="protiratnum">
-                      28,530 Ratings &amp; 4195 Reviews
+                      {{ item.ratings }} Ratings &amp; {{ item.reviews }} Reviews
                     </div>
                   </div>
                   <ul class="vFw0gD">
-                    <li class="tVe95H">
-                      2 GB RAM | 32 GB ROM | Expandable Upto 256 GB
-                    </li>
-                    <li class="tVe95H">15.77 cm (6.21 inch) HD+ Display</li>
-                    <li class="tVe95H">
-                      13MP + 2MP + Low Light Sensor | 8MP Front Camera
-                    </li>
-                    <li class="tVe95H">3500 mAh Li-ion Polymer Battery</li>
-                    <li class="tVe95H">
-                      MediaTek A22 Quad Core 2.0GHz Processor
-                    </li>
-                    <li class="tVe95H">
-                      Brand Warranty of 1 Year Available for Mobile and 6 Months
-                      for Accessories
+                    <li class="tVe95H" v-for="(info, index) in item.informations" :key="index">
+                      {{ info }}
                     </li>
                   </ul>
-                  <div class="wpnheadingg">Metronaut</div>
-                  <div class="wpnotherdet">Mid-Top Outdoor Boots For Men</div>
+                  <div class="wpnheadingg">{{ item.extra1 }}</div>
+                  <div class="wpnotherdet">{{ item.extra2 }}</div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="wpnpsli_itemlastcontent">
                   <div class="_6BWGkk">
                     <div class="_1uv9Cb">
-                      <div class="price">₹6,999</div>
+                      <div class="price">₹{{ item.price }}</div>
                       <span class="perc">
                         <div class="strk">
                           ₹
-                          <!-- -->7,999
+                          <!-- -->{{ item.discountedPrice }}
                         </div>
                         <div class="ofs">
-                          <span>12% off</span>
+                          <span>{{ Math.round(100 - item.price*100/item.discountedPrice) }}% off</span>
                         </div>
                       </span>
                     </div>
                   </div>
                   <div class="_3gVem9">
                     <span class="ft"
-                      >Up to <span class="_2xjzPG">₹6,800</span> Off on
+                          >Up to <span class="_2xjzPG">₹{{ item.exchangePrice }}</span> Off on
                       Exchange</span
                     >
                   </div>
@@ -123,7 +111,7 @@
                     <!-- -->
                     <span class="_1JT2XE"
                       >₹
-                      <!-- -->233
+                      <!-- -->{{ item.emi }}
                       <!-- -->/month</span
                     >
                   </div>
@@ -172,7 +160,7 @@
           <!--Slides-->
           <div class="carousel-inner" role="listbox">
             <!--First slide-->
-            <div class="carousel-item active" v-for="i in idx">
+            <div class="carousel-item active" v-for="i in data.items.length">
               <div class="container-fluid hidenslidercont">
                 <div class="row">
                   <div class="col-md-3" style="padding: 0;">
@@ -191,7 +179,7 @@
                               <div class="sli2testimg">
                                 <img
                                   class="img-fluid"
-                                  src="img/phs.png"
+                                  src=""
                                   style="width:100%;"
                                 />
                               </div>
@@ -352,10 +340,30 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
-  components: {},
+  props: {
+    type: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    async fetchData(type) {
+      const { data } = await axios.get("/json/all-"+type+".json");
+      this.data = data;
+    }
+  },
+  mounted() {
+    this.fetchData(this.type);
+  },
   data: () => ({
-    idx: [4, 3, 2, 1]
-  })
+    data: []
+  }),
+  watch: {
+    type: function (newType) {
+      this.fetchData(newType);
+    }
+  }
 };
 </script>

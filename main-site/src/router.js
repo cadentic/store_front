@@ -24,7 +24,7 @@ export default new Router({
       component: Cart
     },
     {
-      path: "/addProduct",
+      path: "/addProduct/:type",
       name: "addProduct",
       component: AddProduct
     },

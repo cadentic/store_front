@@ -6,7 +6,7 @@
           <h4>Home Improvement Range</h4>
         </div>
         <div class="view_all_btn_part d-flex justify-content-end">
-          <a class="view_btn" href="javascript:;">View All</a>
+          <router-link :to="{name: 'addProduct', params: {type: 'range'}}" class="view_btn">View All</router-link>
         </div>
       </div>
     </div>

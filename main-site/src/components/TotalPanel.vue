@@ -5,25 +5,24 @@
       <a href="javascript:;" class="add_btn">Sold Out Products</a>
       <a href="javascript:;" class="add_btn">Add New Products</a>
     </div>
-    <TotalComponent :total="total[0]" />
-    <TotalComponent :total="total[1]" />
-    <TotalComponent :total="total[2]" />
+    <TotalComponent v-for="(total, index) in totals" :key="index" :total="total" />
   </div>
 </template>
 
 <script>
 import TotalComponent from "../components/TotalComponent";
+import axios from "axios";
 export default {
   name: "TotalPanel",
   components: {
     TotalComponent
   },
+  async mounted() {
+    const { data } = await axios.get("/json/main-dashboard-total.json");
+    this.totals = data;
+  },
   data: () => ({
-    total: [
-      { title: "Total Orders", num: "3.6K", icon: "entypo-basket pull-left" },
-      { title: "Total Sales", num: "7.2M", icon: "entypo-window pull-left" },
-      { title: "Total Customers", num: "3.6K", icon: "entypo-user pull-left" }
-    ]
+    totals: []
   })
 };
 </script>

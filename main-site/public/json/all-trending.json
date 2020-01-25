@@ -1,0 +1,68 @@
+{
+    "totalProductsNumber": 3,
+    "firstProduct": 1,
+    "lastProduct": 3,
+    "title": "Trending Offers",
+    "items": [
+        {
+            "img": "/assets/img/products3.png",
+            "title": "Infinix Smart 3 Plus (Sapphire Cyan, 32 GB)",
+            "ratings": 28530,
+            "reviews": 4195,
+            "informations": [
+                "2 GB RAM | 32 GB ROM | Expandable Upto 256 GB",
+                "15.77 cm (6.21 inch) HD+ Display",
+                "13MP + 2MP + Low Light Sensor | 8MP Front Camera",
+                "3500 mAh Li-ion Polymer Battery",
+                "MediaTek A22 Quad Core 2.0GHz Processor",
+                "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories"
+            ],
+            "extra1": "Metronaut",
+            "extra2": "Mid-Top Outdoor Boots For Men",
+            "price": 6999,
+            "discountedPrice": 7999,
+            "exchangePrice": 6800,
+            "emi": 233
+        },
+        {
+            "img": "/img/phs.png",
+            "title": "Infinix Smart 3 Plus (Sapphire Cyan, 32 GB)",
+            "ratings": 28530,
+            "reviews": 4195,
+            "informations": [
+                "2 GB RAM | 32 GB ROM | Expandable Upto 256 GB",
+                "15.77 cm (6.21 inch) HD+ Display",
+                "13MP + 2MP + Low Light Sensor | 8MP Front Camera",
+                "3500 mAh Li-ion Polymer Battery",
+                "MediaTek A22 Quad Core 2.0GHz Processor",
+                "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories"
+            ],
+            "extra1": "Metronaut",
+            "extra2": "Mid-Top Outdoor Boots For Men",
+            "price": 6999,
+            "discountedPrice": 7999,
+            "exchangePrice": 6800,
+            "emi": 233
+        },
+        {
+            "img": "/img/phs.png",
+            "title": "Infinix Smart 3 Plus (Sapphire Cyan, 32 GB)",
+            "ratings": 28530,
+            "reviews": 4195,
+            "informations": [
+                "2 GB RAM | 32 GB ROM | Expandable Upto 256 GB",
+                "15.77 cm (6.21 inch) HD+ Display",
+                "13MP + 2MP + Low Light Sensor | 8MP Front Camera",
+                "3500 mAh Li-ion Polymer Battery",
+                "MediaTek A22 Quad Core 2.0GHz Processor",
+                "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories"
+            ],
+            "extra1": "Metronaut",
+            "extra2": "Mid-Top Outdoor Boots For Men",
+            "price": 6999,
+            "discountedPrice": 7999,
+            "exchangePrice": 6800,
+            "emi": 233
+        }
+    ]
+}

@@ -6,7 +6,7 @@
           <h3>Kitchen and Home Apliances</h3>
         </div>
         <div class="view_all_btn_part d-flex justify-content-end">
-          <a class="view_btn" href="javascript:;">View All</a>
+          <router-link :to="{name: 'addProduct', params: {type: 'kitchen'}}" class="view_btn">View All</router-link>
         </div>
       </div>
     </div>

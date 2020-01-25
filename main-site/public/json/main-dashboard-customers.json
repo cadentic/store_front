@@ -1,0 +1,32 @@
+[
+    {
+        "username": "Jone Doe",
+        "sex": "admin/images/customers/cs1.png",
+        "cart": "fa fa-plus-circle"
+    },
+    {
+        "username": "Maria Curi",
+        "sex": "admin/images/customers/cs2.png",
+        "cart": "fa fa-refresh"
+    },
+    {
+        "username": "Jone Smiss",
+        "sex": "admin/images/customers/cs1.png",
+        "cart": "fa fa-plus-circle"
+    },
+    {
+        "username": "Jone Doe",
+        "sex": "admin/images/customers/cs2.png",
+        "cart": "fa fa-refresh"
+    },
+    {
+        "username": "Micle Bin",
+        "sex": "admin/images/customers/cs1.png",
+        "cart": "fa fa-plus-circle"
+    },
+    {
+        "username": "Jone Doe",
+        "sex": "admin/images/customers/cs2.png",
+        "cart": "fa fa-plus-circle"
+    }
+]

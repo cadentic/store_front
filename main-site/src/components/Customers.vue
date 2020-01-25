@@ -11,12 +11,7 @@
       <div class="panel-body">
         <div class="customerList">
           <ul class="list-unstyled">
-            <Customer :customer="customerArray[0]" />
-            <Customer :customer="customerArray[1]" />
-            <Customer :customer="customerArray[2]" />
-            <Customer :customer="customerArray[3]" />
-            <Customer :customer="customerArray[4]" />
-            <Customer :customer="customerArray[5]" />
+            <Customer v-for="(customer, index) in customerArray" :key="index" :customer="customer" />
           </ul>
         </div>
       </div>
@@ -26,44 +21,18 @@
 
 <script>
 import Customer from "../components/Customer";
+import axios from "axios";
 export default {
   name: "Customers",
   components: {
     Customer
   },
   data: () => ({
-    customerArray: [
-      {
-        username: "Jone Doe",
-        sex: "admin/images/customers/cs1.png",
-        cart: "fa fa-plus-circle"
-      },
-      {
-        username: "Maria Curi",
-        sex: "admin/images/customers/cs2.png",
-        cart: "fa fa-refresh"
-      },
-      {
-        username: "Jone Smiss",
-        sex: "admin/images/customers/cs1.png",
-        cart: "fa fa-plus-circle"
-      },
-      {
-        username: "Jone Doe",
-        sex: "admin/images/customers/cs2.png",
-        cart: "fa fa-refresh"
-      },
-      {
-        username: "Micle Bin",
-        sex: "admin/images/customers/cs1.png",
-        cart: "fa fa-plus-circle"
-      },
-      {
-        username: "Jone Doe",
-        sex: "admin/images/customers/cs2.png",
-        cart: "fa fa-plus-circle"
-      }
-    ]
-  })
+    customerArray: []
+  }),
+  async mounted() {
+    const { data } = await axios.get("/json/main-dashboard-customers.json");
+    this.customerArray = data;
+  }
 };
 </script>
