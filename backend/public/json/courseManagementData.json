@@ -1,0 +1,71 @@
+{
+    "header": [
+        {
+            "title": "Name",
+            "align": "left"
+        },
+        {
+            "title": "Job Title",
+            "align": "left"
+        },
+        {
+            "title": "Milestone",
+            "align": "left"
+        },
+        {
+            "title": "Salary",
+            "align": "right"
+        },
+        {
+            "title": "Actions",
+            "align": "right"
+        }
+    ],
+    "body": [
+        {
+            "id": 1,
+            "gender": "woman",
+            "name": "Jane Cruz",
+            "jobTitle": "Developer",
+            "progress": 10,
+            "salary": "$80,000",
+            "action": ""
+        },
+        {
+            "id": 2,
+            "gender": "man",
+            "name": "Mike Jackson",
+            "jobTitle": "Designer",
+            "progress": 20,
+            "salary": "$77,000",
+            "action": ""
+        },
+        {
+            "id": 3,
+            "gender": "woman",
+            "name": "Liz Monte",
+            "jobTitle": "Engineer",
+            "progress": 70,
+            "salary": "$75,000",
+            "action": ""
+        },
+        {
+            "id": 4,
+            "gender": "woman",
+            "name": " John Doe",
+            "jobTitle": "Maintenance",
+            "progress": 25,
+            "salary": "$70,000",
+            "action": ""
+        },
+        {
+            "id": 5,
+            "gender": "man",
+            "name": "Rocky Lim",
+            "jobTitle": "Accountant",
+            "progress": 20,
+            "salary": "$77,000",
+            "action": ""
+        }
+    ]
+}

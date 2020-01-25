@@ -1,0 +1,14 @@
+[
+    {
+        "label": "Completed",
+        "percent": 100
+    },
+    {
+        "label": "Pending",
+        "percent": 90
+    },
+    {
+        "label": "Cancelled",
+        "percent": 30
+    }
+]

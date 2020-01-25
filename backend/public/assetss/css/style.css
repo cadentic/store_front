@@ -1,0 +1,381 @@
+/*
+  Theme Name: Name - Multipurpose HTML Template
+  Author: 
+  Support: admin@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index 
+-----------------------------------
+1. Theme default css
+2. header
+3. slider
+4. about-area
+5. features-box
+6. department
+7. team
+8. video-area
+9. counter
+10. footer 
+*/
+
+
+
+/* google fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Work+Sans:300,400,500,600,700,800');
+
+/* 1. Theme default css */
+ body {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+a,
+.button,button {
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+a:hover{
+	text-decoration: none;
+}
+a:focus,
+button:focus,input:focus, textarea:focus {
+	text-decoration: none;
+	outline: none;
+}
+button{cursor: pointer}
+
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: normal;
+	color: #333333;
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 400;
+	text-transform: normal;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+p {
+	font-size: 17px;
+	font-weight: normal;
+	line-height: 30px;
+	color: #777777;
+	margin-bottom: 15px;
+}
+a{
+	color: #333;
+	font-family: sans-serif;
+	font-weight: 500;
+}
+
+/* Custom css start */
+/* payment method */
+.timeline-bar {
+    width: 100%;
+    position: relative;
+    height: 7px;
+    background-color: #c8d7d7;
+    margin-bottom: 10px;
+}
+
+.timeline-bar:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    background-color: #99271a;
+}
+
+.timeline-name a {
+    display: block;
+    font-size: 16px;
+    color: #c8d7d7;
+    font-weight: 600;
+}
+
+.timeline-name a.complate {
+    color: #99271a;
+}
+
+.timeline-name a.complate.shop {
+    position: relative;
+}
+
+.timeline-name a.complate.shop:after {
+    position: absolute;
+    content: '\f07a';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 28px;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.payment-title h2 span {
+    display: block;
+    font-size: 30px;
+}
+
+.payment-title h2 {
+    font-size: 36px;
+    font-weight: 600;
+	color: #99271a;
+	text-transform: uppercase;
+}
+
+/* payment form */
+.payment-form-wrapper {
+    padding: 60px;
+    border: 2px solid #cedcdc;
+    border-radius: 15px;
+}
+
+.payment-form-title h2 {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.payment-form-title {
+    position: relative;
+    margin-bottom: 35px;
+    padding-bottom: 30px;
+}
+
+.payment-form-title:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 100%;
+    width: 25px;
+    height: 3px;
+    background-color: #e9e9e9;
+}
+
+.single-form label {
+    display: inline-block;
+    min-width: 145px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.single-form input {
+    border: none;
+    border-bottom: 1px solid #e1e1e1;
+	padding: 4px 9px;
+	width: 100%;
+}
+
+.single-form {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+span.card-tag {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #004a99;
+    text-transform: uppercase;
+}
+
+button.form-btn {
+    background: transparent;
+    border: 1px solid #cfdcdc;
+    border-radius: 5px;
+    padding: 5px 15px;
+    min-width: 125px;
+    font-weight: 600;
+    color: #e2e2e2;
+}
+
+button.form-btn:hover {
+    background: #39b54a;
+}
+
+/* card flip */
+
+.card-wrapper{
+    position: relative;
+    width: 268px;
+    height: 174px;
+    text-align: center;
+}
+
+.card{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all .5s ease;
+    text-align: center;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.card-wrapper:hover .card{
+    transform: rotateY(180deg);
+}
+.card-front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    background: #b4655e;
+    color: #fff;
+    border-radius: 15px;
+}
+.card-back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    background: transparent;
+    color: #333;
+    border: 1px solid #d2d8d8;
+    transform: rotateY(180deg);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.back-img{
+    padding: 0px 60px;
+    margin-bottom: 20px;
+}
+
+.card-wrapper img{
+    max-width: 100%;
+}
+
+.back-btn a {
+    display: inline-block;
+    border: 1px solid #d8dad9;
+    border-radius: 5px;
+    padding: 2px 40px;
+    font-size: 14px;
+    color: #cfd3d4;
+}
+
+.back-btn a:hover {
+    color: #fff;
+    background: #009cde;
+}
+
+.font-img {
+    padding: 0 65px;
+}
+
+.back-img.master-card img {
+    max-width: 100px;
+}
+
+/* form card */
+
+.form-card-wrapper{
+    position: relative;
+    height: 180px;
+    width: 100%;
+}
+
+.form-card{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all .5s ease;
+    text-align: center;
+}
+.form-card-wrapper:hover .form-card{
+    transform: rotateY(180deg);
+}
+.form-card-front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    color: #fff;
+}
+.form-card-back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    color: #333;
+    transform: rotateY(180deg);
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+}
+
+
+/* form */
+.payment-form {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 999;
+    background: #ffffff69;
+    padding-top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.payment-form-wrapper {
+    background-color: #fff;
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Jan",
+    "value": 15
+  },
+  {
+    "name": "Feb",
+    "value": 35
+  },
+  {
+    "name": "Mar",
+    "value": 30
+  },
+  {
+    "name": "Apr",
+    "value": 10
+  },
+  {
+    "name": "May",
+    "value": 20
+  },
+  {
+    "name": "Jun",
+    "value": 30
+  },
+  {
+    "name": "Jul",
+    "value": 40
+  },
+  {
+    "name": "Aug",
+    "value": 30
+  },
+  {
+    "name": "Sep",
+    "value": 50
+  },
+  {
+    "name": "Oct",
+    "value": 30
+  },
+  {
+    "name": "Nov",
+    "value": 20
+  },
+  {
+    "name": "Dec",
+    "value": 10
+  }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "primary": "Total Monthly Sales",
+        "secondary": "100 unit",
+        "avatar": "one"
+    },
+    {
+        "id": 2,
+        "primary": "Highest Monthly Sales",
+        "secondary": "50 unit",
+        "avatar": "two"
+    },
+    {
+        "id": 3,
+        "primary": "Average Monthly Sales",
+        "secondary": "10 unit",
+        "avatar": "three"
+    },
+    {
+        "id": 4,
+        "primary": "Lowest Monthly Sales",
+        "secondary": "10 unit",
+        "avatar": "four"
+    }
+]

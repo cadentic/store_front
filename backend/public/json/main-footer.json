@@ -1,0 +1,21 @@
+{
+    "textWidget": "Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commod luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
+    "twitterWidget": [
+        {
+            "html": "<a href=\"#\">@ericafustero</a> Why thank you. Your work looks awesome by the way! <a href=\"#\">@treemelody</a>",
+            "text": "19 days ago"
+        },
+        {
+            "html": "<a href=\"#\">@ericafustero</a> Why thank you. Your work looks awesome by the way! <a href=\"#\">@treemelody</a>",
+            "text": "19 days ago"
+        }
+    ],
+    "flickerWidget": [
+      "/assets/img/flicker1.png",
+      "/assets/img/flicker2.png",
+      "/assets/img/flicker3.png",
+      "/assets/img/flicker4.png",
+      "/assets/img/flicker5.png",
+      "/assets/img/flicker6.png"
+    ]
+}

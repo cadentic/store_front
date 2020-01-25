@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "img":"/assets/img/kitchen1.png",
+        "subtitle":"Food Processor",
+        "subcontent":"Lorem ipsum dolor sit amet, consectetur."
+    },
+    {
+        "id": 2,
+        "img":"/assets/img/kitchen2.png",
+        "subtitle":"Cooking Utensils",
+        "subcontent":"Lorem ipsum dolor sit amet, consectetur."
+    },
+    {
+        "id": 3,
+        "img":"/assets/img/kitchen3.png",
+        "subtitle":"Microvave Oven",
+        "subcontent":"Lorem ipsum dolor sit amet, consectetur."
+    },
+    {
+        "id": 4,
+        "img":"/assets/img/kitchen4.png",
+        "subtitle":"Blender",
+        "subcontent":"Lorem ipsum dolor sit amet, consectetur."
+    },
+    {
+        "id": 5,
+        "img":"/assets/img/kitchen5.png",
+        "subtitle":"Freezer",
+        "subcontent":"Lorem ipsum dolor sit amet, consectetur."
+    }
+]

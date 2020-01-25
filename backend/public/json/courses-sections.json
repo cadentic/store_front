@@ -1,0 +1,158 @@
+[
+    {
+        "id": 1,
+        "courseTitle": {
+            "img": "/assets/images/p5.png",
+            "background": "#C1272D",
+            "price": "150",
+            "discount": "-10%",
+            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla."
+        },
+        "courseTable": [
+            {
+                "title": "Introduction",
+                "items": [
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "2:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "1:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "3:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "4:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "4:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "5:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "2:50 m"
+                    }
+                ]
+            },
+            {
+                "title": "Basic",
+                "items": [
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "2:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "1:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "3:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "4:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "4:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "5:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "2:50 m"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "courseTitle": {
+            "img": "/assets/images/p5.png",
+            "background": "#A1FF2D",
+            "price": "200",
+            "discount": "-25%",
+            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla."
+        },
+        "courseTable": [
+            {
+                "title": "Introduction",
+                "items": [
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "2:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "1:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "3:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "4:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "4:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "5:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "2:50 m"
+                    }
+                ]
+            },
+            {
+                "title": "Basic",
+                "items": [
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "2:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "1:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "3:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "4:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "4:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "5:50 m"
+                    },
+                    {
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipis olor sit amet.",
+                        "duration": "2:50 m"
+                    }
+                ]
+            }
+        ]
+    }
+]

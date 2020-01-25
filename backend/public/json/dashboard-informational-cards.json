@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "color": "warning",
+        "icon": "content_copy",
+        "textLabel": "Used Space",
+        "text": "49/50 GB",
+        "footerIcon": "warning",
+        "footerIconColor": "danger",
+        "footerText": "Get more space",
+        "footerLink": "#"
+    },
+    {
+        "id": 2,
+        "color": "success",
+        "icon": "store",
+        "textLabel": "Revenue",
+        "text": "$34,245",
+        "footerIcon": "date-range",
+        "footerText": "Last 24 Hours"
+    },
+    {
+        "id": 3,
+        "color": "danger",
+        "icon": "info_outline",
+        "textLabel": "Fixed issues",
+        "text": "75",
+        "footerIcon": "local-offer",
+        "footerText": "Tracked from Github"
+    },
+    {
+        "id": 4,
+        "color": "info",
+        "icon": "accessibility",
+        "textLabel": "Followers",
+        "text": "+245",
+        "footerIcon": "update",
+        "footerText": "Just Updated"
+    }
+]
