@@ -1,7 +1,9 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-
+  outputDir: "../backend/public",
+  assetsDir: './assets/',
+  indexPath: "../resources/views/vue-dashboard.blade.php",
   pages: {
     index: {
       entry: 'src/index.js',
@@ -34,7 +36,6 @@ module.exports = {
       })
   },
   productionSourceMap: false,
-  assetsDir: './assets/',
   configureWebpack: {
     plugins: [
       new CopyWebpackPlugin([

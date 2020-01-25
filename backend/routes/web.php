@@ -1,7 +1,5 @@
 <?php
 
-Route::post("add-to-cart/{id}", "CartController@add");
-
 // main-site routes
 Route::view("/", "main-site");
 Route::view("/product/{id}", "main-site");
@@ -33,3 +31,9 @@ Route::view("/admin/react/icons", "react-dashboard");
 Route::view("/admin/react/maps", "react-dashboard");
 Route::view("/admin/react/notifications", "react-dashboard");
 Route::view("/admin/react/upgrade-to-pro", "react-dashboard");
+
+// vue-dashboard routes
+Route::view("/admin/vue/dashboards/default", "vue-dashboard");
+Route::view("/admin/vue/dashboards/analytics", "vue-dashboard");
+Route::view("/admin/vue/dashboards/content", "vue-dashboard");
+Route::view("/admin/vue/dashboards/ecommerce", "vue-dashboard");

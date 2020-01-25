@@ -8,13 +8,13 @@ const routes = [
   {
     path: '/',
     component: () => import(/* webpackChunkName: "app" */ './views/app'),
-    redirect: '/app/dashboards',
+    redirect: '/admin/vue/dashboards',
     beforeEnter: AuthRequired,
     children: [
       {
-        path: 'app/dashboards',
+        path: 'admin/vue/dashboards',
         component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards'),
-        redirect: '/app/dashboards/default',
+        redirect: '/admin/vue/dashboards/default',
         children: [
           { path: 'default', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Default') },
           { path: 'analytics', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Analytics') },
@@ -23,9 +23,9 @@ const routes = [
         ]
       },
       {
-        path: 'app/pages',
+        path: 'admin/vue/pages',
         component: () => import(/* webpackChunkName: "pages" */ './views/app/pages'),
-        redirect: '/app/pages/data-list',
+        redirect: '/admin/vue/pages/data-list',
         children: [
           { path: 'data-list', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/DataList') },
           { path: 'thumb-list', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/ThumbList') },
@@ -37,9 +37,9 @@ const routes = [
         ]
       },
       {
-        path: 'app/applications',
+        path: 'admin/vue/applications',
         component: () => import(/* webpackChunkName: "applications" */ './views/app/applications'),
-        redirect: '/app/applications/todo',
+        redirect: '/admin/vue/applications/todo',
         children: [
           { path: 'todo', component: () => import(/* webpackChunkName: "applications" */ './views/app/applications/Todo') },
           { path: 'survey', component: () => import(/* webpackChunkName: "applications" */ './views/app/applications/Survey') },
@@ -48,9 +48,9 @@ const routes = [
         ]
       },
       {
-        path: 'app/ui',
+        path: 'admin/vue/ui',
         component: () => import(/* webpackChunkName: "ui" */ './views/app/ui'),
-        redirect: '/app/ui/alerts',
+        redirect: '/admin/vue/ui/alerts',
         children: [
           { path: 'alerts', component: () => import(/* webpackChunkName: "ui" */ './views/app/ui/Alerts') },
           { path: 'badges', component: () => import(/* webpackChunkName: "ui" */ './views/app/ui/Badges') },
