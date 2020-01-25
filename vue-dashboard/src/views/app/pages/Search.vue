@@ -52,8 +52,8 @@ export default {
       return '#page-' + pageNum
     }
   },
-  mounted () {
-    fetch('/json/products.json', this.items)
+  async mounted () {
+    this.items = await fetch('/json/vue-products.json')
   }
 }
 </script>
