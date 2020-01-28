@@ -1,27 +1,38 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import InfoSystemFirst from './information-system/InfoSystemFirst';
 
 import CourseLeftBlock from './CourseLeftBlock';
 import CourseRightBlock from './CourseRightBlock';
+import { useParams } from 'react-router-dom';
+import { isEmpty } from 'lodash';
+import axios from 'axios';
 
 
-class Course extends Component {
-    render() {
-        return(
-            <React.Fragment>
-                <InfoSystemFirst />
+export default () => {
+  const { id } = useParams();
+  const [data, setData] = useState({});
 
-                <div className="course-info">
-                    <div className="section-container">
-                        <CourseLeftBlock />
-                        <CourseRightBlock />
-                    </div>
-                    <div className="clearfix"></div>
-                </div>
-            </React.Fragment>
-        );
-    }
-}
+  useEffect(() => {
+    axios.get("/json/courses-whole/"+id+".json")
+         .then(({data}) => setData(data));
+  }, []);
 
-export default Course;
+  return(
+    <React.Fragment>
+      <InfoSystemFirst />
+
+      <div className="course-info">
+        <div className="section-container">
+          {!isEmpty(data) && (
+            <>
+            <CourseLeftBlock data={data} />
+            <CourseRightBlock data={data} />
+            </>
+          )}
+        </div>
+        <div className="clearfix"></div>
+      </div>
+    </React.Fragment>
+  );
+};

@@ -30,14 +30,14 @@ import axios from 'axios';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       showBox: false,
-      chatData: [] 
+      chatData: []
     };
   }
 
   handleChatBox = () => {
-    
+
     axios.get('/json/chatbox.json')
     .then(res => {
       this.setState(state=> ({
@@ -53,7 +53,7 @@ class App extends React.Component {
       }));
     })
      }
-  
+
   closeChatBox = () => {
     this.setState(state=> ({
       showBox: false
@@ -66,15 +66,7 @@ class App extends React.Component {
         <Navbar />
         <CourseContainer>
             <Switch>
-              <Route path="/course" component={Course} />
-              <Route path="/course20" component={Course20} />
-              <Route path="/course21" component={Course21} />
-              <Route path="/course22" component={Course22} />
-              <Route path="/course23" component={Course23} />
-              <Route path="/course24" component={Course24} />
-              <Route path="/course25" component={Course25} />
-              <Route path="/course26" component={Course26} />
-              <Route path="/course27" component={Course27} />
+              <Route path="/course/:id" component={Course} />
 
               <Route path="/blog33" component={Blog33} />
               <Route path="/blog34" component={Blog34} />
@@ -103,7 +95,7 @@ class App extends React.Component {
                   position: relative;
                   margin: 0 auto;
               }
-              
+
               .border-bottom {
                   border-bottom: solid 1px #dbe4ed;
               }
@@ -116,8 +108,8 @@ class App extends React.Component {
               .border-left {
                   border-left: solid 1px #dbe4ed;
               }
-              
-              
+
+
               /* font common */
               .uppercase {
                   text-transform: uppercase;
@@ -128,7 +120,7 @@ class App extends React.Component {
               .text-center {
                   text-align: center;;
               }
-              
+
               /* position common */
               .float-left {
                   float: left;
@@ -146,7 +138,7 @@ class App extends React.Component {
                   clear: both;
                   content: "";
               }
-              
+
               /* margin common */
               .margin-left-6 {
                   margin-left: 6px;
@@ -154,13 +146,13 @@ class App extends React.Component {
               .no-margin {
                   margin: 0px !important;
               }
-              
-              
+
+
               /* padding common */
               .no-padding {
                   padding: 0px !important;
               }
-              
+
               @media screen and (max-width: 1280px) {
                   .section-container {
                       max-width: 90%;
