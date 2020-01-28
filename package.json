@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "subpkg run build",
-    "clean": "rm -rf backend/public && git checkout backend/public && rm backend/resources/views/*"
+    "clean": "rm -rf backend/public && git checkout backend/public/index.php && rm backend/resources/views/*"
   },
   "repository": {
     "type": "git",
