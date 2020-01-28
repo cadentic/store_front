@@ -1,0 +1,9 @@
+navitem {
+    font-size: 17px;
+    line-height: 60px;
+    color: #2d2d2d;
+    font-weight: 600;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}

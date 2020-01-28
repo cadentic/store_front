@@ -1,0 +1,46 @@
+[
+    {
+        "label": "Course 19",
+        "to": "/course"
+    },
+    {
+        "label": "Course 20",
+        "to": "/course20"
+    },
+    {
+        "label": "Course 21",
+        "to": "/course21"
+    },
+    {
+        "label": "Course 22",
+        "to": "/course22"
+    },
+    {
+        "label": "Course 23",
+        "to": "/course23"
+    },
+    {
+        "label": "Course 24",
+        "to": "/course24"
+    },
+    {
+        "label": "Course 25",
+        "to": "/course25"
+    },
+    {
+        "label": "Course 26",
+        "to": "/course26"
+    },
+    {
+        "label": "Course 27",
+        "to": "/course27"
+    },
+    {
+        "label": "Blog 33",
+        "to": "/blog33"
+    },
+    {
+        "label": "Blog 34",
+        "to": "/blog34"
+    }
+]

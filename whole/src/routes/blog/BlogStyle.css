@@ -1,0 +1,73 @@
+.input-group{
+    display: table;
+    padding-top: 6px;
+    width: 100%;
+    padding-right: 70px;
+    box-sizing: border-box;
+}
+.input-group .form-control .MuiInputBase-root{
+    height: 100%;
+    font-size: 18px;
+}
+.footer_input{
+    border-color: #d1d6da !important;
+    border-radius: 3px !important;
+    background-color: white !important;
+    color: #FBFAFF !important;
+    font-style: italic;
+}
+input.footer_input{
+    height: 58px !important;
+}   
+textarea{
+    height: 160px !important;
+}
+
+
+.form-control{
+    width: 100%;
+    box-sizing: border-box;
+    display: table-cell;
+    position: relative;
+    float: left;
+    margin-bottom: 0;
+    outline: 0!important;
+    box-shadow: none!important;
+    padding: 6px 12px;
+    background-color: #f9fbf7;
+    border: 1px solid #dbe7cb;
+    font-size: 17px;
+    line-height: 46px;
+    color: #b3bdd0 !important;
+    font-weight: 300;
+    height: 50px;
+}
+
+        
+@media only screen and (max-width: 1460px){
+    body .main_area{
+        width: 41.39%;
+    }
+    .left_side{
+        width: 100% !important;
+    }
+    .right_side{
+        width: 100% !important;
+    }
+    .post .post-part .post-right{
+        width: 50% !important;
+    }
+}
+@media only screen and (max-width: 1460px) and (min-width: 1080px) {
+    .post .post-part .post-right{
+        width: 80% !important;
+    }
+}
+@media only screen and (max-width: 1080px){
+    .said .said_content{
+        width: 100% !important;
+    }
+    .post .post-part .post-right{
+        width: 100% !important;
+    }
+}
