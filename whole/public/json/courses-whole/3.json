@@ -1,0 +1,76 @@
+{
+    "leftBlock": {
+        "heading": {
+            "img": "/blank-background.png",
+            "title": "Et harum quidem rerum facili est et expedita distinctio.",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscelit. Cras consectetur, nisi et mollis vulputate, odmauris dapibus massa, vel facilisis erat neque sitamet augue. Mauris porttitor fringilla ."
+        },
+        "content": {
+            "price": 190,
+            "discountedPrice": 290,
+            "studentsNumber": 83,
+            "rating": 3.5,
+            "img": "/blank-background.png",
+            "author": "Mohamed Said",
+            "authorJob": "senior ui ux designer",
+            "authorDescription": "In just 2 years Victor has become one of the most successful instructors on the web. Victor's incredble rising story has been covered on he Wall Street Journal, MIT Journal, Slate and the Sydney Morning Herald"
+        },
+        "sidebar": [
+            {
+                "title": "Home",
+                "icon": "fa fa-send"
+            },
+            {
+                "title": "Curriculum",
+                "icon": "fa fa-laptop"
+            },
+            {
+                "title": "Members",
+                "icon": "fa fa-user"
+            },
+            {
+                "title": "Events",
+                "icon": "fa fa-stack-overflow"
+            },
+            {
+                "title": "Forum",
+                "icon": "fa fa-comments-o"
+            }
+        ]
+    },
+    "rightBlock": {
+        "heading": {
+            "title": "Learn Everything You Need to Know About Web Development Even If You've Never Programmed Before!",
+            "text": "in more than 45 hours of content, this comprehensive programming course will teach youll you need to know about becoming a web developer. \"Web Development\" is the term usedto define all the work involved in the creation of a web site or web application. Web developme can range from creating a simple and static website, to the most complex web-based applications such as Facebook, Ebay, or Google Maps.",
+            "skillsList": [
+                "The Basics: HTML, XHTML, CSS and JavaScript"
+            ]
+        },
+        "content": {
+            "title": "Join Over 36,000 Students, and Build a Variety of Functional Websites from Scratch .",
+            "text": "This course is regularly updated and along with video tutorials it also contains exercises manuals and resources to help you succeed. Anyone looking to get into web development should sign up today--no prior experience necessary",
+            "skillsList": [
+                {
+                    "title": "Fully Responsive Theme",
+                    "icon": "fa fa-list-alt",
+                    "content": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready"
+                },
+                {
+                    "title":"'Strategy Solutions",
+                    "icon": "fa fa-angellist",
+                    "content": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready"
+                },
+                {
+                    "title":"'Touchable Slider",
+                    "icon": "fa fa-copy",
+                    "content": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready"
+                },
+                {
+                    "title": "Clean Modern Code",
+                    "icon": "fa fa-laptop",
+                    "content": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready"
+                }
+            ]
+        }
+    }
+}

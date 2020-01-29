@@ -58,10 +58,10 @@ class App extends React.Component {
         <Navbar />
         <CourseContainer>
             <Switch>
-              <Route path="/course/details/:id" component={DetailedCourse} />
-              <Route path="/course/:id" component={Course} />
-              <Route path="/blog/:id" component={Blog} />
-              <Route path="/" component={Course} />
+              <Route path="/whole/course/details/:id" component={DetailedCourse} />
+              <Route path="/whole/course/:id" component={Course} />
+              <Route path="/whole/blog/:id" component={Blog} />
+              <Route path="/whole" component={Course} />
             </Switch>
         </CourseContainer>
         <Footer handleMsgClick={this.handleChatBox} />
