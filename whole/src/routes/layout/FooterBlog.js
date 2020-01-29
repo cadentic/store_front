@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
+import { isEmpty } from 'lodash';
+import axios from 'axios';
 
 
 class FooterBlog extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        data: {}
+      };
+    }
+
+    async componentDidMount() {
+      const { data } = await axios.get('/json/whole-blog-footer.json');
+      this.setState({data});
+    }
+
     render() {
-        return(
+      return isEmpty(this.state.data) ? null : (
             <div className="post-wrapper">
                 <div className="col-wrapper overflow-hidden">
                     <div className="col-sub-wrapper overflow-hidden">
@@ -25,94 +39,43 @@ class FooterBlog extends Component {
                         <div className="popular-post-title title">
                         POPULAR POSTS
                         </div>
-                        <div className="post-list-item">My daily blog entry (259)</div>
-                        <div className="post-list-item">Unrevealed Shortcodes (223)</div>
-                        <div className="post-list-item">Developing with pleasure (204)</div>
-                        <div className="post-list-item">Communication information (199)</div>
-                        <div className="post-list-item">Beautiful Image Post (167)</div>
-                        <div className="post-list-item">Unrevealed Shortcodes (223)</div>
+                      {this.state.data.popularPosts.map((post, index) => (
+                        <div className="post-list-item" key={index}>{post.title} ({post.count})</div>
+                      ))}
                     </div>
                     <div className="recent-post-col post-col">
                         <div className="recent-post-title title">
                         RECENT POST
                         </div>
-                        <div className="row overflow-hidden">
+                      {this.state.data.recentPosts.map((post, index) => (
+                        <div className="row overflow-hidden" key={index}>
                         <div className="post-image">
-                            <img src="/footer/empty-square.png" alt="Empty Square" />
+                            <img src={post.img} alt={post.imgAlt} />
                         </div>
                         <div className="post-description">
                             <div className="content">
-                            Far far away, behind the word mountains, far.
+                              {post.content}
                             </div>
                             <div className="date">
-                            October 1, 2014
+                              {post.date}
                             </div>
                         </div>
                         </div>
-                        <div className="row overflow-hidden">
-                        <div className="post-image active">
-                            <img src="/footer/empty-square.png" alt="Empty Square" />
-                        </div>
-                        <div className="post-description">
-                            <div className="content">
-                            Far far away, behind the word mountains, far.
-                            </div>
-                            <div className="date">
-                            October 1, 2014
-                            </div>
-                        </div>
-                        </div>
-                        <div className="row overflow-hidden">
-                        <div className="post-image">
-                            <img src="/footer/empty-square.png" alt="Empty Square" />
-                        </div>
-                        <div className="post-description">
-                            <div className="content">
-                            Far far away, behind the word mountains, far.
-                            </div>
-                            <div className="date">
-                            October 1, 2014
-                            </div>
-                        </div>
-                        </div>
+                      ))}
                     </div>
                     <div className="flickr-col post-col">
                         <div className="flickr-title title">
                         FLICKR
                         </div>
-                        <div className="row overflow-hidden">
-                        <div className="item">
-                            <img src="/footer/empty-square.png" alt="Empty Square" />
+                      {this.state.data.flickr.map((container, index) => (
+                        <div className="row overflow-hidden" key={index}>
+                          {container.map((item, index) => (
+                          <div className="item" key={index}>
+                            <img src={item.img} alt={item.imgAlt} />
+                          </div>
+                          ))}
                         </div>
-                        <div className="item">
-                            <img src="/footer/empty-square.png" alt="Empty Square" />
-                        </div>
-                        <div className="item">
-                            <img src="/footer/empty-square.png" alt="Empty Square" />
-                        </div>
-                        </div>
-                        <div className="row overflow-hidden">
-                        <div className="item">
-                            <img src="/footer/empty-square.png" alt="Empty Square" />
-                        </div>
-                        <div className="item">
-                            <img src="/footer/empty-square.png" alt="Empty Square" />
-                        </div>
-                        <div className="item">
-                            <img src="/footer/empty-square.png" alt="Empty Square" />
-                        </div>
-                        </div>
-                        <div className="row overflow-hidden">
-                        <div className="item">
-                            <img src="/footer/empty-square.png" alt="Empty Square" />
-                        </div>
-                        <div className="item">
-                            <img src="/footer/empty-square.png" alt="Empty Square" />
-                        </div>
-                        <div className="item">
-                            <img src="/footer/empty-square.png" alt="Empty Square" />
-                        </div>
-                        </div>
+                      ))}
                     </div>
                     </div>
                 </div>
@@ -136,7 +99,7 @@ class FooterBlog extends Component {
                 .margin-right-low-30{
                     margin-right: -30px !important;
                 }
-                
+
                 .post-wrapper{
                     width: 100%;
                     background-color: #2D2D2D;
@@ -158,13 +121,13 @@ class FooterBlog extends Component {
                     display: inline-block;
                     padding: 0 15px;
                 }
-                
+
                 .title {
                     font-size: 24px;
                     font-family: sans-serif;
                     font-weight: 700;
                 }
-                
+
                 .post-wrapper .logo-col > div:nth-child(2) {
                     font-family: sans-serif;
                     color: white;
@@ -187,21 +150,21 @@ class FooterBlog extends Component {
                 .post-wrapper .logo-col > div:nth-child(4) > a {
                     font-size: 12.5px;
                 }
-                
+
                 .post-wrapper .popular-post-col > .popular-post-title {
                     padding-top: 6px;
                 }
                 .post-wrapper .popular-post-col > div:nth-child(2) {
                     padding-top: 49px;
                 }
-                .post-wrapper .popular-post-col > div:nth-child(3), .post-wrapper .popular-post-col > div:nth-child(4), 
+                .post-wrapper .popular-post-col > div:nth-child(3), .post-wrapper .popular-post-col > div:nth-child(4),
                 .post-wrapper .popular-post-col > div:nth-child(5), .post-wrapper .popular-post-col > div:nth-child(7) {
                     padding-top: 12px;
                 }
                 .post-wrapper .popular-post-col > div:nth-child(6) {
                     padding-top: 16px;
                 }
-                
+
                 .recent-post-col{
                     /* padding-left: 15px;
                     padding-top: 6px; */
@@ -217,7 +180,7 @@ class FooterBlog extends Component {
                     width: 26%;
                 }
                 .recent-post-col > div.row > div.post-image.active > img{
-                    border: 1px solid green;   
+                    border: 1px solid green;
                 }
                 .recent-post-col > div.row > div.post-image > img{
                     width: 100%;
@@ -236,9 +199,9 @@ class FooterBlog extends Component {
                 .recent-post-col > div.row > div.post-description > div.date{
                     font-size: 12.5px;
                     color: grey;
-                    padding-top: 6px;     
+                    padding-top: 6px;
                 }
-                
+
                 .recent-post-col > div:nth-child(2) {
                     padding-top: 53px;
                 }
@@ -248,7 +211,7 @@ class FooterBlog extends Component {
                 .recent-post-col > div:nth-child(4) {
                     padding-top: 15px;
                 }
-                
+
                 .flickr-col{
                     padding-left: 21px;
                     padding-top: 6px;
@@ -274,7 +237,7 @@ class FooterBlog extends Component {
                 .flickr-col > div.row > .item > img{
                     width: 100%;
                 }
-                
+
                 @media (max-width: 500px) {
                     .col-wrapper{
                         width: 60%;

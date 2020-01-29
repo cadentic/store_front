@@ -11,6 +11,7 @@ import Navbar from './routes/layout/Navbar';
 
 import Course from './routes/course/Course';
 import DetailedCourse from './routes/course/DetailedCourse';
+import Blog from './routes/blog/Blog';
 
 import Course20 from './routes/course/Course20';
 import Course21 from './routes/course/Course21';
@@ -19,7 +20,6 @@ import Course23 from './routes/course/Course23';
 import Course25 from './routes/course/Course25';
 import Course26 from './routes/course/Course26';
 import Course27 from './routes/course/Course27';
-import Blog33 from './routes/blog/Blog33';
 import Blog34 from './routes/blog/Blog34';
 import Footer from './routes/layout/Footer';
 import ChatBox from './routes/layout/ChatBox';
@@ -68,8 +68,8 @@ class App extends React.Component {
             <Switch>
               <Route path="/course/details/:id" component={DetailedCourse} />
               <Route path="/course/:id" component={Course} />
+              <Route path="/blog/:id" component={Blog} />
 
-              <Route path="/blog33" component={Blog33} />
               <Route path="/blog34" component={Blog34} />
               <Route path="/" component={Course} />
             </Switch>

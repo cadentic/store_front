@@ -1,0 +1,92 @@
+{
+    "popularPosts": [
+        {
+            "title": "My daily blog entry",
+            "count": 259
+        },
+        {
+            "title": "Unrevealed Shortcodes",
+            "count": 223
+        },
+        {
+            "title": "Developing with pleasure",
+            "count": 204
+        },
+        {
+            "title": "Communication information ",
+            "count": 199
+        },
+        {
+            "title": "Beautiful Image Post",
+            "count": 167
+        },
+        {
+            "title": "Unrevealed Shortcodes",
+            "count": 223
+        }
+    ],
+    "recentPosts": [
+        {
+            "img": "/footer/empty-square.png",
+            "imgAlt": "Empty Square",
+            "content": "Far far away, behind the word mountains, far.",
+            "date": "October 1, 2014"
+        },
+        {
+            "img": "/footer/empty-square.png",
+            "imgAlt": "Empty Square",
+            "content": "Far far away, behind the word mountains, far.",
+            "date": "October 1, 2014"
+        },
+        {
+            "img": "/footer/empty-square.png",
+            "imgAlt": "Empty Square",
+            "content": "Far far away, behind the word mountains, far.",
+            "date": "October 1, 2014"
+        }
+    ],
+    "flickr": [
+        [
+            {
+                "img": "/footer/empty-square.png",
+                "imgAlt": "Empty Square"
+            },
+            {
+                "img": "/footer/empty-square.png",
+                "imgAlt": "Empty Square"
+            },
+            {
+                "img": "/footer/empty-square.png",
+                "imgAlt": "Empty Square"
+            }
+        ],
+        [
+            {
+                "img": "/footer/empty-square.png",
+                "imgAlt": "Empty Square"
+            },
+            {
+                "img": "/footer/empty-square.png",
+                "imgAlt": "Empty Square"
+            },
+            {
+                "img": "/footer/empty-square.png",
+                "imgAlt": "Empty Square"
+            }
+        ],
+        [
+            {
+                "img": "/footer/empty-square.png",
+                "imgAlt": "Empty Square"
+            },
+            {
+                "img": "/footer/empty-square.png",
+                "imgAlt": "Empty Square"
+            },
+            {
+                "img": "/footer/empty-square.png",
+                "imgAlt": "Empty Square"
+            }
+        ]
+    ]
+}
