@@ -19,14 +19,34 @@ const InputGroup = styled.div`
 `;
 
 class BlogSidebarBlock extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchText: ''
+    };
+    this.handleSearchTextChange = this.handleSearchTextChange.bind(this);
+    this.handleSearchTextButtonClick = this.handleSearchTextButtonClick.bind(this);
+  }
+
+  /**
+   * Here you will handle text search.
+   */
+  handleSearchTextButtonClick(text) {
+    alert('You need to handle text search by yourself!\nText: '+text);
+  }
+
+  handleSearchTextChange({target}) {
+    this.setState({searchText: target.value});
+  }
+
   render() {
     return isEmpty(this.props.data) ? null : (
       <div className="right_side">
         <span className="title">SEARCH</span>
         <hr />
         <InputGroup className="input-group">
-          <TextField label="Start searching.." variant="outlined" className="form-control" color="primary" />
-          <span className="input-group-addon">
+          <TextField value={this.state.searchText} onChange={this.handleSearchTextChange} label="Start searching.." variant="outlined" className="form-control" color="primary" />
+          <span className="input-group-addon" onClick={() => this.handleSearchTextButtonClick(this.state.searchText)}>
             <i className="fa fa-search" />
           </span>
         </InputGroup>
