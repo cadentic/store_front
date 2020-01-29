@@ -11,10 +11,12 @@ class MiddleHeader extends Component {
 
         this.state = {
             dropdownShowFlag: false,
-            links: []
+            links: [],
+            searchText: ''
         }
         this.updateLinks = this.updateLinks.bind(this);
-        this.updateLinks();
+        this.handleSearchTextChange = this.handleSearchTextChange.bind(this);
+        this.handleSearchButtonClick = this.handleSearchButtonClick.bind(this);
     }
 
     async updateLinks() {
@@ -26,6 +28,21 @@ class MiddleHeader extends Component {
         this.setState({
             dropdownShowFlag: !this.state.dropdownShowFlag
         });
+    }
+
+    componentDidMount() {
+      this.updateLinks();
+    }
+
+    /**
+     * Here you will handle text search.
+     */
+    handleSearchButtonClick(text) {
+      alert('You will need to handle text search by yourself!\nText: '+text);
+    }
+
+    handleSearchTextChange({target}) {
+      this.setState({searchText: target.value});
     }
 
     render() {
@@ -50,8 +67,8 @@ class MiddleHeader extends Component {
                     </div>
 
                     <div className="courses-search float-right">
-                        <TextField id="standard-basic" placeholder="Search for Courses" />
-                        <span className="input-group-addon border-left">
+                        <TextField id="standard-basic" placeholder="Search for Courses" value={this.state.searchText} onChange={this.handleSearchTextChange} />
+                      <span className="input-group-addon border-left" onClick={() => this.handleSearchButtonClick(this.state.searchText)}>
                             <i className="fa fa-search"></i>
                         </span>
                     </div>
