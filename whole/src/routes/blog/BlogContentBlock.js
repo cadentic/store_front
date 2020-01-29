@@ -30,6 +30,41 @@ const FooterInput = styled(TextField)`
 
 class BlogContentBlock extends Component {
 
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        newCommentForm: {
+          name: '',
+          email: '',
+          website: '',
+          tags: '',
+          comment: ''
+        }
+      };
+
+      this.handleCommentInputChange = this.handleCommentInputChange.bind(this);
+      this.handleCommentPost = this.handleCommentPost.bind(this);
+    }
+
+    /**
+     * Here you will handle comment post.
+     */
+    handleCommentPost(data) {
+      alert('You need to handle comment post by yourself ! Look at the code in BlogContentBlock.js\nData: '+JSON.stringify(data));
+    }
+
+    handleCommentInputChange(event) {
+      const target = event.target;
+
+      this.setState(state => ({
+        newCommentForm: {
+          ...state.newCommentForm,
+          [target.name]: target.value
+        }
+      }));
+    }
+
     render() {
       return isEmpty(this.props.data) ? null : (
             <div className="left_side">
@@ -130,28 +165,28 @@ class BlogContentBlock extends Component {
                 <h3 className="leave">LEAVE A REPLY</h3>
                 <div className="post_step margin-top-78">
                 <div className="width-50 float-left">
-                    <FooterInput label="Name" variant="outlined" className="form-control footer_input" color="primary" />
+                    <FooterInput name="name" value={this.state.newCommentForm.name} onChange={this.handleCommentInputChange} label="Name" variant="outlined" className="form-control footer_input" color="primary" />
                 </div>
                 <div className="width-50 float-right">
-                    <FooterInput label="Email" variant="outlined" className="form-control footer_input" color="primary" />
+                    <FooterInput name="email" value={this.state.newCommentForm.email} onChange={this.handleCommentInputChange} label="Email" variant="outlined" className="form-control footer_input" color="primary" />
                 </div>
                 <div className="clearfix" />
                 </div>
                 <div className="post_step margin-top-27">
-                    <FooterInput label="Website" variant="outlined" className="form-control footer_input" color="primary" />
+                    <FooterInput name="website" value={this.state.newCommentForm.website} onChange={this.handleCommentInputChange} label="Website" variant="outlined" className="form-control footer_input" color="primary" />
                     <div className="clearfix" />
                 </div>
                 <div className="post_step margin-top-27">
-                    <FooterInput label="Tags" variant="outlined" className="form-control footer_input" />
+                    <FooterInput name="tags" value={this.state.newCommentForm.tags} onChange={this.handleCommentInputChange} label="Tags" variant="outlined" className="form-control footer_input" />
                     <div className="clearfix" />
                 </div>
                 <div className="post_step margin-top-27">
-                    <FooterInput label="Add your Comments" variant="outlined" className="form-control footer_input textarea" color="primary" multiline rows="4" rowsMax="4" />
+                    <FooterInput name="comment" value={this.state.newCommentForm.comment} onChange={this.handleCommentInputChange} label="Add your Comments" variant="outlined" className="form-control footer_input textarea" color="primary" multiline rows="4" rowsMax="4" />
                     <div className="clearfix" />
                 </div>
                 <div className="clearfix" />
 
-                <Button aria-controls="simple-menu" className="button margin-top-30 margin-bottom-64 specify_button" aria-haspopup="true" onClick={this.changeDropdownShowState}>
+              <Button aria-controls="simple-menu" className="button margin-top-30 margin-bottom-64 specify_button" aria-haspopup="true" onClick={() => this.handleCommentPost(this.state.newCommentForm)}>
                     Post a Comments
                 </Button>
 
