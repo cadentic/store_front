@@ -1,107 +1,66 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-import axios from 'axios';
+import { isEmpty } from 'lodash';
+import Stars from './Stars';
 
+export default ({bigBlock, data}) => {
 
-class CourseDetailBlock extends Component {
-    constructor(props) {
-        super(props);
+  return isEmpty(data) ? null : (
+    <div className={`course-detail-block ${bigBlock ? 'big-block' : ''}`}>
+      <List className="skill-list">
+        {data.skillsList.map((list, i) => {
+          return (
+            <React.Fragment key={i}>
+              <ListItem dense button className="list-item header">
+                <span className="float-left">{list.header}</span>
+                <span className="float-right">{list.lessonsCount} lessons, {list.time}</span>
+                <div className="clearfix"></div>
+              </ListItem>
+              {list.skills.map((item, index) => {
+                return(
+                  <ListItem dense button className="list-item" key={`item_${index}`}>
+                    <span className="float-left">
+                      <i className={item.icon}></i>
+                      {item.text}
+                    </span>
+                    {item.previewFlag &&
+                    <ListItemSecondaryAction>
+                      <span className="float-right">
+                        Free Preview
+                        <i className="fa fa-arrow-right"></i>
+                      </span>
+                    </ListItemSecondaryAction>
+                    }
+                  </ListItem>
+                );
+              })}
+            </React.Fragment>
+          );
+        })}
+      </List>
 
-        this.state = {
-            skillList: [],
-            ratingData: []
-        }
-    }
+      <div className="rating">
+        <h1 className="rating-header">RATING</h1>
+        {data.comments.map((data, i) => {
+          return(
+            <div className="rating-item" key={i}>
+              <img src={data.logoUrl} alt="user-logo" className="float-left" />
 
-    componentDidMount() {
-        const self = this;
-        axios.get('/json/courseskilllistsecond.json')
-            .then(response => {
-                self.setState({
-                    skillList: response.data
-                })
-            });
-        
-        axios.get('/json/courseratingdata.json')
-            .then(response => {
-                self.setState({
-                    ratingData: response.data
-                })
-            });
-    }
+              <div className="detail">
+                <p className="name">{data.name}</p>
 
-    renderSkillList = () => {
-        return this.state.skillList.map((list, i) => {
-            return (
-                <React.Fragment key={i}>
-                    <ListItem dense button className="list-item header">
-                        <span className="float-left">{list.header}</span>
-                        <span className="float-right">{list.lessonsCount} lessons, {list.time}</span>
-                        <div className="clearfix"></div>
-                    </ListItem>
-                    {list.skills.map((item, index) => {
-                        return(
-                            <ListItem dense button className="list-item" key={`item_${index}`}>
-                                <span className="float-left">
-                                    <i className={item.icon}></i>
-                                    {item.text}
-                                </span>
-                                {item.previewFlag &&
-                                    <ListItemSecondaryAction>
-                                        <span className="float-right">
-                                            Free Preview
-                                            <i className="fa fa-arrow-right"></i>
-                                        </span>
-                                    </ListItemSecondaryAction>
-                                }
-                            </ListItem>
-                        );
-                    })}
-                </React.Fragment>
-            );
-        });
-    }
+                <Stars rating={data.rate} />
 
-    renderRating = () => {
-        return this.state.ratingData.map((data, i) => {
-            return(
-                <div className="rating-item" key={i}>
-                    <img src={data.logoUrl} alt="user-logo" className="float-left" />
+                <p className="description">{data.description}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
 
-                    <div className="detail">
-                        <p className="name">{data.name}</p>
-
-                        <p className="rating-stars">
-                            <i className="fa fa-star"></i>
-                            <i className="fa fa-star"></i>
-                            <i className="fa fa-star"></i>
-                            <i className="fa fa-star-half-empty"></i>
-                            <i className="fa fa-star-o"></i>
-                        </p>
-
-                        <p className="description">{data.description}</p>
-                    </div>
-                </div>
-            );
-        });
-    }
-
-    render() {
-        return(
-            <div className={`course-detail-block ${this.props.bigBlock ? 'big-block' : ''}`}>
-                <List className="skill-list">
-                    {this.renderSkillList()}
-                </List>
-
-                <div className="rating">
-                    <h1 className="rating-header">RATING</h1>
-                    {this.renderRating()}
-                </div>
-
-                <style>{`
+      <style>{`
                 .course-detail-block {
                     transition: width linear .3s;
                 }
@@ -138,7 +97,7 @@ class CourseDetailBlock extends Component {
                     letter-spacing: 0;
                     padding-bottom: 19px;
                 }
-                
+
                 .course-detail-block .rating {
                     margin-top: 85px;
                     margin-left: -2px;
@@ -182,7 +141,7 @@ class CourseDetailBlock extends Component {
                     line-height: 34px;
                     display: flex;
                 }
-                
+
                 @media screen and (max-width: 900px) {
                     .course-detail-block {
                         width: 100% !important;
@@ -191,17 +150,6 @@ class CourseDetailBlock extends Component {
                     }
                 }
                 `}</style>
-            </div>
-        );
-    }
+    </div>
+  );
 }
-
-CourseDetailBlock.defaultProps = {
-    bigBlock: false
-}
-
-CourseDetailBlock.propTypes = {
-    bigBlock: PropTypes.bool
-}
-
-export default CourseDetailBlock;

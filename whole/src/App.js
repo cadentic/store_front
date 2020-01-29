@@ -10,12 +10,12 @@ import {
 import Navbar from './routes/layout/Navbar';
 
 import Course from './routes/course/Course';
+import DetailedCourse from './routes/course/DetailedCourse';
 
 import Course20 from './routes/course/Course20';
 import Course21 from './routes/course/Course21';
 import Course22 from './routes/course/Course22';
 import Course23 from './routes/course/Course23';
-import Course24 from './routes/course/Course24';
 import Course25 from './routes/course/Course25';
 import Course26 from './routes/course/Course26';
 import Course27 from './routes/course/Course27';
@@ -66,6 +66,7 @@ class App extends React.Component {
         <Navbar />
         <CourseContainer>
             <Switch>
+              <Route path="/course/details/:id" component={DetailedCourse} />
               <Route path="/course/:id" component={Course} />
 
               <Route path="/blog33" component={Blog33} />

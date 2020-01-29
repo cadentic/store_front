@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { isEmpty } from 'lodash';
 
 export default function(ComposedComponent) {
     class CourseLeftBlockContainer extends Component {
         render() {
-            return(
+          return isEmpty(this.props.data) ? null : (
                 <div className="left-block light-border">
                     <img src={this.props.data.leftBlock.heading.img} alt="img" className="course-img" />
 

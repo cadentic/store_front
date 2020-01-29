@@ -16,7 +16,7 @@ export default () => {
   useEffect(() => {
     axios.get("/json/courses-whole/"+id+".json")
          .then(({data}) => setData(data));
-  }, []);
+  }, [id]);
 
   return(
     <React.Fragment>
