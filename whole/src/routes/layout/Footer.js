@@ -3,10 +3,6 @@ import Avatar from '@material-ui/core/Avatar';
 
 
 class Footer extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   handleClick = () => {
     this.props.handleMsgClick();
   }
@@ -100,7 +96,7 @@ class Footer extends Component {
           <div className="footer-bottom">
             <div className="fixed-width overflow-hidden">
               <div className="copyright-letter footer-bottom-item">
-                  <div>Copyright 2014 The Legend <span className="green-separator">|</span> Designed By Mohamed Said</div> 
+                  <div>Copyright 2014 The Legend <span className="green-separator">|</span> Designed By Mohamed Said</div>
               </div>
               <div className="footer-bottom-list footer-bottom-item">
                 <ul>
@@ -117,7 +113,7 @@ class Footer extends Component {
           </div>
         </div>
             <style>{`
-            
+
                 *{
                     box-sizing: border-box;
                 }
@@ -158,7 +154,7 @@ class Footer extends Component {
                 .footer-top div.item-image:last-child{
                     width: 70px;
                 }
-                .footer-top div.item-image > img{ 
+                .footer-top div.item-image > img{
                     width: 33px;
                     height: 33px;
                     margin-top: 50px;
@@ -259,11 +255,11 @@ class Footer extends Component {
                     line-height: 125px;
                     font-size: 21.7px;
                     letter-spacing: 0.5px;
-                } 
+                }
                 .copyright-letter div span.green-separator{
                     color: #82b540;
                     padding-left: 5px;
-                } 
+                }
                 .footer-bottom-list.footer-bottom-item li {
                     display: inline;
                     padding-right: 40px;
