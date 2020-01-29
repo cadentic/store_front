@@ -37,3 +37,8 @@ Route::view("/admin/vue/dashboards/default", "vue-dashboard");
 Route::view("/admin/vue/dashboards/analytics", "vue-dashboard");
 Route::view("/admin/vue/dashboards/content", "vue-dashboard");
 Route::view("/admin/vue/dashboards/ecommerce", "vue-dashboard");
+
+// whole routes
+Route::view("/whole/course/{id}", "whole");
+Route::view("/whole/course/details/{id}", "whole");
+Route::view("/whole/blog/{id}", "whole");

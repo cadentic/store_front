@@ -1,0 +1,248 @@
+{
+    "note": {
+        "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit .",
+        "author": "Mohamed",
+        "creationDate": "May 23, 2014",
+        "commentsNumber": 29,
+        "contents": [
+            {
+                "class": "content",
+                "html": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.Aenean massa. Cum sontesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretiu Integer tincidunt."
+            },
+            {
+                "class": "content style2",
+                "html": "<span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sontesque eu, pretium quis, sem. </span><span className=\"specify_color\">Nulla consequat massa quis enim. Donec pede justo, fringilla</span> <span>vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretiu Integer tincidunt.</span>"
+            },
+            {
+                "class": "content style2 style3",
+                "html": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sontesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretiu Integer tincidunt amet, consectetuer elit. Aenean commodo ligula eget dolor"
+            }
+        ],
+        "pane": {
+            "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sontesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretiu Integer tincidunt amet, consectetuer adipiscing .",
+            "caption": "MOHAMED SAID"
+        }
+    },
+    "post": {
+        "title": "Tincidunt amet, consectetuer adipiscing elit.",
+        "contents": [
+            {
+                "class": "content style4 margin-top-8",
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sontesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretiu Integer tincidunt amet, consectetuer elit. Aenean commodo ligula eget dolor"
+            },
+            {
+                "postStep": true,
+                "class": "post_step margin-top-26",
+                "contents": [
+                    {
+                        "class": "content style4 blog-right",
+                        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean commodo ligula eget dolor. Aenean massa. Cum sontesque eu, pretium quisem. rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum velaliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiulnteger tincidunt amet, consectetuer Lorem ipsum dolor sit amet, consectetue modo ligula eget dolor. Aenean massa. Cum sontesque eu, pretium quitincidunt amet, consectetuers"
+                    }
+                ],
+                "clearFixClass": "clearfix"
+            },
+            {
+                "class": "content style5",
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sontesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiu Integer tincidunt amet, consectetuer penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium."
+            },
+            {
+                "postStep": true,
+                "class": "post_step margin-top-26",
+                "contents": [
+                    {
+                        "class": "content style4 blog-right float-left",
+                        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean commodo ligula eget dolor. Aenean massa. Cum sontesque eu, pretium quisem. rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum velaliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiulnteger tincidunt amet, consectetuer Lorem ipsum dolor sit amet, consectetue modo ligula eget dolor. Aenean massa. Cum sontesque eu, pretium quitincidunt amet, consectetuers"
+                    }],
+                    "clearFixClass": "blog-left float-right"
+            },
+            {
+                "postStep": true,
+                "class": "post_step margin-top-0",
+                "contents": [
+                    {
+                        "class": "content style4 width-50 float-left",
+                        "text": "Lorem ipsum dolor sit amet, consectetuer adipising elimodo ligula eget dolor. Aenean massa. Cum sontesquesem. rhoncus ut, imperdiet a, venenatis vitae, justo. Nulaiquet nec, vulputate eget, arcu. In enim justo, rhoncutincidut amet, consectetuer"
+                    },
+                    {
+                        "class": "content style4 width-50 float-right",
+                        "text": "Lorem ipsum dolor sit amet, consectetuer adipising elimodo ligula eget dolor. Aenean massa. Cum sontesquesem. rhoncus ut, imperdiet a, venenatis vitae, justo. Nulaiquet nec, vulputate eget, arcu. In enim justo, rhoncutincidut amet, consectetuer"
+                    }
+                ],
+                "clearFixClass": "clearfix"
+            },
+            {
+                "class": "content style4",
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sontesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiu Integer tincidunt amet, consectetuer penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium."
+            },
+            {
+                "postStep": true,
+                "class": "post_step margin-top-0",
+                "contents": [
+                    [
+                        "Lorem ipsum dolor sit amet, onsectetuer adipiscing elit",
+                        "Lorem ipsum dolor sit amet, onsectetuer adipiscing elit",
+                        "Lorem ipsum dolor sit amet, onsectetuer adipiscing elit",
+                        "Lorem ipsum dolor sit amet, onsectetuer adipiscing elit"
+                    ],
+                    [
+                        "Lorem ipsum dolor sit amet, onsectetuer adipiscing elit",
+                        "Lorem ipsum dolor sit amet, onsectetuer adipiscing elit",
+                        "Lorem ipsum dolor sit amet, onsectetuer adipiscing elit",
+                        "Lorem ipsum dolor sit amet, onsectetuer adipiscing elit"
+                    ]
+                ],
+                "clearFixClass": "clearfix"
+            },
+            {
+                "class": "content style5",
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipising elit. Aenean commodo ligula eget dlor. Aenean massa. Cum soa vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium."
+            }
+        ]
+    },
+    "quote": {
+        "avatar": "/avatar0.png",
+        "title": "Mohamed said",
+        "text": "Lorem ipsum dolor sit amet, ocnsectetuer adipiscing elit. Aenean commodo ligula egetdo a vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imprediet a, venenatisit felis eu pede mollis pretium."
+    },
+    "relatedPosts": [
+        {
+            "class": "float-left width-50",
+            "title": "Lorem ipsum dolor sit amet, consectet.",
+            "author": "Mohamed",
+            "creationDate": "May 23, 2014",
+            "commentsNumber": 29,
+            "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elintesque eu, pretium quis, sem. Nulla consequat massawte eget, arcu. In enim justo, rhoncus ut, imperdiet a, ven Integer tincidunt."
+        },
+        {
+            "class": "float-right width-50 margin-top-8",
+            "title": "Lorem ipsum dolor sit amet, consectet.",
+            "author": "Mohamed",
+            "creationDate": "May 23, 2014",
+            "commentsNumber": 29,
+            "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elintesque eu, pretium quis, sem. Nulla consequat massawte eget, arcu. In enim justo, rhoncus ut, imperdiet a, ven Integer tincidunt."
+        }
+    ],
+    "comments": [
+        {
+            "icon": "/avatar0.png",
+            "name": "Mohamed said",
+            "time": "50 min ago",
+            "content": "Lorem ipsum dolor sit amet, ocnsectetuer adipiscing elit. Aenean commodo ligula egetdo a vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imprediet a, venenatisit felis eu pede mollis pretium."
+        },
+        {
+            "icon": "/avatar1.png",
+            "name": "Mohamed said",
+            "time": "50 min ago",
+            "content": "Lorem ipsum dolor sit amet, ocnsectetuer adipiscing elit. Aenean commodo ligula egetdo a vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imprediet a, venenatisit felis eu pede mollis pretium."
+        },
+        {
+            "icon": "/avatar0.png",
+            "name": "Mohamed said",
+            "time": "50 min ago",
+            "content": "Lorem ipsum dolor sit amet, ocnsectetuer adipiscing elit. Aenean commodo ligula egetdo a vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imprediet a, venenatisit felis eu pede mollis pretium."
+        },
+        {
+            "icon": "/avatar0.png",
+            "name": "Mohamed said",
+            "time": "50 min ago",
+            "content": "Lorem ipsum dolor sit amet, ocnsectetuer adipiscing elit. Aenean commodo ligula egetdo a vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imprediet a, venenatisit felis eu pede mollis pretium."
+        }
+    ],
+    "sidebar": {
+        "categories": [
+            {
+                "name": "Creative",
+                "count": 2
+            },
+            {
+                "name": "Design ",
+                "count": 19
+            },
+            {
+                "name": "Photography ",
+                "count": 25
+            },
+            {
+                "name": "Image",
+                "count": 37
+            },
+            {
+                "name": "Wordpress ",
+                "count": 82
+            }
+        ],
+        "postParts": [
+            {
+                "class": "post-part",
+                "avatar": "/avatar0.png",
+                "title": "But I must explain.",
+                "content": "Lorem ipsum dolor sit amet, consectectuer dolor. Anean massa.",
+                "date": "Jul 29 2013"
+            },
+            {
+                "class": "post-part",
+                "avatar": "/avatar0.png",
+                "title": "But I must explain.",
+                "content": "Lorem ipsum dolor sit amet, consectectuer dolor. Anean massa.",
+                "date": "Jul 29 2013"
+            },
+            {
+                "class": "post-part",
+                "avatar": "/avatar0.png",
+                "title": "But I must explain.",
+                "content": "Lorem ipsum dolor sit amet, consectectuer dolor. Anean massa.",
+                "date": "Jul 29 2013"
+            },
+            {
+                "class": "post-part margin-bottom-64",
+                "avatar": "/avatar0.png",
+                "title": "These sweet mornings.",
+                "content": "Lorem ipsum dolor sit amet, consectectuer dolor. Anean massa.",
+                "date": "Jul 29 2013"
+            }
+        ],
+        "flickr": [
+            [
+                "/avatar0.png",
+                "/avatar0.png",
+                "/avatar0.png"
+            ],
+            [
+                "/avatar0.png",
+                "/avatar0.png",
+                "/avatar0.png"
+            ]
+        ],
+        "tweets": [
+            {
+                "author": "envato",
+                "content": "Neque porro quisquam est, qui dolorem ipsum quia <u class=\"specify_color\">goo.gi/5GlsEZ</u> dolor sit amet",
+                "link": "goo.gi/5GlsEZ",
+                "creation": "14 hours ago"
+            },
+            {
+                "author": "envato",
+                "content": "Neque porro quisquam est, qui dolorem ipsum quia <u class=\"specify_color\">goo.gi/5GlsEZ</u> dolor sit amet",
+                "link": "goo.gi/5GlsEZ",
+                "creation": "14 hours ago"
+            }
+        ],
+        "tags": [
+            [
+                "Porfolio",
+                "Theme",
+                "HTML"
+            ],
+            [
+                "Porfolio",
+                "Theme",
+                "HTML"
+            ],
+            [
+                "Porfolio",
+                "Theme",
+                "HTML"
+            ]
+        ]
+    }
+}

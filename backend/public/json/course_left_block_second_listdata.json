@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Introduction",
+        "childs": [
+            {
+                "name": "Lesson 1",
+                "completedFlag": true
+            },
+            {
+                "name": "Lesson 2",
+                "completedFlag": true
+            },
+            {
+                "name": "Lesson 3",
+                "completedFlag": true
+            },
+            {
+                "name": "Lesson 4",
+                "completedFlag": true
+            },
+            {
+                "name": "Lesson "
+            },
+            {
+                "name": "Lesson "
+            }
+        ]
+    },
+    {
+        "name": "HTML",
+        "childs": [
+            {
+                "name": "HTML 1",
+                "completedFlag": true
+            },
+            {
+                "name": "HTML 2",
+                "completedFlag": true
+            },
+            {
+                "name": "HTML 3",
+                "completedFlag": true
+            },
+            {
+                "name": "HTML 4",
+                "completedFlag": true
+            },
+            {
+                "name": "HTML "
+            },
+            {
+                "name": "HTML "
+            }
+        ]
+    }
+]

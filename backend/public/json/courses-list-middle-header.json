@@ -1,0 +1,14 @@
+[
+    {
+        "label": "Course 1",
+        "to": "/whole/course/1"
+    },
+    {
+        "label": "Course 2",
+        "to": "/whole/course/2"
+    },
+    {
+        "label": "Course 3",
+        "to": "/whole/course/3"
+    }
+]

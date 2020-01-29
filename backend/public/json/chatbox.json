@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1, 
+        "receiver": "Hi! How are you? How is project going?", 
+         "sender": "Hi! Nice to meet you."
+    },
+    {
+        "id": 2, 
+        "receiver": "Ok! I may be believe you . what is your budget?", 
+        "sender": "I thin k.. "
+    },
+    {
+        "id": 3, 
+        "receiver": "Ok! I may be believe you . what is your budget?", 
+        "sender": "I think.. "
+    },
+    {
+        "id": 4, "receiver": "Ok! I may be believe you . what is your budget?", 
+        "sender": "Thank you "
+    }
+]

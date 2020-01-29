@@ -1,0 +1,100 @@
+{
+    "skillsList": [
+        {
+            "header": "Introduction",
+            "lessonsCount": 4,
+            "time": "26:24",
+            "skills": [
+                {
+                    "icon": "fa fa-unlock",
+                    "text": "Introduction",
+                    "previewFlag": true
+                },
+                {
+                    "icon": "fa fa-unlock",
+                    "text": "Web Development Basic Concepts",
+                    "previewFlag": true
+                },
+                {
+                    "icon": "fa fa-file-text-o",
+                    "text": "Basic Web Development Concepts"
+                },
+                {
+                    "icon": "fa fa-unlock-alt",
+                    "text": "Other Web Development Courses by Zenva"
+                }
+            ]
+        },
+        {
+            "header": "HTML",
+            "lessonsCount": 12,
+            "time": "60:24",
+            "skills": [
+                {
+                    "icon": "fa fa-unlock-alt",
+                    "text": "Titles and Paragraphs"
+                },
+                {
+                    "icon": "fa fa-unlock-alt",
+                    "text": "Links"
+                },
+                {
+                    "icon": "fa fa-unlock-alt",
+                    "text": "Images"
+                },
+                {
+                    "icon": "fa fa-unlock-alt",
+                    "text": "Lists"
+                },
+                {
+                    "icon": "fa fa-unlock-alt",
+                    "text": "Forms"
+                },
+                {
+                    "icon": "fa fa-unlock-alt",
+                    "text": "More Inputs"
+                },
+                {
+                    "icon": "fa fa-unlock-alt",
+                    "text": "Text Areas"
+                },
+                {
+                    "icon": "fa fa-unlock-alt",
+                    "text": "Dropdown and Multiple Selections"
+                },
+                {
+                    "icon": "fa fa-unlock-alt",
+                    "text": "Structure of a HTML Document"
+                },
+                {
+                    "icon": "fa fa-unlock-alt",
+                    "text": "Project Structure"
+                },
+                {
+                    "icon": "fa fa-check",
+                    "text": "HTML"
+                }
+            ]
+        }
+    ],
+    "comments": [
+        {
+            "logoUrl": "/blank-background.png",
+            "name": "Mohamed Said",
+            "rate": 4,
+            "description": "It took me a little while to figure out that I wasn't supposed to be within one html document the entire course. As I follow along, frantically writing the code as the instructor, the next lecturemay have had the code structure slightly different. This made it difficult to determine where my code was broken because my lines of code were not matching up to the line numbers within the editor. This may be my fault as I skipped through the first two lectures quickly. Overall I found this course very helpful and I will suggest it to friends."
+        },
+        {
+            "logoUrl": "/blank-background.png",
+            "name": "Mohamed Said",
+            "rate": 4,
+            "description": "It took me a little while to figure out that I wasn't supposed to be within one html document the entire course. As I follow numbers within the editor. This may be my fault as I skipped through the first two lectures quickly. Overall I found this course very  ."
+        },
+        {
+            "logoUrl": "/blank-background.png",
+            "name": "Mohamed Said",
+            "rate": 4,
+            "description": "It took me a little while to figure out that I wasn't supposed to be within one html document the entire course. As I follow this course very  ."
+        }
+    ]
+}
