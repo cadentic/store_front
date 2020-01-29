@@ -47,3 +47,6 @@ $ npm run build
 * /admin/vue/dashboards/analytics (vue-dashboard)
 * /admin/vue/dashboards/content (vue-dashboard)
 * /admin/vue/dashboards/ecommerce (vue-dashboard)
+* /whole/course/{id} (whole)
+* /whole/course/details/{id} (whole)
+* /whole/blof/{id} (whole)
