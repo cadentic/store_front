@@ -7,6 +7,7 @@ Route::view("/cart", "main-site");
 Route::view("/addProduct/{type}", "main-site");
 Route::view("/adminpanel", "main-site");
 Route::view("/payment", "main-site");
+Route::view("/login", "main-site");
 Route::post("/add-to-cart/{id}", "MainSiteController@addToCart");
 
 // email-builder routes
