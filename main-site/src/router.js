@@ -6,6 +6,7 @@ import AddProduct from "./views/AddProduct.vue";
 import Adminpanel from "./views/AdminPanel.vue";
 import Payment from "./views/Payment.vue";
 import Product from "./views/Products.vue";
+import Login from "./views/Login.vue";
 
 Vue.use(Router);
 
@@ -42,6 +43,11 @@ export default new Router({
       path: "/product/:id",
       name: "product",
       component: Product
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: Login
     }
   ]
 });
