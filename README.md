@@ -50,3 +50,6 @@ $ npm run build
 * /whole/course/{id} (whole)
 * /whole/course/details/{id} (whole)
 * /whole/blof/{id} (whole)
+* /forms (forms)
+* /forms/FormTwo (forms)
+* /forms/FormThree (forms)
