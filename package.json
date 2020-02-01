@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "subpkg run build",
-    "clean": "rm -rf backend/public && git checkout backend/public/index.php && rm backend/resources/views/*"
+    "clean": "rm -rf backend/public && git checkout backend/public/index.php backend/public/.htaccess && rm backend/resources/views/*"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
       "teacher-panel",
       "material-dashboard-react-master",
       "vue-dashboard",
-      "whole"
+      "whole",
+      "forms"
   ]
 }

@@ -43,3 +43,8 @@ Route::view("/admin/vue/dashboards/ecommerce", "vue-dashboard");
 Route::view("/whole/course/{id}", "whole");
 Route::view("/whole/course/details/{id}", "whole");
 Route::view("/whole/blog/{id}", "whole");
+
+// forms
+Route::view("/forms", "forms");
+Route::view("/forms/FormTwo", "forms");
+Route::view("/forms/FormThree", "forms");
