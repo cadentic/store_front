@@ -21,13 +21,16 @@
     "subpackage": "^1.1.0"
   },
   "subPackages": [
-      "main-site",
-      "email-builder",
-      "courses-site",
-      "teacher-panel",
-      "material-dashboard-react-master",
-      "vue-dashboard",
-      "whole",
-      "forms"
-  ]
+    "main-site",
+    "email-builder",
+    "courses-site",
+    "teacher-panel",
+    "material-dashboard-react-master",
+    "vue-dashboard",
+    "whole",
+    "forms"
+  ],
+  "dependencies": {
+    "material-ui": "^0.20.2"
+  }
 }

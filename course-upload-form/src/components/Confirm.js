@@ -47,8 +47,7 @@ export class Confirm extends Component {
                 <ListItemText primary="Course Category" secondary={courseCategory} />
               </ListItem>
               <ListItem>
-                <ListItemText primary="Course Description
-                " secondary={courseDesc} />
+                <ListItemText primary="Course Description" secondary={courseDesc} />
               </ListItem>
             </List>
             <br />

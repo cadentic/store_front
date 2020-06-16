@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FormUserDetails from './FormUserDetails';
-import FormPersonalDetails from './FormPersonalDetails';
+import FormCourseDetails from './FormCourseDetails';
 import Confirm from './Confirm';
 import Success from './Success';
 
@@ -38,8 +38,8 @@ export class UserForm extends Component {
 
   render() {
     const { step } = this.state;
-    const { firstName, lastName, email, occupation, city, bio } = this.state;
-    const values = { firstName, lastName, email, occupation, city, bio };
+    const { firstName, lastName, email, courseName, courseCategory, courseDesc } = this.state;
+    const values = { firstName, lastName, email, courseName, courseCategory, courseDesc};
 
     switch (step) {
       case 1:
@@ -52,7 +52,7 @@ export class UserForm extends Component {
         );
       case 2:
         return (
-          <FormPersonalDetails
+          <FormCourseDetails
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             handleChange={this.handleChange}
